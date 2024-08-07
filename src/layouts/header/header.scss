@@ -1,0 +1,48 @@
+.header {
+    padding: 23px 0 21px 0;
+    &_main {
+        background-color: $color-light;
+    }
+    &__container {
+        @include flex-all-sb;
+    }
+
+    &__nav {
+        margin-left: -114px;
+    }
+}
+
+.header-contacts {
+    @include flex-v-center;
+    &__link {
+        @include flex-colomn-start;
+
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+    }
+}
+.contacts-link {
+    padding-left: 52px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    &__caption {
+        font-size: 14px;
+        font-weight: 700;
+        color: $color-gray;
+        line-height: 150%;
+    }
+    &__value {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-dark-gray;
+        line-height: 150%;
+    }
+    &_call {
+        background-image: url(../../assets/icons/iPhone.svg);
+    }
+    &_mail {
+        background-image: url(../../assets/icons/Chat.svg);
+    }
+}

@@ -1,0 +1,19 @@
+// @import '../../styles/variables.module';
+
+.nav {
+    &__list {
+        @include flex-all-sb;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 16px;
+        color: $color-gray;
+        line-height: 160%;
+    }
+}

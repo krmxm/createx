@@ -1,0 +1,14 @@
+// h1 {
+//     @include ubuntu-font(700); // Использование начертания "Bold" для заголовков
+// }
+
+@mixin ubuntu-font($weight) {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: $weight;
+}
+
+@mixin lato-font($weight) {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: $weight;
+}
+
