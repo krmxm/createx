@@ -1,0 +1,19 @@
+.hero {
+    padding: 220px 0 353px 0;
+    background-image: url(../../assets/bg/bg-hero-homepage.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: $color-gray;
+    &__content {
+        max-width: 590px;
+    }
+    &__btns {
+        .btn {
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+
+    }
+}
