@@ -1,0 +1,15 @@
+.video-block {
+    &__play {
+        @include flex-all-center;
+
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: $color-primary;
+        svg {
+            width: 26px;
+            height: 26px;
+            z-index: 10;
+        }
+    }
+}

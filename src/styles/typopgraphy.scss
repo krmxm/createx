@@ -9,6 +9,7 @@ h6 {
     margin: 0;
 }
 
+//title
 .main-title {
     margin-bottom: 25px;
     font-size: 72px;
@@ -26,6 +27,19 @@ h6 {
     }
 }
 
+.title {
+    margin-bottom: 25px;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: $color-ebony-clay-gray;
+    &_center {
+        text-align: center;
+    }
+}
+
+// descr
 .main-descr {
     font-size: 20px;
     font-weight: 400;
@@ -36,5 +50,16 @@ h6 {
     &_home {
         color: $color-light;
         margin-bottom: 60px;
+    }
+}
+
+.descr {
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    &_center {
+        text-align: center;
     }
 }
