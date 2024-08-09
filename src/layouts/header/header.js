@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import Nav from '../../components/nav/nav';
 
-import logo from '../../assets/logo/logo.svg';
+import logo from '../../assets/img/logo/logo.svg';
 
 import './header.scss';
 
