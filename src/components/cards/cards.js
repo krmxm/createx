@@ -3,9 +3,9 @@ import { Component } from 'react';
 import './cards.scss';
 
 const Cards = ({ cards }) => {
-    const creatCard = ({ title, descr, iconSrc }) => {
+    const createCard = ({ title, descr, iconSrc }, index) => {
         return (
-            <li className='card__item'>
+            <li key={index} className='card__item'>
                 <img src={iconSrc} alt="icon" className='card__icon' />
                 <h3 className="card__title">{title}</h3>
                 <p className="card__descr">{descr}</p>
@@ -15,7 +15,7 @@ const Cards = ({ cards }) => {
 
     return (
         <ul className='card__list grid'>
-            {cards.map(card => creatCard(card))}
+            {cards.map((card, index) => createCard(card, index))}
         </ul>
     )
 }

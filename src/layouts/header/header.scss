@@ -15,7 +15,7 @@
 .header-contacts {
     @include flex-v-center;
     &__link {
-        @include flex-colomn-start;
+        @include flex-column-start;
 
         &:not(:last-child) {
             margin-right: 36px;

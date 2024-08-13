@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Forms from '../../components/forms/forms';
 
 import Cards from '../../components/cards/cards';
 import quality from '../../assets/img/icons/quality.svg';
@@ -40,6 +41,14 @@ class Mission extends Component {
                         ]} />
 
                     </ul>
+                    <form action="#">
+                        <h2 className="title-form">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h2>
+                        <Forms
+                            isEmail={true}
+                            isPhone = {true}
+                            isMessage={true}
+                        />
+                    </form>
                 </div>
 
             </div>
