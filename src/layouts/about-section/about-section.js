@@ -12,7 +12,7 @@ class AboutSection extends Component {
     render() {
         return (
             <section className="about-section section-offset">
-                <div className="contaiter">
+                <div className="container">
                     <h2 className="title title_center">We are Createx Construction Bureau </h2>
                     <p className="descr descr_center">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the best construction company in&nbsp;the USA.</p>
                     <VideoBlock />

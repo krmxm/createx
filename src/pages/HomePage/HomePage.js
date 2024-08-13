@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Header from '../../layouts/header/header';
 import Hero from '../../layouts/hero/hero';
 import AboutSection from '../../layouts/about-section/about-section';
+import Mission from '../../layouts/mission/mission';
 
 import './HomePage.scss';
 
@@ -20,6 +21,7 @@ class HomePage extends Component {
                 <Header headerClassMod={headerClassMod} />
                 <Hero />
                 <AboutSection />
+                <Mission />
             </>
         )
     }
