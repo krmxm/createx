@@ -10,12 +10,30 @@
     text-transform: uppercase;
     color: $color-light;
     border-radius: 4px;
-    &_stroke {
+    &_size {
+            &-regular {
+                padding: 0px 29px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 44px;
+                letter-spacing: 0.5px;
+            }
+            &-small {
+                padding: 7px 12px;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 36px;
+                letter-spacing: 0.5px;
+            }
+            
+        }
+    &_theme {
         &-light {
-            border-color: $color-light;
+                border-color: $color-light;
+            }
+        &-primary {
+            background-color: $color-primary;
         }
     }
-    &_fill {
-        background-color: $color-primary;
-    }
+    
 }

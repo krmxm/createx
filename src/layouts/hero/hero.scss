@@ -8,6 +8,13 @@
     &__content {
         max-width: 590px;
     }
+    &__descr {
+        text-align: left;
+        &_home {
+            color: $color-light;
+            margin-bottom: 60px;
+        }
+    }
     &__btns {
         .btn {
             &:not(:last-child) {

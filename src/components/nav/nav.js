@@ -12,11 +12,11 @@ class Nav extends Component {
         return (
             <nav className='nav'>
                 <ul className={`nav__list ${className}`}>
-                    <li className='nav__item'><a href="#" className='nav__link'>About Us</a></li>
-                    <li className='nav__item'><a href="#" className='nav__link'>Services</a></li>
-                    <li className='nav__item'><a href="#" className='nav__link'>Work</a></li>
-                    <li className='nav__item'><a href="#" className='nav__link'>News</a></li>
-                    <li className='nav__item'><a href="#" className='nav__link'>Contacts</a></li>
+                    <li className='nav__item'><a href="#" className='nav__link base base_bold'>About Us</a></li>
+                    <li className='nav__item'><a href="#" className='nav__link base base_bold'>Services</a></li>
+                    <li className='nav__item'><a href="#" className='nav__link base base_bold'>Work</a></li>
+                    <li className='nav__item'><a href="#" className='nav__link base base_bold'>News</a></li>
+                    <li className='nav__item'><a href="#" className='nav__link base base_bold'>Contacts</a></li>
                 </ul>
             </nav>
         )

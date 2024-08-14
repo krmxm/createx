@@ -4,6 +4,7 @@ import Header from '../../layouts/header/header';
 import Hero from '../../layouts/hero/hero';
 import AboutSection from '../../layouts/about-section/about-section';
 import Mission from '../../layouts/mission/mission';
+import ServicesSection from '../../layouts/services-section/services-section';
 
 import './HomePage.scss';
 
@@ -22,6 +23,7 @@ class HomePage extends Component {
                 <Hero />
                 <AboutSection />
                 <Mission />
+                <ServicesSection />
             </>
         )
     }

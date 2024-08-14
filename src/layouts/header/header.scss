@@ -27,18 +27,6 @@
     background-position: left center;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-    &__caption {
-        font-size: 14px;
-        font-weight: 700;
-        color: $color-gray;
-        line-height: 150%;
-    }
-    &__value {
-        font-size: 18px;
-        font-weight: 400;
-        color: $color-ebony-clay-gray;
-        line-height: 150%;
-    }
     &_call {
         background-image: url(../../assets/img/icons/iPhone.svg);
     }
