@@ -40,3 +40,9 @@
     align-items: flex-start;
     flex-direction: column;
 }
+
+@mixin flex-column-center {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: center;
+}

@@ -1,4 +1,9 @@
 import { Component } from 'react';
+import { ReactComponent as Services1 } from '../../assets/img/sprite/services-1.svg';
+import { ReactComponent as Services2 } from '../../assets/img/sprite/services-2.svg';
+import { ReactComponent as Services3 } from '../../assets/img/sprite/services-3.svg';
+import { ReactComponent as Services4 } from '../../assets/img/sprite/services-4.svg';
+
 
 import './services-section.scss';
 
@@ -7,12 +12,23 @@ class ServicesSection extends Component {
         super(props);
     }
 
+
     render() {
         return (
             <section className="services-section section-offset">
                 <div className="container">
                     <h2 className="title title_regular title_regular-center">Our services</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
+                    <ul className="services-list">
+                        <li className="services-list__item">
+                            <a href="#">
+                                <div className="services-item">
+                                    <Services1 />
+                                    <h3 className="lead lead_bold">Construction</h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         )
