@@ -21,10 +21,34 @@ class ServicesSection extends Component {
                     <p className="large large_regular large_center large_section-descr-mb">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
                     <ul className="services-list">
                         <li className="services-list__item">
-                            <a href="#">
-                                <div className="services-item">
-                                    <Services1 />
-                                    <h3 className="lead lead_bold">Construction</h3>
+                            <a href="#" className="services-item services-item_construction">
+                                <div className="services-item__content">
+                                    <Services1 className="services-item__icon" />
+                                    <h3 className="services-item__title lead lead_bold">Construction</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li className="services-list__item">
+                            <a href="#" className="services-item services-item">
+                                <div className="services-item__content">
+                                    <Services2 className="services-item__icon" />
+                                    <h3 className="services-item__title lead lead_bold">Project Development</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li className="services-list__item">
+                            <a href="#" className="services-item services-item">
+                                <div className="services-item__content">
+                                    <Services3 className="services-item__icon" />
+                                    <h3 className="services-item__title lead lead_bold">Interior Design</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li className="services-list__item">
+                            <a href="#" className="services-item services-item">
+                                <div className="services-item__content">
+                                    <Services4 className="services-item__icon" />
+                                    <h3 className="services-item__title lead lead_bold">Repairs</h3>
                                 </div>
                             </a>
                         </li>

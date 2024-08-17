@@ -10,23 +10,89 @@
 .services-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    &__item {
-        box-sizing: border-box;
-        border: 1px solid rgb(229, 232, 237);
-        border-radius: 4px;
-        box-shadow: 
-            0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
-        background: $color-light;
-    }
+    gap: 30px;
 }
 
 .services-item {
-    @include flex-column-center;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgb(229, 232, 237);
+    border-radius: 4px;
+    box-shadow:
+        0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+    background: $color-light;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        border-radius: inherit;
+        background-color: $color-ebony-clay-gray;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        border-radius: inherit;
+        background-color: rgba(#1e212c, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__content {
+        @include flex-column-center;
+
+        position: relative;
+        padding: 87px 10px;
+        z-index: 10;
+    }
     
     &__icon {
+        margin-bottom: 24px;
         width: 52px;
         height: 52px;
+        fill: $color-primary;
         object-fit: cover;
+        transition: fill 0.3s ease-in-out;
+    }
+
+    &__title {
+        transition: color 0.3s ease-in-out;
+    }
+
+    &_construction {
+        &::before {
+            background-image: url(../../assets/img/services-1.jpeg);
+        }
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+        &::after {
+            opacity: 1;
+        }
+        .services-item__icon {
+            fill: $color-light
+        }
+        .services-item__title {
+            color: $color-light;
+        }
     }
 }
