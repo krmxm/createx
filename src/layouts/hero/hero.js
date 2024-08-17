@@ -17,8 +17,8 @@ class Hero extends Component {
                             Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
                         </p>
                         <div className="hero__btns">
-                            <button className='btn-reset btn btn_theme-light'>Learn more about us</button>
-                            <button className='btn-reset btn btn_theme-primary'>Submit Request</button>
+                            <button className='btn-reset btn btn_size-large btn_theme-light'>Learn more about us</button>
+                            <button className='btn-reset btn btn_size-large btn_theme-primary'>Submit Request</button>
                         </div>
                     </div>
                 </div>

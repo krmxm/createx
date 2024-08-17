@@ -1,10 +1,13 @@
 .services-section {
-    padding: 212px 80px;
+    padding: 212px 0 85px 0;
     background-image: url(../../assets/img/bg/bg-services.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     // background-color: $bg-color;
+    &__list {
+        margin-bottom: 80px;
+    }
 }
 
 .services-list {

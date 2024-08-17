@@ -2,22 +2,10 @@
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
-    padding: 15px 35px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 21px;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: $color-light;
     border-radius: 4px;
     &_size {
-            &-regular {
-                padding: 0px 29px;
-                font-size: 14px;
-                font-weight: 700;
-                line-height: 44px;
-                letter-spacing: 0.5px;
-            }
             &-small {
                 padding: 7px 12px;
                 font-size: 12px;
@@ -25,7 +13,20 @@
                 line-height: 36px;
                 letter-spacing: 0.5px;
             }
-            
+            &-regular {
+                padding: 0px 29px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 44px;
+                letter-spacing: 0.5px;
+            }
+            &-large {
+                padding: 15px 35px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 21px;
+                letter-spacing: 0.5px;
+            }
         }
     &_theme {
         &-light {

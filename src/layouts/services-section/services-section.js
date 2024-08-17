@@ -3,7 +3,7 @@ import { ReactComponent as Services1 } from '../../assets/img/sprite/services-1.
 import { ReactComponent as Services2 } from '../../assets/img/sprite/services-2.svg';
 import { ReactComponent as Services3 } from '../../assets/img/sprite/services-3.svg';
 import { ReactComponent as Services4 } from '../../assets/img/sprite/services-4.svg';
-
+import LearnMore from '../../components/learn-more/learn-more';
 
 import './services-section.scss';
 
@@ -15,11 +15,11 @@ class ServicesSection extends Component {
 
     render() {
         return (
-            <section className="services-section section-offset">
+            <section className="offset-section services-section section-offset">
                 <div className="container">
                     <h2 className="title title_regular title_regular-center">Our services</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
-                    <ul className="services-list">
+                    <ul className="services-list services-section__list">
                         <li className="services-list__item">
                             <a href="#" className="services-item services-item_construction">
                                 <div className="services-item__content">
@@ -53,6 +53,7 @@ class ServicesSection extends Component {
                             </a>
                         </li>
                     </ul>
+                    <LearnMore classLearnMore='services-section__learn' />
                 </div>
             </section>
         )
