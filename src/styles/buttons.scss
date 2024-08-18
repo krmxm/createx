@@ -30,10 +30,14 @@
         }
     &_theme {
         &-light {
-                border-color: $color-light;
+            border-color: $color-light;
             }
         &-primary {
             background-color: $color-primary;
+        }
+        &-outline {
+            color: $color-primary;
+            border-color: $color-primary
         }
     }
     

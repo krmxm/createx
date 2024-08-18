@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import SliderMini from '../../components/slider/slider';
+
 
 import './portfolio-section.scss'
 
@@ -8,11 +10,17 @@ class PortfolioSection extends Component {
     }
 
     render() {
+        const slideData = [
+            { id: 1, picture: require('../../assets/img/portfolio-1.jpeg'), title: 'Red Finger Building', descr: 'Business Centers' },
+            { id: 1, picture: require('../../assets/img/portfolio-2.jpeg'), title: 'Cubes Building', descr: 'Business Centers' },
+            { id: 1, picture: require('../../assets/img/portfolio-3.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' },
+            { id: 1, picture: require('../../assets/img/portfolio-1.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' },
+            { id: 1, picture: require('../../assets/img/portfolio-2.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' }
+        ];
         return (
-            <div className="portfolio-section">
+            <div className="section-offset portfolio-section">
                 <div className="container">
-                    <h2 className="title title_regular portfolio-section__title">Browse our selected projects 
-                    and learn more about our work</h2>
+                    <SliderMini slides={slideData} />
                 </div>
             </div>
         )

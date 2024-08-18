@@ -1,6 +1,41 @@
 .portfolio-section {
+    padding-bottom: 100px;
+    &__top {
+        @include flex-all-sb;
+
+        align-items: flex-end;
+        margin-bottom: 48px;
+    }
     &__title {
         margin: 0;
         max-width: 710px;
+        padding-bottom: 20px;
+    }
+    &__slider-nav {
+        @include flex-h-center;
+        transform: translateX(14px);
+    }
+    &__btn {
+        @include flex-all-center;
+
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        color: $color-gray;
+        transition: background-color 0.3s ease-in-out;
+        svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            color: inherit;
+            fill: currentColor;
+            transition: color 0.3s ease-in-out;
+            object-fit: cover;
+        }
+        
+        &:hover {
+            color: $color-light;
+            background-color: $color-primary;
+        }
     }
 }

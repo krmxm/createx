@@ -1,0 +1,76 @@
+.slider {
+    width: 100%;
+    &__top {
+            @include flex-all-sb;
+    
+            align-items: flex-end;
+            margin-bottom: 48px;
+        }
+    
+    &__title {
+        margin: 0;
+        max-width: 710px;
+        padding-bottom: 8px;
+    }
+
+    &__wrapper {
+        width: inherit;
+        overflow: hidden;
+    }
+    &__inner {
+        display: flex;
+        // transition-property: transform;
+        // width: calc((390px + 30px));
+        transition: transform 0.5s ease-in-out;
+    }
+    &__item {
+        @include flex-column-center;
+        
+        overflow: hidden;
+            border-radius: 4px;
+            box-shadow:
+                0 80px 80px -20px rgba(154, 156, 165, 0.08),
+                    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+            background: var(--color-light);
+    }
+    &__img {
+        width: 100%;
+        height: 345px;
+        border-radius: 4px;
+    }
+    &__content {
+        @include flex-column-center;
+    }
+}
+
+.slider-nav {
+    @include flex-h-center;
+    transform: translateX(14px);
+
+    &__btn {
+        @include flex-all-center;
+
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        color: $color-gray;
+        transition: background-color 0.3s ease-in-out;
+
+        svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            color: inherit;
+            fill: currentColor;
+            transition: color 0.3s ease-in-out;
+            object-fit: cover;
+        }
+
+        &:hover {
+            color: $color-light;
+            background-color: $color-primary;
+        }
+    }
+}
