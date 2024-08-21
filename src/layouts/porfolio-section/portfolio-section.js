@@ -14,10 +14,10 @@ class PortfolioSection extends Component {
     render() {
         const slideData = [
             { id: 1, picture: require('../../assets/img/portfolio-1.jpeg'), title: 'Red Finger Building', descr: 'Business Centers' },
-            { id: 1, picture: require('../../assets/img/portfolio-2.jpeg'), title: 'Cubes Building', descr: 'Business Centers' },
-            { id: 1, picture: require('../../assets/img/portfolio-3.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' },
-            { id: 1, picture: require('../../assets/img/portfolio-1.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' },
-            { id: 1, picture: require('../../assets/img/portfolio-2.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' }
+            { id: 2, picture: require('../../assets/img/portfolio-2.jpeg'), title: 'Cubes Building', descr: 'Business Centers' },
+            { id: 3, picture: require('../../assets/img/portfolio-3.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' },
+            { id: 4, picture: require('../../assets/img/portfolio-1.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' },
+            { id: 5, picture: require('../../assets/img/portfolio-2.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls' }
         ];
         return (
             <div className="section-offset portfolio-section">
