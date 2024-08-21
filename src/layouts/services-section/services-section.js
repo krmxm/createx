@@ -53,7 +53,7 @@ class ServicesSection extends Component {
                             </a>
                         </li>
                     </ul>
-                    <LearnMore classLearnMore='services-section__learn' />
+                    <LearnMore title='Learn more about our services' textBtn='View services' classLearnMore='services-section__learn' />
                 </div>
             </section>
         )

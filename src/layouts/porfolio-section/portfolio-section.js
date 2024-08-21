@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import SliderMini from '../../components/slider/slider';
+import LearnMore from '../../components/learn-more/learn-more';
+
 
 
 import './portfolio-section.scss'
@@ -21,6 +23,7 @@ class PortfolioSection extends Component {
             <div className="section-offset portfolio-section">
                 <div className="container">
                     <SliderMini slides={slideData} />
+                    <LearnMore title='Explore all our works' textBtn='View portfolio' classLearnMore='portfolio-section__learn' />
                 </div>
             </div>
         )

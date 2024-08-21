@@ -14,7 +14,9 @@
     }
 
     &__wrapper {
-        width: inherit;
+        padding: 100px;
+        margin: -100px;
+        width: calc(100% + 200px);
         overflow: hidden;
     }
     &__inner {
@@ -26,6 +28,7 @@
     &__item {
         @include flex-column-center;
         
+
         overflow: hidden;
             border-radius: 4px;
             box-shadow:
@@ -42,7 +45,18 @@
     }
     &__content {
         @include flex-column-center;
+        padding: 16px 10px 23px;
     }
+    &__btn-slide {
+        display: none;
+        // margin-bottom: -69px;
+        margin-top: 24px;
+    }
+    // &:hover {
+    //     .slider__btn-slide {
+    //         margin-bottom: 0;
+    //     }
+    // }
 }
 
 .slider-nav {
@@ -57,6 +71,12 @@
         border-radius: 100%;
         color: $color-gray;
         transition: background-color 0.3s ease-in-out;
+        z-index: 15;
+        &_disabled {
+                opacity: 0.4;
+                pointer-events: none;
+                cursor: default;
+            }
 
         svg {
             display: block;
@@ -66,6 +86,10 @@
             fill: currentColor;
             transition: color 0.3s ease-in-out;
             object-fit: cover;
+        }
+        &_disbled {
+            opacity: 0.4;
+            pointer-events: none;
         }
 
         &:hover {

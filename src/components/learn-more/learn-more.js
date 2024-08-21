@@ -7,13 +7,15 @@ class LearnMore extends Component {
         super(props);
     }
 
-    render () {
+    render() {
         const clazz = `learn-more ${this.props.classLearnMore || ''}`;
-        return(
+        const title = this.props.title;
+        const textBtn = this.props.textBtn;
+        return (
             <div className={clazz}>
-                        <h3 className="title title_small title_small-center learn-more__subtitle">Learn more about our services</h3>
-                        <a href="#" className="learn-more__btn btn-reset btn btn_size-large btn_theme-primary">View services</a>
-                    </div>
+                <h3 className="title title_small title_small-center learn-more__subtitle">{title}</h3>
+                <a href="#" className="learn-more__btn btn-reset btn btn_size-large btn_theme-primary">{textBtn}</a>
+            </div>
         )
     }
 }
