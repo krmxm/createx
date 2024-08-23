@@ -15,6 +15,12 @@ import './HomePage.scss';
 class HomePage extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            testimonialsSlides: [
+                { id: 1, authorImg: require('../../assets/img/testmonials-author.png'), descr: 'Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim  laboris cillum laboris voluptate minim proident exercitation ullamco.', authorName: 'Shawn Edwards', authorPosition: 'Position, Company name' },
+                { id: 2, authorImg: require('../../assets/img/testmonials-author.png'), descr: 'Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim  laboris cillum laboris voluptate minim proident exercitation ullamco.', authorName: 'John Smite', authorPosition: 'Position, Company name' }
+            ]
+        }
 
     }
 
@@ -29,7 +35,7 @@ class HomePage extends Component {
                 <ServicesSection />
                 <PortfolioSection />
                 <PartnersSection />
-                <Testimonials />
+                <Testimonials testimonialsSlides={this.state.testimonialsSlides} />
             </>
         )
     }

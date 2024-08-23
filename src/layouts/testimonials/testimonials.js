@@ -25,11 +25,30 @@ class Testimonials extends Component {
         }
     }
 
+    onRenderSlides = (slides) => {
+        return slides.map(({ authorImg, descr, authorName, authorPosition }) => {
+            return (
+                <SwiperSlide>
+                    <div className="testimonials-item">
+                        <img src={authorImg} alt="Human 1" className="testimonials-item__img" />
+                        <p className='base base_regular testimonials-item__descr'>
+                            {descr}
+                        </p>
+                        <span className="base base_bold testimonials-item__author">{authorName}</span>
+                        <span className="small small_regular testimonials-item__author-position">{authorPosition}</span>
+                    </div>
+                </SwiperSlide>
+            )
+        })
+    }
+
 
 
     render() {
         const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav__btn slider-nav__prev' : 'btn-reset slider-nav__btn slider-nav__prev slider-nav__btn_disabled';
         const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav__btn slider-nav__next' : 'btn-reset slider-nav__btn slider-nav__next slider-nav__btn_disabled';
+
+        const slides = this.props.testimonialsSlides;
         return (
             <div className="testimonials">
                 <div className="container testimonials__container">
@@ -55,24 +74,8 @@ class Testimonials extends Component {
                                 swiper.wrapperEl.classList.add('my-custom-wrapper-class');
                             }}
                         >
-                            <SwiperSlide>
-                                <div className="testimonials-item">
-                                    <img src={Humen1} alt="Human 1" className="testimonials-item__img" />
-                                    <p className='base base_regular testimonials-item__descr'>
-                                        Ipsum aute sunt aliquip aute et{' '}
-                                        occaecat. Anim minim do{' '}
-                                        cillum eiusmod enim. Consectetur magna
-                                        cillum consequat minim laboris cillum
-                                        laboris voluptate minim proident exercitation
-                                        ullamco.
-                                    </p>
-                                    <span className="base base_bold testimonials-item__author">Shawn Edwards</span>
-                                    <span className="small small_regular testimonials-item__author-position">Position, Company name</span>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>Slide 2</SwiperSlide>
-                            <SwiperSlide>Slide 3</SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
+                            {this.onRenderSlides(slides)}
+
                             <div className="slider-nav testimonials__buttons">
                                 <button ref={this.prevRef} className={prevBtnClass}>
                                     <ArrowLeft />
