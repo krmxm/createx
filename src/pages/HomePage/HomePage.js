@@ -8,6 +8,7 @@ import ServicesSection from '../../layouts/services-section/services-section';
 import PortfolioSection from '../../layouts/porfolio-section/portfolio-section';
 import PartnersSection from '../../layouts/partners-section/partners-section';
 import Testimonials from '../../layouts/testimonials/testimonials';
+import Facts from '../../layouts/facts/facts';
 
 import './HomePage.scss';
 
@@ -36,6 +37,7 @@ class HomePage extends Component {
                 <PortfolioSection />
                 <PartnersSection />
                 <Testimonials testimonialsSlides={this.state.testimonialsSlides} />
+                <Facts />
             </>
         )
     }

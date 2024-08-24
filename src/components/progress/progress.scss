@@ -1,0 +1,51 @@
+.progress-element {
+    &__circly {
+        position: relative;
+        width: 148px;
+        height: 148px;
+        margin-bottom: 20px;
+        $progress-stroke: #0000;
+        $progress-bg-opacity: 0.3;
+
+        svg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .progress {
+            stroke: $progress-stroke;
+            transform: rotate(-90deg) translateX(24px);
+            transform-origin: center;
+        }
+        
+        .progress-bg {
+            stroke: $progress-stroke;
+            opacity: $progress-bg-opacity;
+        }
+    
+        &_one-color {
+            $progress-stroke: #f89828;
+        }
+        &_two-color {
+            $progress-stroke: #f52f6e;
+        }
+      
+        &_three-color {
+            $progress-stroke: #5a87fc;
+        }
+    
+        &_four-color {
+            $progress-stroke: #03cea4;
+        }
+
+    }
+    &__value {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
