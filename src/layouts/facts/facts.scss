@@ -1,5 +1,7 @@
 .facts {
+    position: relative;
     padding-top: 180px;
+    // overflow: hidden;
     &__title {
         margin-bottom: 61px;
     }
@@ -9,6 +11,20 @@
         max-width: 736px;
         margin: 0 auto;
         gap: 48px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 570px;
+        height: 1065px;
+        left: -9px;
+        top: -195px;
+        background-image: url('../../assets/img/bg/facts-bg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        // transform: rotate(126.97deg);
     }
 }
 

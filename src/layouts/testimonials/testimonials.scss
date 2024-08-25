@@ -1,6 +1,8 @@
 .testimonials {
+    position: relative;
     padding-top: 79px;
     background-color: $bg-color;
+    z-index: 15;
     &__container {
         display: flex;
         justify-content: space-between;

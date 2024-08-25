@@ -1,12 +1,24 @@
 .form {
     &__content {
-        @include flex-v-end;
-        label {
-        margin-right: 24px;
+        &_horizontal {
+            @include flex-v-end;
+            label {
+                margin-right: 24px;
+                }
+        }
+        &_vertical {
+            @include flex-column-center;
+            label {
+                margin-bottom: 20px;
+            }
         }
     }
     &__field {
         @include flex-column-start;
+        width: 100%;
+        input {
+            width: 100%;
+        }
         &_big {
             flex-grow: 1;
             input {
@@ -31,6 +43,30 @@
             line-height: 150%;
             font-weight: 400;
             color: $color-gray;
+        }
+    }
+}
+
+.custom-checkbox {
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+    &__text {
+        position: relative;
+        display: inline-block;
+        padding-left: 27px;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: 1px;
+            display: inline-block;
+            border: 1px solid $color-primary;
+            border-radius: 3px;
+            width: 16px;
+            height: 16px;
+            transition: background-color .3s ease-in-out;
         }
     }
 }

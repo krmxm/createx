@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LearnMore from '../../components/learn-more/learn-more';
+
 
 
 import './recent-news.scss';
@@ -13,6 +15,14 @@ class RecentNews extends Component {
 
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return data.toLocaleDateString('en-US', options);
+    }
+
+    compressLongString = (string) => {
+        if(string.length > 168) {
+            return `${string.slice(0, 168)}...`;
+        }
+
+        return string;
     }
 
     onRenderArticle = (news) => {
@@ -31,7 +41,7 @@ class RecentNews extends Component {
                                     <time className='article-meta__item' >{this.formatData(recentArticleMetaTime)}</time>
                                     <span className='article-meta__item article-meta__item_comments'>{recentArticleMetaComments} comments</span>
                                 </div>
-                                <p className="recent-article__descr base base_regular">{recentArticleDescr}</p>
+                                <p className="recent-article__descr base base_regular">{this.compressLongString(recentArticleDescr)}</p>
                             </div>
                         </article>
 
@@ -47,7 +57,7 @@ class RecentNews extends Component {
                                     <a href="#">{recentArticleLinkText}</a>
                                 </h3>
                                 <div className="recent-article__meta article-meta small small_regular">
-                                    <a className='articlesmalla__item' href="#">{recentArticleMetaLinkText}</a>
+                                    <a className='article-meta__item' href="#">{recentArticleMetaLinkText}</a>
                                     <time className='article-meta__item' >{this.formatData(recentArticleMetaTime)}</time>
                                     <span className='article-meta__item article-meta__item_comments'>{recentArticleMetaComments} comments</span>
                                 </div>
@@ -72,6 +82,7 @@ class RecentNews extends Component {
                     <ul className="recent-news__list">
                         {this.onRenderArticle(recentNews)}
                     </ul>
+                    <LearnMore title='Explore all our news posts' textBtn='View all news' classLearnMore='recent-news__learn'/>
                 </div>
             </div>
         )

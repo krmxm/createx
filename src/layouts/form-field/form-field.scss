@@ -1,0 +1,21 @@
+.contacts-section {
+    padding: 80px;
+    display: flex;
+    justify-content: end;
+    background-image: url(../../assets/img/bg/bg-contacts.jpeg);
+    background-color: $bg-color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__form {
+        padding: 48px 40px;
+        max-width: 495px;
+        background-color: $color-light;
+        box-shadow: $shadow-large;
+        border-radius: 4px;
+    }
+}
