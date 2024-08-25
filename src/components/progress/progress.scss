@@ -1,47 +1,52 @@
 .progress-element {
     &__circly {
-        position: relative;
-        width: 148px;
-        height: 148px;
-        margin-bottom: 20px;
-        $progress-stroke: #0000;
-        $progress-bg-opacity: 0.3;
-
-        svg {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
-
-        .progress {
-            stroke: $progress-stroke;
-            transform: rotate(-90deg) translateX(24px);
-            transform-origin: center;
-        }
+            --progress-stroke: #000;
+            --progress-bg-opacity: 0.3;
         
-        .progress-bg {
-            stroke: $progress-stroke;
-            opacity: $progress-bg-opacity;
-        }
-    
-        &_one-color {
-            $progress-stroke: #f89828;
-        }
-        &_two-color {
-            $progress-stroke: #f52f6e;
-        }
-      
-        &_three-color {
-            $progress-stroke: #5a87fc;
-        }
-    
-        &_four-color {
-            $progress-stroke: #03cea4;
-        }
+            position: relative;
+            margin-bottom: 20px;
+            width: 148px;
+            height: 148px;
+        
+            svg {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+        
+            
+        
+            &_one-color {
+                --progress-stroke: #f89828;
+            }
+        
+            &_two-color {
+                --progress-stroke: #f52f6e;
+            }
+        
+            &_three-color {
+                --progress-stroke: #5a87fc;
+            }
+        
+            &_four-color {
+                --progress-stroke: #03cea4;
+            }
 
+            .progress {
+                stroke: var(--progress-stroke);
+                transform: rotate(-90deg) translateX(20px);
+                transform-origin: center;
+                transition: stroke-dashoffset 4s ease, stroke 0.5s ease;
+            }
+
+            .progress-bg {
+                stroke: var(--progress-stroke);
+                opacity: var(--progress-bg-opacity);
+            }
     }
+
     &__value {
         position: absolute;
         left: 50%;

@@ -5,26 +5,26 @@ import './facts.scss';
 
 class Facts extends Component {
     constructor(props) {
-        super (props);
+        super(props);
     }
 
     render() {
-        return(
+        return (
             <div className="facts">
                 <div className="container">
                     <h2 className='title title_regular title_regular-center facts__title'>Some facts and figures</h2>
                     <ul className="facts__list">
                         <li className="facts__item">
-                            <Progress percentage='98'/>
+                            <Progress descr="Totally satisfied clients" percentage value="98" color="one-color" />
                         </li>
                         <li className="facts__item">
-                            <Progress percentage='98'/>
+                            <Progress descr="Years of experience" full='50' value='35' color="two-color" />
                         </li>
                         <li className="facts__item">
-                            <Progress percentage='98'/>
+                            <Progress descr="Working hours spent" full="10000" value="9452" color="three-color" />
                         </li>
                         <li className="facts__item">
-                            <Progress percentage='98'/>
+                            <Progress descr="Succeeded projects" percentage value="100" color="four-color" />
                         </li>
                     </ul>
                 </div>
