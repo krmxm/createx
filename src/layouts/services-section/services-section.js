@@ -17,7 +17,7 @@ class ServicesSection extends Component {
         return (
             <section className="services-section section-offset">
                 <div className="container">
-                    <h2 className="title title_regular title_regular-center">Our services</h2>
+                    <h2 className="title title_h2 title_h2-center">Our services</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
                     <ul className="services-list services-section__list">
                         <li className="services-list__item">

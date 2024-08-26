@@ -12,7 +12,7 @@ class Facts extends Component {
         return (
             <div className="facts">
                 <div className="container">
-                    <h2 className='title title_regular title_regular-center facts__title'>Some facts and figures</h2>
+                    <h2 className='title title_h2 title_h2-center facts__title'>Some facts and figures</h2>
                     <ul className="facts__list">
                         <li className="facts__item">
                             <Progress descr="Totally satisfied clients" percentage value="98" color="one-color" />

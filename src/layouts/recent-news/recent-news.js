@@ -78,7 +78,7 @@ class RecentNews extends Component {
         return (
             <div className="recent-news section-offset">
                 <div className="container">
-                    <h2 className='title title_regular title_regular-center recent-news__title'>Recent news</h2 >
+                    <h2 className='title title_h2 title_h2-center recent-news__title'>Recent news</h2 >
                     <ul className="recent-news__list">
                         {this.onRenderArticle(recentNews)}
                     </ul>

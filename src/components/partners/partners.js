@@ -21,13 +21,13 @@ class Partners extends Component {
         })
     }
 
-    render () {
-        const {title, subtitle, logos} = this.props;
-        
+    render() {
+        const { title, subtitle, logos } = this.props;
+
         return (
             <div className='container partner'>
-                <h2 className='title title_regular title_regular-center partners__title'>{title}</h2>
-                {subtitle ? {subtitle} : ''}
+                <h2 className='title title_h2 title_h2-center partners__title'>{title}</h2>
+                {subtitle ? { subtitle } : ''}
                 <ul className="partners__list">
                     {this.renderLogo(logos)}
                 </ul>

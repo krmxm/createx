@@ -12,11 +12,11 @@ class ContactsSection extends Component {
     render() {
         return (
             <div className="contacts-section">
-                <h2 className="title title_regular title_regular-center visually-hidden">Contacts</h2>
+                <h2 className="title title_h2 title_h2-center visually-hidden">Contacts</h2>
 
                 <div className="container contacts-section__container">
                     <form className='contacts-section__form' action="#">
-                        <h3 className="title title_small title_small-center title_small-form">A&nbsp;quick way to&nbsp;discuss details</h3>
+                        <h3 className="title title_h3 title_h3-center title_h3-form">A&nbsp;quick way to&nbsp;discuss details</h3>
                         <Forms
                             isVertical={true}
                             isPhone={true}

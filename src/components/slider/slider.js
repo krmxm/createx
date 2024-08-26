@@ -113,7 +113,7 @@ class SliderMini extends Component {
         return (
             <div className="slider">
                 <div className="slider__top">
-                    <h2 className="title title_regular slider__title">Browse our selected projects
+                    <h2 className="title title_h2 slider__title">Browse our selected projects
                         and learn more about our work</h2>
 
                     <div className="slider__nav slider-nav">

@@ -11,6 +11,7 @@ import Testimonials from '../../layouts/testimonials/testimonials';
 import Facts from '../../layouts/facts/facts';
 import RecentNews from '../../layouts/recent-news/recent-news';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
+import Footer from '../../layouts/footer/footer';
 
 import './HomePage.scss';
 
@@ -51,6 +52,7 @@ class HomePage extends Component {
                 <Facts />
                 <RecentNews recentNews={this.recentNews} />
                 <ContactsSection />
+                <Footer />
             </>
         )
     }

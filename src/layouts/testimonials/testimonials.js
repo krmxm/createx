@@ -53,7 +53,7 @@ class Testimonials extends Component {
             <div className="testimonials">
                 <div className="container testimonials__container">
                     <div className="testimonials__content">
-                        <h2 className="title title_regular testimonials__title">What our clients are saying</h2>
+                        <h2 className="title title_h2 testimonials__title">What our clients are saying</h2>
                         <Swiper
                             spaceBetween={50}
                             slidesPerView={1}

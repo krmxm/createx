@@ -13,7 +13,7 @@ class AboutSection extends Component {
         return (
             <section className="about-section section-offset">
                 <div className="container">
-                    <h2 className="title title_regular title_regular-center">We are Createx Construction Bureau </h2>
+                    <h2 className="title title_h2 title_h2-center">We are Createx Construction Bureau </h2>
                     <p className="large large_regular large_center large_section-descr-mb">We&nbsp;are rightfully considered to&nbsp;be&nbsp;the best construction company in&nbsp;the USA.</p>
                     <VideoBlock />
                 </div>
