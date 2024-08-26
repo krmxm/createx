@@ -2,26 +2,41 @@
     &__content {
         &_horizontal {
             @include flex-v-end;
-            label {
+            .form__field {
                 margin-right: 24px;
                 }
         }
         &_vertical {
             @include flex-column-center;
-            label {
+            .form__field {
                 margin-bottom: 20px;
+            }
+            .form__checkbox {
+                margin-bottom: 24px;
             }
         }
     }
     &__field {
         @include flex-column-start;
-        width: 100%;
-        input {
-            width: 100%;
+        // width: 100%;
+        
+        // input, textarea {
+        //     width: 100%;
+        // }
+        textarea {
+            // width: 100%;
+            resize: none;
+            padding-top: 10px;
         }
-        &_big {
+        &_horizontal-message {
             flex-grow: 1;
-            input {
+            input, textarea {
+                width: 100%;
+            }
+        }
+        &_vertical {
+            width: 100%;
+            input, textarea {
                 width: 100%;
             }
         }
@@ -32,41 +47,20 @@
     &__input {
         width: 260px;
         height: 44px;
-        padding: 11px 0 12px 16px;
+        padding-left: 16px;
         border: 1px;
         border-style: solid;
         border-radius: 4px;
         border-color: $iron;
         background-color: #F4F5F7;
+        &_vertical {
+            height: 66px;
+        }
         &::placeholder {
             font-size: 14px;
             line-height: 150%;
             font-weight: 400;
             color: $color-gray;
-        }
-    }
-}
-
-.custom-checkbox {
-    &__input {
-        position: absolute;
-        opacity: 0;
-    }
-    &__text {
-        position: relative;
-        display: inline-block;
-        padding-left: 27px;
-        &::before {
-            content: "";
-            position: absolute;
-            left: -1px;
-            top: 1px;
-            display: inline-block;
-            border: 1px solid $color-primary;
-            border-radius: 3px;
-            width: 16px;
-            height: 16px;
-            transition: background-color .3s ease-in-out;
         }
     }
 }

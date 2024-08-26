@@ -10,7 +10,7 @@ import PartnersSection from '../../layouts/partners-section/partners-section';
 import Testimonials from '../../layouts/testimonials/testimonials';
 import Facts from '../../layouts/facts/facts';
 import RecentNews from '../../layouts/recent-news/recent-news';
-import ContactsSection from '../../layouts/form-field/form-field';
+import ContactsSection from '../../layouts/contacts-section/contacts-section';
 
 import './HomePage.scss';
 

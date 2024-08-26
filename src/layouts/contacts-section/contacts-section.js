@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Forms from '../../components/forms/forms';
 
 
-import './form-field.scss';
+import './contacts-section.scss';
 
 class ContactsSection extends Component {
     constructor(props) {
@@ -12,10 +12,11 @@ class ContactsSection extends Component {
     render() {
         return (
             <div className="contacts-section">
-                <div className="container contacts-section__container">
                 <h2 className="title title_regular title_regular-center visually-hidden">Contacts</h2>
-                <form className='contacts-section__form' action="#">
-                        <h3 className="title title_small title_small-center">A&nbsp;quick way to&&nbsp;discuss details</h3>
+
+                <div className="container contacts-section__container">
+                    <form className='contacts-section__form' action="#">
+                        <h3 className="title title_small title_small-center title_small-form">A&nbsp;quick way to&nbsp;discuss details</h3>
                         <Forms
                             isVertical={true}
                             isPhone={true}

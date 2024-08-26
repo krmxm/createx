@@ -18,7 +18,7 @@ class RecentNews extends Component {
     }
 
     compressLongString = (string) => {
-        if(string.length > 168) {
+        if (string.length > 168) {
             return `${string.slice(0, 168)}...`;
         }
 
@@ -82,7 +82,7 @@ class RecentNews extends Component {
                     <ul className="recent-news__list">
                         {this.onRenderArticle(recentNews)}
                     </ul>
-                    <LearnMore title='Explore all our news posts' textBtn='View all news' classLearnMore='recent-news__learn'/>
+                    <LearnMore title='Explore all our news posts' textBtn='View all news' classLearnMore='recent-news__learn' />
                 </div>
             </div>
         )

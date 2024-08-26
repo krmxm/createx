@@ -1,3 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1260px;
+}
+
 .section-offset {
     padding-top: 120px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.custom-checkbox {
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__text {
+        position: relative;
+        display: inline-block;
+        padding-left: 27px;
+    }
+
+    &__text::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 1px;
+        display: inline-block;
+        border: 1px solid $color-primary;
+        border-radius: 3px;
+        width: 16px;
+        height: 16px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &__text::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        background-image: url('data: image/svg+xml, %3Csvg%20width%3D%2210.000000%22%20height%3D%228.000000%22%20viewBox%3D%220%200%2010%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdesc%3ECreated%20with%20Pixso.%3C%2Fdesc%3E%3Cdefs%2F%3E%3Cpath%20d%3D%22M9.82%200.19C10.05%200.45%2010.05%200.87%209.82%201.13L3.94%207.8C3.71%208.06%203.34%208.06%203.11%207.8L0.17%204.47C-0.06%204.21%20-0.06%203.78%200.17%203.52C0.4%203.26%200.77%203.26%201%203.52L3.52%206.39L8.99%200.19C9.22%20-0.07%209.59%20-0.07%209.82%200.19Z%22%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%221.000000%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
+        background-position: center;
+        background-size: 10px 8px;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__input:checked+&__text::before {
+        background-color: $color-primary;
+    }
+
+    &__input:checked+&__text::after {
+        opacity: 1;
+    }
+
+    &__input:focus+&__text {
+        outline: 1px solid $color-primary;
+        border-radius: 4px;
+    }
 }
