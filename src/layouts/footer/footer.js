@@ -70,24 +70,24 @@ class Footer extends Component {
                         </p>
                     </form>
                     <adsress className="footer-address footer__address">
-                        <h4 className="footer-address__title"></h4>
-                        <span className="base base_regular ooter-address__item">
+                        <h4 className="footer-address__title footer-title">HEAD OFFICE</h4>
+                        <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Address:
+                                Address: 
                             </span>
-                            8502 Preston Rd. Inglewood, New York
+                             8502 Preston Rd. Inglewood, New York
                         </span>
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Call:
+                                Call: 
                             </span>
-                            <a href="tel:4055550128" className='base base_regular'>(405) 555-0128</a>
+                            <a href="tel:4055550128" className='base base_regular'> (405) 555-0128</a>
                         </span>
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Email:
+                                Email: 
                             </span>
-                            <a href="mailto:hello@createx.com" className='base base_regular'>hello@createx.com</a>
+                            <a href="mailto:hello@createx.com" className='base base_regular'> hello@createx.com</a>
                         </span>
                     </adsress>
                     <nav className="footer-nav footer__nav" title="secondary navigation">
@@ -122,7 +122,7 @@ class Footer extends Component {
                             </ul>
                         </div>
                     </nav>
-                    <small className="footer__copyright">
+                    <small className="extrasmall extrasmall_regular footer__copyright">
                         &#169;&nbsp;All rights reserved. Made with <span>by Createx Studio</span>
                     </small>
                 </div>
