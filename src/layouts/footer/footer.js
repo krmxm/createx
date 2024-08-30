@@ -56,7 +56,7 @@ class Footer extends Component {
                         <p className="small small_regular footer__descr">Createx Construction Bureau has been successfbully operating in{'\u00A0'}the USA construction market since 2000. We{'\u00A0'}are proud to{'\u00A0'}offer you quality construction and exemplary service. Our mission is{'\u00A0'}to{'\u00A0'}set the highest standards for construction sphere.</p>
                     </div>
                     <form action="#" className="footer-form footer__form">
-                        <h4 className="title title_h4 footer-title">
+                        <h4 className="title title_h4 footer-form__title">
                             Let’s{'\u00A0'}stay in{'\u00A0'}touch
                         </h4>
                         <div className="footer-form__items">
@@ -73,19 +73,19 @@ class Footer extends Component {
                         <h4 className="footer-address__title footer-title">HEAD OFFICE</h4>
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Address: 
+                                Address:
                             </span>
-                             8502 Preston Rd. Inglewood, New York
+                            8502 Preston Rd. Inglewood, New York
                         </span>
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Call: 
+                                Call:
                             </span>
                             <a href="tel:4055550128" className='base base_regular'> (405) 555-0128</a>
                         </span>
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Email: 
+                                Email:
                             </span>
                             <a href="mailto:hello@createx.com" className='base base_regular'> hello@createx.com</a>
                         </span>

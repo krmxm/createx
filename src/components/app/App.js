@@ -1,6 +1,7 @@
 import { Component } from 'react';
 
 import HomePage from "../../pages/HomePage/HomePage";
+import ServicesPage from '../../pages/ServicesPage/ServicesPage';
 
 
 import './app.scss';
@@ -12,7 +13,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <HomePage />
+        {/* <HomePage /> */}
+        <ServicesPage />
       </>
     )
   }

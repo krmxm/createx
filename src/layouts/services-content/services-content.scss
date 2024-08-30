@@ -1,0 +1,22 @@
+.services {
+    padding-top: 120px;
+    padding-bottom: 180px;
+    &__list {
+        width: 100%;
+    }
+    &__item {
+        @include flex-v-center;
+        &_revers {
+            flex-direction: row-reverse;
+        }
+    }
+    &__imgs {
+        min-width: 575px;
+        height: 420px;
+        margin-right: 80px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

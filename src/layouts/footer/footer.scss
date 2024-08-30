@@ -1,21 +1,21 @@
 .footer {
-    padding: 80px 0 80px;
+    padding: 84px 0 80px;
     background-color: $color-ebony-clay-gray;
     &__container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         // grid-template-rows: repeat(3, 1fr);
-        gap: 50px;
+        gap: 30px;
     }
     &__left{
         grid-column: 7 span;
     }
     &__top {
         @include flex-v-center;
-        margin-bottom: 22px;
+        margin-bottom: 20px;
     }
     &__logo {
-        margin-right: 60px;
+        margin-right: 63px;
     }
     &__descr {
         width: 100%;
@@ -33,7 +33,7 @@
         grid-column: 8 span;
     }
     &__copyright {
-        padding-top: 30px;
+        padding-top: 22px;
         grid-column: 12 span;
         color: $color-light;
         opacity: 0.6;
@@ -53,6 +53,7 @@
     }
     &__items {
         @include flex-v-center;
+        margin-bottom: 16px;
     }
     &__descr {
         color: $color-light;
@@ -61,7 +62,8 @@
     &__btn {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        padding: 12px 19px;
+        padding: 12px 21px;
+        letter-spacing: 0.5px;
     }
     .form-field {
         margin: 0;
@@ -70,7 +72,7 @@
 
     .form-field__input {
         width: 100%;
-        margin-bottom: 16px;
+        
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
