@@ -19,7 +19,7 @@ class Footer extends Component {
     render() {
         return (
             <footer className='footer'>
-                <div className="container footer__container">
+                <div className="container footer__container grid">
                     <div className="footer__left">
                         <div className="footer__top">
                             <a href="#" className='logo footer__logo'>
@@ -56,7 +56,7 @@ class Footer extends Component {
                         <p className="small small_regular footer__descr">Createx Construction Bureau has been successfbully operating in{'\u00A0'}the USA construction market since 2000. We{'\u00A0'}are proud to{'\u00A0'}offer you quality construction and exemplary service. Our mission is{'\u00A0'}to{'\u00A0'}set the highest standards for construction sphere.</p>
                     </div>
                     <form action="#" className="footer-form footer__form">
-                        <h4 className="title title_h4 footer-form__title">
+                        <h4 className="title title_h5 footer-form__title">
                             Let’s{'\u00A0'}stay in{'\u00A0'}touch
                         </h4>
                         <div className="footer-form__items">

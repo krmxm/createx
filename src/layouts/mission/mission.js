@@ -39,7 +39,7 @@ class Mission extends Component {
                         }
                     ]} />
                     <form className='form mission__form' action="#">
-                        <h3 className="title title_h3 title_h3-center">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h3>
+                        <h3 className="title title_h5 title_h5-center">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h3>
                         <Forms
                             isHorizontal={true}
                             isPhone={true}

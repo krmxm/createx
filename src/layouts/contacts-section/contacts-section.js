@@ -16,7 +16,7 @@ class ContactsSection extends Component {
 
                 <div className="container contacts-section__container">
                     <form className='contacts-section__form' action="#">
-                        <h3 className="title title_h3 title_h3-center title_h3-form">A&nbsp;quick way to&nbsp;discuss details</h3>
+                        <h3 className="title title_h4 title_h4-center title_h4-form">A&nbsp;quick way to&nbsp;discuss details</h3>
                         <Forms
                             isVertical={true}
                             isPhone={true}

@@ -12,17 +12,19 @@ class ServicesContent extends Component {
     }
 
     renderLi = (liArr) => {
-        return liArr.map((li, index) => {
-            <div className={`services__item ${index % 2 === 0 ? '' : 'services__item_revers'}`}>
-                <div className="services__img">
-                    <img src="" alt="services picture" />
-                </div>
-                <div className="services__info">
-                    <div className="services__title"></div>
-                    <div className="services__descr"></div>
-                    <button></button>
-                </div>
-            </div>
+        return liArr.map(({ id, servicesImg, title, descr }, index) => {
+            return (
+                <li key={id} className={index % 2 === 0 ? 'services__item' : 'services__item services__item_revers'}>
+                    <div className={index % 2 === 0 ? 'services__img services__img_mr' : 'services__img services__img_ml'}>
+                        <img src={servicesImg} alt="services" />
+                    </div>
+                    <div className="services__info">
+                        <div className="title title_h3 services__title">{title}</div>
+                        <p className="base base_regular services__descr">{descr} </p>
+                        <button className='btn btn_size-regular btn_theme-outline'>Learn more</button>
+                    </div>
+                </li>
+            )
         })
     }
 
@@ -33,26 +35,7 @@ class ServicesContent extends Component {
                     <h2 className="visually-hidden">Services content</h2>
 
                     <ul className="services__list">
-                        <li className="services__item">
-                            <div className="services__imgs">
-                                <img src={ServicesImg} alt="services" />
-                            </div>
-                            <div className="services__info">
-                                <div className="title title_h2 services__title">Construction</div>
-                                <p className="base base_regular services__descr">Sapien, feugiat faucibus orci arcu, vulputate. Tristique varius consectetur vulputate arcu, scelerisque nisi, nibh. Enim semper id sodales ultricies sed ut ut augue. Mattis habitant venenatis, gravida posuere massa ac interdum. Eget aliquam dignissim ut vestibulum. </p>
-                                <button ></button>
-                            </div>
-                        </li>
-                        <li className="services__item services__item_revers">
-                            <div className="services__imgs">
-                                <img src={ServicesImg} alt="services" />
-                            </div>
-                            <div className="services__info">
-                                <div className="title title_h2 services__title">Construction</div>
-                                <p className="base base_regular services__descr">Sapien, feugiat faucibus orci arcu, vulputate. Tristique varius consectetur vulputate arcu, scelerisque nisi, nibh. Enim semper id sodales ultricies sed ut ut augue. Mattis habitant venenatis, gravida posuere massa ac interdum. Eget aliquam dignissim ut vestibulum. </p>
-                                <button ></button>
-                            </div>
-                        </li>
+                        {this.renderLi(this.props.servicesContent)}
                     </ul>
                 </div>
             </div>

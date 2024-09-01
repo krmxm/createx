@@ -6,17 +6,33 @@
     }
     &__item {
         @include flex-v-center;
+        margin-bottom: 120px;
         &_revers {
             flex-direction: row-reverse;
+            .services__img {
+                margin-left: margin-left80;
+            }
         }
     }
-    &__imgs {
+    &__img {
         min-width: 575px;
         height: 420px;
-        margin-right: 80px;
+        &_mr {
+            margin-right: 80px;
+        }
+        &_ml {
+            margin-left: 80px;
+        }
         img {
             width: 100%;
             height: 100%;
         }
+    }
+    &__title {
+        text-transform: none;
+        margin-bottom: 25px;
+    }
+    &__descr {
+        margin-bottom: 48px;
     }
 }

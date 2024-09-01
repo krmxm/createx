@@ -14,7 +14,7 @@
                 letter-spacing: 0.5px;
             }
             &-regular {
-                padding: 10px 29px;
+                padding: 11px 29px;
                 font-size: 14px;
                 font-weight: 700;
                 line-height: 19px;
@@ -37,7 +37,8 @@
         }
         &-outline {
             color: $color-primary;
-            border-color: $color-primary
+            border-color: $color-primary;
+            background-color: transparent;
         }
     }
     

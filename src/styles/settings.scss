@@ -16,6 +16,13 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1260px;
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $grid-gap;
 }
 
 .section-offset {

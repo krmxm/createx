@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import HomePage from "../../pages/HomePage/HomePage";
 import ServicesPage from '../../pages/ServicesPage/ServicesPage';
+import ServicesPageInner from '../../pages/ServicesPageInner/ServicesPageInner';
 
 
 import './app.scss';
@@ -14,7 +15,8 @@ class App extends Component {
     return (
       <>
         {/* <HomePage /> */}
-        <ServicesPage />
+        {/* <ServicesPage /> */}
+        <ServicesPageInner />
       </>
     )
   }

@@ -8,8 +8,9 @@ class HeroPage extends Component {
     }
 
     render() {
+        const { title, descr, inner } = this.props;
         return (
-            <div className="hero-page">
+            <section className={inner ? 'hero-page hero-page_inner' : 'hero-page'}>
                 <div className="container">
                     <ul className="breadcrumbs hero-page__breadcrumbs">
                         <li className="breadcrumbs__item">
@@ -19,12 +20,10 @@ class HeroPage extends Component {
                             <a className="small small_regular breadcrumbs__link">Services</a>
                         </li>
                     </ul>
-                    <h1 className="title hero-services__title">Services</h1>
-                    <p className="lead lead_regular hero-page__descr">
-                        If{'\u00A0'}you are looking for a{'\u00A0'}full-service construction company, look to{'\u00A0'}Createx Construction Bureau. We{'\u00A0'}are doing our best to{'\u00A0'}be{'\u00A0'}a{'\u00A0'}partner for all of{'\u00A0'}your construction needs.
-                    </p>
+                    <h1 className="title hero-page__title">{title}</h1>
+                    <p className="lead lead_regular hero-page__descr">{descr}</p>
                 </div>
-            </div>
+            </section>
         )
     }
 }

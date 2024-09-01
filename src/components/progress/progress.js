@@ -80,7 +80,7 @@ class Progress extends Component {
                             style={{ strokeDasharray: circleLength, strokeDashoffset: isVisible ? strokeDashoffset : circleLength }} // Анимация только при видимости
                         ></circle>
                     </svg>
-                    <div className="title title_h3 progress-element__value" data-percentage={value ? value : undefined}>
+                    <div className="title title_h5 progress-element__value" data-percentage={value ? value : undefined}>
                         {percentage ? `${value}%` : value}
                     </div>
                 </div>

@@ -13,7 +13,7 @@
 .services-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: $grid-gap;
 }
 
 .services-item {

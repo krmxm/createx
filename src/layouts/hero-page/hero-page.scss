@@ -1,15 +1,22 @@
 .hero-page {
-    padding-top: 153px;
-    padding-bottom: 179px;
+    padding-top: 149px;
+    // padding-bottom: 179px;
+    min-height: 600px;
     background-image: url(../../assets/img/bg/hero-page-bg.png);
     background-position: right -8px top;
     background-repeat: no-repeat;
     background-color: $bg-color;
+    &_inner {
+        background-image: url(../../assets/img/bg/hero-page-inner-bg.png);
+        background-position: right -171px top -174px;
+    }
     &__breadcrumbs {
         margin-bottom: 40px;
     }
     &__title {
-        margin-bottom: 24px;
+        margin-bottom: 23px;
+        max-width: 600px;
+        text-transform: uppercase;
     }
     &__descr {
         max-width: 600px;
