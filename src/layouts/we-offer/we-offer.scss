@@ -14,8 +14,10 @@
         margin-bottom: 59px;
     }
     &__accordion {
-        &:not(:last-of-type) {
-            margin-bottom: 13px;
+        .accordion__item {
+            &:not(:last-child) {
+                margin-bottom: 27px; // Пример стиля для всех, кроме последнего
+            }
         }
 
         .accordion__btn {
@@ -89,12 +91,14 @@
 }
 
 .accordion__content {
+    position: relative;
+    top: -50px;
     max-height: 0;
     opacity: 0;
-    // overflow: hidden;
+    overflow: hidden;
     padding: 0 20px;
     will-change: max-height;
-    transition: all var(--accordion-time) ease-out;
+    transition: all 0.7s ease-out;
     box-sizing: content-box;
 }
 
@@ -108,5 +112,6 @@
 
 .is-open .accordion__content {
     opacity: 1;
-    padding: 20px;
+    top: 0;
+    // padding-top: 12px;
 }
