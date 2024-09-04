@@ -1,0 +1,51 @@
+.how-we-do {
+    padding-top: 55px;
+    padding-bottom: 90px;
+    &__title {
+        margin-bottom: 60px;
+        text-align-last: left;
+        // margin-bottom: 59px;
+    }
+    &__list {
+        counter-reset: section;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: $grid-gap;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-column: 3 span;
+
+        &::before {
+            counter-increment: section;
+            content: "0"counter(section);
+            margin-bottom: 18px;
+            color: $iron;
+            font-size: 46px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 0%;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 30px;
+                width: 75%;
+                height: 1px;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjA5LjAwMDAwMCIgaGVpZ2h0PSIxLjAwMDAwMCIgdmlld0JveD0iMCAwIDIwOSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KCTxkZXNjPgoJCQlDcmVhdGVkIHdpdGggUGl4c28uCgk8L2Rlc2M+Cgk8ZGVmcy8+Cgk8bGluZSB4MT0iMC4wMDAwMDAiIHkxPSIwLjUwMDAwMCIgeDI9IjIwOS4wMDAwMDAiIHkyPSIwLjUwMDAwMCIgc3Ryb2tlPSIjRDdEQUREIiBzdHJva2Utb3BhY2l0eT0iMS4wMDAwMDAiIHN0cm9rZS13aWR0aD0iMS4wMDAwMDAiIHN0cm9rZS1kYXNoYXJyYXk9IjQuMDAwMDAwLDQuMDAwMDAwIi8+Cjwvc3ZnPgoK");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    &__subtitle {
+        margin-bottom: 9px;
+    }
+}

@@ -9,6 +9,7 @@
     }
     &__title {
         font-family: "Lato", sans-serif;
+        font-weight: 900;
         line-height: 134%;
         letter-spacing: -1px;
         margin-bottom: 59px;
@@ -46,6 +47,7 @@
                 border-radius: 100px;
                 background-color: $color-primary;
                 transform: translateY(-50%);
+                transition: 0.5s ease-in-out;
             }
 
             &::after {
@@ -58,6 +60,7 @@
                 border-radius: 100px;
                 background-color: $color-primary;
                 transform: translateX(-50%);
+                transition: 0.5s ease-in-out;
             }
         }
 
@@ -68,8 +71,13 @@
     }
     .is-open .accordion__icon {
         transform: none;
+        // transform: rotate(45deg);
 
         &::after {
+            transform: rotate(90deg);
+        }
+        &::before {
+            // transform: rotate(90deg);
             opacity: 0;
         }
     }
@@ -98,7 +106,7 @@
     overflow: hidden;
     padding: 0 20px;
     will-change: max-height;
-    transition: all 0.7s ease-out;
+    transition: all 0.5s ease-out;
     box-sizing: content-box;
 }
 
