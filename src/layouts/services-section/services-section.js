@@ -19,7 +19,7 @@ class ServicesSection extends Component {
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center">Our services</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>
-                    <ul className="services-list services-section__list">
+                    <ul className="services-list services-section__list grid">
                         <li className="services-list__item">
                             <a href="#" className="services-item services-item_construction">
                                 <div className="services-item__content">

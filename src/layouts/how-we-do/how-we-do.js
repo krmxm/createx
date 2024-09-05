@@ -12,7 +12,7 @@ class HowWeDo extends Component {
             <section className="how-we-do">
                 <div className="container">
                     <h2 className="title title_h2 how-we-do__title">That’s how we do it</h2>
-                    <ul className="how-we-do__list">
+                    <ul className="how-we-do__list grid">
                         <li className="how-we-do__item">
                             <h3 className="lead lead_bold how-we-do__subtitle">Work Estimate</h3>
                             <p className="base base_regular how-we-do__descr">Culpa nostrud commodo ea consequat aliquip reprehenderit.</p>

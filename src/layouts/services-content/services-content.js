@@ -14,7 +14,7 @@ class ServicesContent extends Component {
     renderLi = (liArr) => {
         return liArr.map(({ id, servicesImg, title, descr }, index) => {
             return (
-                <li key={id} className={index % 2 === 0 ? 'services__item' : 'services__item services__item_revers'}>
+                <li key={id} className={index % 2 === 0 ? 'services__item grid' : 'services__item services__item_revers'}>
                     <div className={index % 2 === 0 ? 'services__img services__img_mr' : 'services__img services__img_ml'}>
                         <img src={servicesImg} alt="services" />
                     </div>

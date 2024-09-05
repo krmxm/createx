@@ -8,9 +8,6 @@
     }
     &__list {
         counter-reset: section;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: $grid-gap;
     }
 
     &__item {
