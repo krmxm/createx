@@ -37,5 +37,8 @@
 
         &__title {
             margin-bottom: 9px;
+            &_light {
+                color: $color-light;
+            }
         }
 }

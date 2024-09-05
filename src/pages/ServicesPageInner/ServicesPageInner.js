@@ -4,6 +4,7 @@ import Header from '../../layouts/header/header';
 import HeroPage from '../../layouts/hero-page/hero-page';
 import WeOffer from '../../layouts/we-offer/we-offer';
 import HowWeDo from '../../layouts/how-we-do/how-we-do';
+import Benefits from '../../layouts/services-benefits/services-benefits';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
@@ -22,6 +23,7 @@ class ServicesPageInner extends Component {
                 <HeroPage title='INTERIOR DESIGN' descr={`Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean vulputate elementum blandit amet.`} inner />
                 <WeOffer />
                 <HowWeDo />
+                <Benefits />
                 <ContactsSection />
                 <Footer />
             </>

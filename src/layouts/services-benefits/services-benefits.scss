@@ -1,0 +1,15 @@
+.services-benefits {
+    padding-bottom: 126px;
+    background-color: $color-ebony-clay-gray;
+    &__title {
+        color: $color-light;
+    }
+    &__descr {
+        color: $color-light;
+        opacity: 0.6;
+    }
+    &__btn {
+        // transform: translateY(13px);
+    }
+    &__centered {}
+}

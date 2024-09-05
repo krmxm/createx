@@ -17,7 +17,7 @@ class Mission extends Component {
 
     render() {
         return (
-            <div className="mission section-offset">
+            <section className="mission section-offset">
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center">Our core values</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.</p>
@@ -50,7 +50,7 @@ class Mission extends Component {
                     </form>
                 </div>
 
-            </div>
+            </section>
         )
     }
 }
