@@ -105,6 +105,7 @@ class SliderMini extends Component {
     render() {
         const slideMarginRight = this.state.slideMarginRight;
         const offset = this.state.offset;
+        const title = this.props.title;
 
         // Установка классов для кнопок
         const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav__btn slider-nav__prev' : 'btn-reset slider-nav__btn slider-nav__prev slider-nav__btn_disabled';
@@ -113,8 +114,7 @@ class SliderMini extends Component {
         return (
             <div className="slider">
                 <div className="slider__top">
-                    <h2 className="title title_h2 slider__title">Browse our selected projects
-                        and learn more about our work</h2>
+                    <h2 className="title title_h2 slider__title">{title}</h2>
 
                     <div className="slider__nav slider-nav">
                         <button onClick={this.prevSlide} className={prevBtnClass}>

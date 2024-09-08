@@ -13,7 +13,7 @@ class LearnMore extends Component {
         const textBtn = this.props.textBtn;
         return (
             <div className={clazz}>
-                <h3 className="title title_h5 title_h5-center learn-more__subtitle">{title}</h3>
+                <h3 className="title title_h4 title_h4-center learn-more__subtitle">{title}</h3>
                 <a href="#" className="learn-more__btn btn-reset btn btn_size-large btn_theme-primary">{textBtn}</a>
             </div>
         )

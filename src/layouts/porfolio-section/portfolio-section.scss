@@ -1,5 +1,5 @@
 .portfolio-section {
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     &__top {
         @include flex-all-sb;
 
@@ -39,6 +39,6 @@
         }
     }
     &__learn {
-        margin-top: 84px;
+        margin-top: 80px;
     }
 }

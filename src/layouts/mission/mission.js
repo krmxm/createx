@@ -19,7 +19,7 @@ class Mission extends Component {
         return (
             <section className="mission section-offset">
                 <div className="container">
-                    <h2 className="title title_h2 title_h2-center">Our core values</h2>
+                    <h2 className="title title_h2 title_h2-center mission__title">Our core values</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.</p>
                     <Cards cards={[
                         {
@@ -39,7 +39,7 @@ class Mission extends Component {
                         }
                     ]} />
                     <form className='form mission__form' action="#">
-                        <h3 className="title title_h5 title_h5-center">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h3>
+                        <h3 className="title title_h4 title_h4-center">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h3>
                         <Forms
                             isHorizontal={true}
                             isPhone={true}

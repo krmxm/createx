@@ -12,7 +12,7 @@ class Hero extends Component {
             <section className="hero">
                 <div className="container">
                     <div className="hero__content">
-                        <h1 className="title title_home">Create<span>x</span> Construction</h1>
+                        <h1 className="title title_home hero__title">Create<span>x</span> Construction</h1>
                         <p className="lead lead_regular hero__descr hero__descr_home">
                             Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis.
                         </p>

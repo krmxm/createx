@@ -34,7 +34,7 @@ class RecentNews extends Component {
                             <img className='recent-article__img' src={recentArticleImg} alt="img news" />
                             <div className="recent-article__text">
                                 <h3 className="lead lead_bold recent-article__title">
-                                    <a href="#">{recentArticleLinkText}</a>
+                                    <a href="#" className='recent-article__link'>{recentArticleLinkText}</a>
                                 </h3>
                                 <div className="recent-article__meta article-meta small small_regular">
                                     <a className='article-meta__item' href="#">{recentArticleMetaLinkText}</a>
@@ -54,7 +54,7 @@ class RecentNews extends Component {
                             <img className='recent-article__img' src={recentArticleImg} alt="img news" />
                             <div className="recent-article__text">
                                 <h3 className="lead lead_bold recent-article__title">
-                                    <a href="#">{recentArticleLinkText}</a>
+                                    <a href="#" className='recent-article__link'>{recentArticleLinkText}</a>
                                 </h3>
                                 <div className="recent-article__meta article-meta small small_regular">
                                     <a className='article-meta__item' href="#">{recentArticleMetaLinkText}</a>

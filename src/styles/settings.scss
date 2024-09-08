@@ -16,7 +16,7 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1260px;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .grid {
@@ -38,6 +38,11 @@ body {
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
+}
+
+.centered {
+    width: 100%;
+    text-align: center;
 }
 
 .custom-checkbox {

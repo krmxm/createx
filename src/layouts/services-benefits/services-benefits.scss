@@ -1,7 +1,9 @@
 .services-benefits {
-    padding-bottom: 126px;
+    padding-top: 80px;
+    // padding-bottom: 126px;
     background-color: $color-ebony-clay-gray;
     &__title {
+        margin-bottom: 23px;
         color: $color-light;
     }
     &__descr {
@@ -9,7 +11,11 @@
         opacity: 0.6;
     }
     &__btn {
-        // transform: translateY(13px);
+        width: 390px;
+        transform: translateY(26px);
     }
-    &__centered {}
+    &__centered {
+        margin-top: 73px;
+        margin-bottom: -13px;
+    }
 }

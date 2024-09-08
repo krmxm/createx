@@ -15,7 +15,7 @@ class Benefits extends Component {
     }
 
     render() {
-        return(
+        return (
             <section className="services-benefits section-offset">
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center services-benefits__title">Our benefits</h2>
@@ -38,7 +38,7 @@ class Benefits extends Component {
                         }
                     ]} theme='light' />
                     <div className="centered services-benefits__centered">
-                        <button className="btn btn_size-large btn_theme-primary services-benefits__btn">Discuss a project</button>
+                        <button className="btn-reset btn btn_size-large btn_theme-primary services-benefits__btn">Discuss a project</button>
                     </div>
                 </div>
 

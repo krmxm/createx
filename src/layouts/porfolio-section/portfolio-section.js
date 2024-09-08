@@ -22,7 +22,8 @@ class PortfolioSection extends Component {
         return (
             <div className="section-offset portfolio-section">
                 <div className="container">
-                    <SliderMini slides={slideData} />
+                    <SliderMini title='Browse our selected projects 
+and learn more about our work' slides={slideData} />
                     <LearnMore title='Explore all our works' textBtn='View portfolio' classLearnMore='portfolio-section__learn' />
                 </div>
             </div>
