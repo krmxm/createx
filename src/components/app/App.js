@@ -14,8 +14,8 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <HomePage />? */}
-        {/* <ServicesPage /> */}
+        <HomePage />
+        <ServicesPage />
         <ServicesPageInner />
       </>
     )

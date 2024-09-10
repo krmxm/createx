@@ -6,11 +6,12 @@ import WeOffer from '../../layouts/we-offer/we-offer';
 import HowWeDo from '../../layouts/how-we-do/how-we-do';
 import RelatedProjects from '../../layouts/related-projects/related-projects';
 import Benefits from '../../layouts/services-benefits/services-benefits';
+import Pricing from '../../layouts/pricing/pricing';
+import PartnersSection from '../../layouts/partners-section/partners-section';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
 import './ServicesPageInner.scss';
-
 class ServicesPageInner extends Component {
     constructor(props) {
         super(props);
@@ -26,6 +27,8 @@ class ServicesPageInner extends Component {
                 <HowWeDo />
                 <Benefits />
                 <RelatedProjects />
+                <Pricing />
+                <PartnersSection />
                 <ContactsSection />
                 <Footer />
             </>
