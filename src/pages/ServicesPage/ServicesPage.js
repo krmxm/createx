@@ -24,7 +24,7 @@ class ServicesPage extends Component {
         return (
             <>
                 <Header headerClassMod={headerClassMod} />
-                <HeroPage title='SERVICES' descr={`If${'\u00A0'}you are looking for a${'\u00A0'}full-service construction company, look${'\u00A0'}to Createx Construction Bureau. We${'\u00A0'}are doing our best to be a partner for all of${'\u00A0'}your construction needs.`} />
+                <HeroPage title='SERVICES' descr={`If${'\u00A0'}you are looking for a${'\u00A0'}full-service construction company, look${'\u00A0'}to Createx Construction Bureau. We${'\u00A0'}are doing our best to be a partner for all of${'\u00A0'}your construction needs.`} page='services' />
                 <ServicesContent servicesContent={this.servicesContent} />
                 <ContactsSection />
                 <Footer />

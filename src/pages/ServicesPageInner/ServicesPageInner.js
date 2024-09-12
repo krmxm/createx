@@ -22,7 +22,7 @@ class ServicesPageInner extends Component {
         return (
             <>
                 <Header headerClassMod={headerClassMod} />
-                <HeroPage title='INTERIOR DESIGN' descr={`Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean vulputate elementum blandit amet.`} inner />
+                <HeroPage title='INTERIOR DESIGN' descr={`Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean vulputate elementum blandit amet.`} page='inner' />
                 <WeOffer />
                 <HowWeDo />
                 <Benefits />

@@ -7,10 +7,28 @@ class HeroPage extends Component {
         super(props);
     }
 
+    setClassSection = (page) => {
+        switch (page) {
+            case 'services':
+                return 'hero-page hero-page_services';
+                break;
+            case 'inner':
+                return 'hero-page hero-page_inner';
+                break;
+            case 'work':
+                return 'hero-page hero-page_work';
+                break;
+            case 'about-us':
+                return 'hero-page hero-page_about-us';
+                break;
+            default: return 'hero-page'
+        }
+    }
+
     render() {
-        const { title, descr, inner } = this.props;
+        const { title, descr, page } = this.props;
         return (
-            <section className={inner ? 'hero-page hero-page_inner' : 'hero-page'}>
+            <section className={this.setClassSection(page)}>
                 <div className="container">
                     <ul className="breadcrumbs hero-page__breadcrumbs">
                         <li className="breadcrumbs__item">
