@@ -1,0 +1,16 @@
+.tabs-nav {
+    $gap: 20px;
+
+    @include flex-v-center;
+    &__item {
+        width: calc((100% - (($gap) * 4)) / 5);
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        
+        &:not(:last-child) {
+            margin-right: $gap;
+        }
+        &_active {
+            background-color: $color-primary;
+        }
+    }
+}

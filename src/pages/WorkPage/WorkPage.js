@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import Header from '../../layouts/header/header';
 import HeroPage from '../../layouts/hero-page/hero-page';
+import Portfolio from '../../layouts/portfolio/portfolio';
 import Testimonials from '../../layouts/testimonials/testimonials';
 import PartnersSection from '../../layouts/partners-section/partners-section';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
@@ -24,6 +25,7 @@ class WorkPage extends Component {
             <>
                 <Header headerClassMod={headerClassMod} />
                 <HeroPage title='OUR WORK' descr={`Our portfolio represents 20 years of construction experience backed by a passion for perfect client service, quality and innovations in consctuction industry.`} page='work' />
+                <Portfolio />
                 <Testimonials testimonialsSlides={this.testimonialsSlides} />
                 <PartnersSection />
                 <ContactsSection />
