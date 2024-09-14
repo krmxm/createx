@@ -18,17 +18,21 @@ class TabsButton extends Component {
             }
         }
         return (
-            this.props.tabsData.map(({ name, id }) => {
+            this.props.tabsData.map(({ id, name, icon }) => {
                 const active = this.props.filter === name;
-                const clazz = active ? 'tabs-nav__item tabs-nav__item_active' : 'tabs-nav__item';
+                const clazz = active ? 'tabs-nav__btn tabs-nav__btn_active' : 'tabs-nav__btn';
                 return (
-                    <button
-                        className={clazz}
-                        type="button"
-                        key={id}
-                        onClick={(e) => checkActive(e, name)}>
-                        <span>{name}</span>
-                    </button>
+                    <li className='tabs-nav__item'>
+                        <button
+                            className={`btn-reset ${clazz}`}
+                            type="button"
+                            key={id}
+                            onClick={(e) => checkActive(e, name)}>
+                            <span className="tabs-nav__icon">{icon}</span>
+                            <span className='base base_bold tabs-nav__text'>{name}</span>
+                        </button>
+
+                    </li>
                 )
             })
         )

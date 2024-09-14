@@ -1,16 +1,23 @@
 import { Component } from 'react';
 import TabsButton from '../../components/tabsButton/tabsButton';
 
+import { ReactComponent as TabIcon1 } from '../../assets/img/sprite/house.svg';
+import { ReactComponent as TabIcon2 } from '../../assets/img/sprite/construction.svg';
+import { ReactComponent as TabIcon3 } from '../../assets/img/sprite/project-development.svg';
+import { ReactComponent as TabIcon4 } from '../../assets/img/sprite/interior-design.svg';
+import { ReactComponent as TabIcon5 } from '../../assets/img/sprite/repairs.svg';
+
+
 class Portfolio extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tabsData: [
-                { id: 0, name: 'All Projects' },
-                { id: 1, name: 'Construction' },
-                { id: 2, name: 'Project Development' },
-                { id: 3, name: 'Interior Design' },
-                { id: 4, name: 'Repairs' }
+                { id: 0, name: 'All Projects', icon: <TabIcon1 /> },
+                { id: 1, name: 'Construction', icon: <TabIcon2 /> },
+                { id: 2, name: 'Project Development', icon: <TabIcon3 /> },
+                { id: 3, name: 'Interior Design', icon: <TabIcon4 /> },
+                { id: 4, name: 'Repairs', icon: <TabIcon5 /> }
             ],
             contentForTabs: [
                 { imgProduct: 'solimo', nameProduct: 'Solimo Coffee Beans 2 kg', country: 'Kenya', price: '10.73', best: true, id: '1' },
@@ -20,7 +27,7 @@ class Portfolio extends Component {
                 { imgProduct: 'aromistico', nameProduct: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: '6.99', best: false, id: '5' },
                 { imgProduct: 'solimo', nameProduct: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: '6.99', best: false, id: '6' }
             ],
-            filter: ''
+            filter: 'All Projects'
         }
     }
 
@@ -47,6 +54,7 @@ class Portfolio extends Component {
             <section className="portfolio">
                 <div className="container">
                     <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='portfolio-tabs-nav' classForTabsItem='portfolio-tabs-nav__item' />
+
                 </div>
             </section>
         )

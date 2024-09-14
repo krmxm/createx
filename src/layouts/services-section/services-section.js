@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import { ReactComponent as Services1 } from '../../assets/img/sprite/services-1.svg';
-import { ReactComponent as Services2 } from '../../assets/img/sprite/services-2.svg';
-import { ReactComponent as Services3 } from '../../assets/img/sprite/services-3.svg';
-import { ReactComponent as Services4 } from '../../assets/img/sprite/services-4.svg';
+import { ReactComponent as Services1 } from '../../assets/img/sprite/construction.svg';
+import { ReactComponent as Services2 } from '../../assets/img/sprite/project-development.svg';
+import { ReactComponent as Services3 } from '../../assets/img/sprite/interior-design.svg';
+import { ReactComponent as Services4 } from '../../assets/img/sprite/repairs.svg';
 import LearnMore from '../../components/learn-more/learn-more';
 
 import './services-section.scss';
