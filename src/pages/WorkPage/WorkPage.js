@@ -27,7 +27,7 @@ class WorkPage extends Component {
                 <HeroPage title='OUR WORK' descr={`Our portfolio represents 20 years of construction experience backed by a passion for perfect client service, quality and innovations in consctuction industry.`} page='work' />
                 <Portfolio />
                 <Testimonials testimonialsSlides={this.testimonialsSlides} />
-                <PartnersSection />
+                <PartnersSection title='Our clients' />
                 <ContactsSection />
                 <Footer />
             </>

@@ -10,13 +10,14 @@ const slideData = [
 
 class PartnersSection extends Component {
     constructor(props) {
-        super (props);
+        super(props);
     }
 
-    render () {
+    render() {
+        const title = this.props.title;
         return (
             <div className="partners-section">
-                <Partners title={`Supported by${'\u00A0'}12+${'\u00A0'}partners`}  logos={slideData}/>
+                <Partners title={title} logos={slideData} />
             </div>
         )
     }

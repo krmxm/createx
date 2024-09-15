@@ -31,13 +31,9 @@
         
 
         overflow: hidden;
-            border-radius: 4px;
-            box-shadow:
-                0 80px 80px -20px rgba(154, 156, 165, 0.08),
-                    0 30px 24px -10px rgba(154, 156, 165, 0.05),
-                    0 12px 10px -6px rgba(154, 156, 165, 0.04),
-                    0 4px 4px -4px rgba(30, 33, 44, 0.03);
-            background: var(--color-light);
+        border-radius: 4px;
+        box-shadow: $shadow-small;
+        background: var(--color-light);
     }
     &__img {
         width: 100%;
@@ -47,6 +43,7 @@
     &__content {
         @include flex-column-center;
         padding: 17px 10px 26px;
+        background: #fff;
     }
     &__btn-slide {
         display: none;

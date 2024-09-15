@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Forms from '../../components/forms/forms';
 
-import Cards from '../../components/cards/cards';
+import CardsMini from '../../components/cards-mini/cards-mini';
 
 import benefits1 from '../../assets/img/icons/benefits-1.svg';
 import benefits2 from '../../assets/img/icons/benefits-2.svg';
@@ -20,7 +20,7 @@ class Benefits extends Component {
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center services-benefits__title">Our benefits</h2>
                     <p className="large large_regular large_center large_section-descr-mb services-benefits__descr">Our mission is to set the highest standards for construction sphere.</p>
-                    <Cards cards={[
+                    <CardsMini cards={[
                         {
                             title: 'Fixed Terms & Cost',
                             descr: `Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.`,

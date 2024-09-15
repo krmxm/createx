@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import './cards.scss';
+import './cards-mini.scss';
 
-const Cards = ({ cards }, theme) => {
+const CardsMini = ({ cards }, theme) => {
     const createCard = ({ title, descr, iconSrc }, index) => {
         return (
             <li key={index} className='card__item'>
@@ -21,4 +21,4 @@ const Cards = ({ cards }, theme) => {
     )
 }
 
-export default Cards;
+export default CardsMini;

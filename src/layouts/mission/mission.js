@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Forms from '../../components/forms/forms';
 
-import Cards from '../../components/cards/cards';
+import CardsMini from '../../components/cards-mini/cards-mini';
 import quality from '../../assets/img/icons/quality.svg';
 import safety from '../../assets/img/icons/safety.svg';
 import comfort from '../../assets/img/icons/comfort.svg';
@@ -21,7 +21,7 @@ class Mission extends Component {
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center mission__title">Our core values</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.</p>
-                    <Cards cards={[
+                    <CardsMini cards={[
                         {
                             title: 'Quality',
                             descr: `Culpa nostrud commodo ea${'\u00A0'}consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.`,

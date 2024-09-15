@@ -1,11 +1,16 @@
 import { Component } from 'react';
 import TabsButton from '../../components/tabsButton/tabsButton';
+import CardsList from '../../components/cardsList/cardsList';
 
 import { ReactComponent as TabIcon1 } from '../../assets/img/sprite/house.svg';
 import { ReactComponent as TabIcon2 } from '../../assets/img/sprite/construction.svg';
 import { ReactComponent as TabIcon3 } from '../../assets/img/sprite/project-development.svg';
 import { ReactComponent as TabIcon4 } from '../../assets/img/sprite/interior-design.svg';
 import { ReactComponent as TabIcon5 } from '../../assets/img/sprite/repairs.svg';
+
+import { ReactComponent as LoadIcon } from '../../assets/img/icons/load.svg';
+
+import './portfolio.scss';
 
 
 class Portfolio extends Component {
@@ -19,42 +24,70 @@ class Portfolio extends Component {
                 { id: 3, name: 'Interior Design', icon: <TabIcon4 /> },
                 { id: 4, name: 'Repairs', icon: <TabIcon5 /> }
             ],
-            contentForTabs: [
-                { imgProduct: 'solimo', nameProduct: 'Solimo Coffee Beans 2 kg', country: 'Kenya', price: '10.73', best: true, id: '1' },
-                { imgProduct: 'presto', nameProduct: 'Presto Coffee Beans 1 kg', country: 'Brazil', price: '15.99', best: true, id: '2' },
-                { imgProduct: 'aromistico', nameProduct: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: '6.99', best: true, id: '3' },
-                { imgProduct: 'presto', nameProduct: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: '6.99', best: false, id: '4' },
-                { imgProduct: 'aromistico', nameProduct: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: '6.99', best: false, id: '5' },
-                { imgProduct: 'solimo', nameProduct: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: '6.99', best: false, id: '6' }
+            cardsData: [
+                { id: 1, picture: require('../../assets/img/portfolio/portfolio-1.jpeg'), title: 'Cubes Building', descr: 'Business Centers', project: 'Construction' },
+                { id: 2, picture: require('../../assets/img/portfolio/portfolio-2.jpeg'), title: 'Modern Cottage', descr: 'Private houses', project: 'Project Development' },
+                { id: 3, picture: require('../../assets/img/portfolio/portfolio-3.jpeg'), title: 'Luxury Beach House', descr: 'Private houses', project: 'Project Development' },
+                { id: 4, picture: require('../../assets/img/portfolio/portfolio-4.jpeg'), title: 'Modern Double Bedroom', descr: 'Apartments & flats', project: 'Interior Design' },
+                { id: 5, picture: require('../../assets/img/portfolio/portfolio-5.jpeg'), title: 'Kids Bedroom With Decorations', descr: 'Apartments & flats', project: 'Interior Design' },
+                { id: 6, picture: require('../../assets/img/portfolio/portfolio-6.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls', project: 'Construction' },
+                { id: 7, picture: require('../../assets/img/portfolio/portfolio-7.jpeg'), title: 'Red Finger Building', descr: 'Business Centers', project: 'Constructios' },
+                { id: 8, picture: require('../../assets/img/portfolio/portfolio-8.jpeg'), title: 'Scandinavian Style Interior', descr: 'Private houses', project: 'Repairs' },
+                { id: 9, picture: require('../../assets/img/portfolio/portfolio-9.jpeg'), title: 'Brown and Gray Painted House', descr: 'Private houses', project: 'Repairs' },
+                { id: 10, picture: require('../../assets/img/portfolio/portfolio-1.jpeg'), title: 'Red Finger Building', descr: 'Business Centers', project: 'Construction' },
+                { id: 11, picture: require('../../assets/img/portfolio/portfolio-2.jpeg'), title: 'Cubes Building', descr: 'Business Centers', project: 'Project Development' },
+                { id: 12, picture: require('../../assets/img/portfolio/portfolio-3.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls', project: 'Project Development' },
+                { id: 13, picture: require('../../assets/img/portfolio/portfolio-4.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls', project: 'Interior Design' },
+                { id: 14, picture: require('../../assets/img/portfolio/portfolio-5.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls', project: 'Interior Design' },
+                { id: 15, picture: require('../../assets/img/portfolio/portfolio-6.jpeg'), title: 'The Pencil Building', descr: 'Stores & Malls', project: 'Construction' }
             ],
-            filter: 'All Projects'
+            filter: 'All Projects',
+            displayedCardsCount: 9
         }
     }
 
     onFilterSelect = (filter) => {
-        this.setState({ filter });
-    }
+        this.setState({ filter, displayedCardsCount: 9 });
+    };
 
-    filterPost = (items, filter) => {
+    filterCard = (items, filter) => {
         switch (filter) {
-            case 'Brazil':
-                return items.filter(item => item.country === 'Brazil');
-            case 'Kenya':
-                return items.filter(item => item.country === 'Kenya');
-            case 'Columbia':
-                return items.filter(item => item.country === 'Columbia');
+            case 'Construction':
+                return items.filter(item => item.project === 'Construction');
+            case 'Project Development':
+                return items.filter(item => item.project === 'Project Development');
+            case 'Interior Design':
+                return items.filter(item => item.project === 'Interior Design');
+            case 'Repairs':
+                return items.filter(item => item.project === 'Repairs');
             default:
                 return items;
         }
     }
 
+    loadMoreCards = () => {
+        this.setState((prevState) => ({
+            displayedCardsCount: prevState.displayedCardsCount + 3 // Подгружаем еще 3 карточки
+        }));
+    };
+
     render() {
-        const { tabsData, filter } = this.state;
+        const { tabsData, cardsData, filter, displayedCardsCount } = this.state;
+        const filteredCards = this.filterCard(cardsData, filter);
+        const visibleCards = filteredCards.slice(0, displayedCardsCount);
         return (
             <section className="portfolio">
                 <div className="container">
                     <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='portfolio-tabs-nav' classForTabsItem='portfolio-tabs-nav__item' />
-
+                    <CardsList cardsData={visibleCards} classForCards='portfolio-tabs' />
+                    {displayedCardsCount < filteredCards.length && (
+                        <div className="centered">
+                            <button onClick={this.loadMoreCards} className="btn-reset portfolio-more">
+                                <LoadIcon />
+                                <p className="base vase_bold">Load more</p>
+                            </button>
+                        </div>
+                    )}
                 </div>
             </section>
         )
