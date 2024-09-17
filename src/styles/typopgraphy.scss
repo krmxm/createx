@@ -22,6 +22,10 @@ h6 {
     &_home {
         color: $color-light;
     }
+    &_overLength {
+        font-size: 64px;
+        line-height: 120%;
+    }
     span {
         color: $color-primary;
     }

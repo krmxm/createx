@@ -21,12 +21,16 @@ class HeroPage extends Component {
             case 'about-us':
                 return 'hero-page hero-page_about-us';
                 break;
+            case 'some-project':
+                return 'hero-page hero-page_some-project';
+                break;
             default: return 'hero-page'
         }
     }
 
     render() {
         const { title, descr, page } = this.props;
+        const classTitle = title.length > 8 ? 'title title_overLength hero-page__title' : 'title hero-page__title';
         return (
             <section className={this.setClassSection(page)}>
                 <div className="container">
@@ -38,8 +42,8 @@ class HeroPage extends Component {
                             <a className="small small_regular breadcrumbs__link">Services</a>
                         </li>
                     </ul>
-                    <h1 className="title hero-page__title">{title}</h1>
-                    <p className="lead lead_regular hero-page__descr">{descr}</p>
+                    <h1 className={classTitle}>{title}</h1>
+                    {descr ? <p className="lead lead_regular hero-page__descr">{descr}</p> : null}
                 </div>
             </section>
         )
