@@ -43,7 +43,6 @@
     &__content {
         @include flex-column-center;
         padding: 17px 10px 26px;
-        background: #fff;
     }
     &__btn-slide {
         display: none;

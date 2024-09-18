@@ -17,7 +17,6 @@ const CardsItem = ({ title, descr, picture }, index) => {
                         <span className='small regular'>{descr}</span>
                     </div>
                     <button className='btn-reset btn btn_size-regular btn_theme-outline cards-item__btn'>View Project</button>
-
                 </div>
 
             </a>
