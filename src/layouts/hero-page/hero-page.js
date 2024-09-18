@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import SliderGellary from '../../components/slider-gallery/slider-gallery';
+
 
 import './hero-page.scss';
 
@@ -44,6 +46,7 @@ class HeroPage extends Component {
                     </ul>
                     <h1 className={classTitle}>{title}</h1>
                     {descr ? <p className="lead lead_regular hero-page__descr">{descr}</p> : null}
+                    <SliderGellary />
                 </div>
             </section>
         )
