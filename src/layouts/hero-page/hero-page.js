@@ -30,9 +30,19 @@ class HeroPage extends Component {
         }
     }
 
+    classTitle = () => {
+        const { title, titleMb } = this.props;
+        let clazz = title.length > 8 ? 'title title_overLength hero-page__title' : 'title hero-page__title';
+        if (titleMb) {
+            clazz += ' hero-page__title_mb';
+        }
+        return clazz;
+    }
+
     render() {
-        const { title, descr, page } = this.props;
+        const { title, descr, page, titleMb } = this.props;
         const classTitle = title.length > 8 ? 'title title_overLength hero-page__title' : 'title hero-page__title';
+        const classTitleMb = titleMb ? 'hero-page__title_mb' : '';
         return (
             <section className={this.setClassSection(page)}>
                 <div className="container">
@@ -44,11 +54,11 @@ class HeroPage extends Component {
                             <a className="small small_regular breadcrumbs__link">Services</a>
                         </li>
                     </ul>
-                    <h1 className={classTitle}>{title}</h1>
+                    <h1 className={this.classTitle()}>{title}</h1>
                     {descr ? <p className="lead lead_regular hero-page__descr">{descr}</p> : null}
                     <SliderGellary />
 
-                    
+
                 </div>
             </section>
         )

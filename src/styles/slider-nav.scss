@@ -1,0 +1,41 @@
+.slider-nav {
+    @include flex-h-center;
+    transform: translateX(14px);
+
+    &__btn {
+        @include flex-all-center;
+
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        color: $color-gray;
+        transition: background-color 0.3s ease-in-out;
+        z-index: 15;
+
+        &_disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            color: inherit;
+            fill: currentColor;
+            transition: color 0.3s ease-in-out;
+            object-fit: cover;
+        }
+
+        &_disbled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        &:hover {
+            color: $color-light;
+            background-color: $color-primary;
+        }
+    }
+}

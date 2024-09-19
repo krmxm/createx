@@ -1,6 +1,6 @@
 .hero-page {
     padding-top: 149px;
-    // padding-bottom: 179px;
+    padding-bottom: 179px;
     min-height: 600px;
     background-repeat: no-repeat;
     background-color: $bg-color;
@@ -26,7 +26,10 @@
     &__title {
         margin-bottom: 23px;
         max-width: 600px;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+        &_mb {
+            margin-bottom: 60px;
+        }
     }
     &__descr {
         max-width: 600px;

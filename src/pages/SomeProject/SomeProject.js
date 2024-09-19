@@ -17,7 +17,7 @@ class SomeProject extends Component {
         return (
             <>
                 <Header headerClassMod={headerClassMod} />
-                <HeroPage title='Modern Cottage' page='some-project' />
+                <HeroPage title='Modern Cottage' page='some-project' titleMb />
                 <ContactsSection />
                 <Footer />
             </>

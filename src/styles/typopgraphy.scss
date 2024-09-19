@@ -17,7 +17,7 @@ h6 {
     line-height: 130%;
     // letter-spacing: 1px;
     text-align: left;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: $color-ebony-clay-gray;
     &_home {
         color: $color-light;
@@ -25,6 +25,7 @@ h6 {
     &_overLength {
         font-size: 64px;
         line-height: 120%;
+        letter-spacing: 1px;
     }
     span {
         color: $color-primary;

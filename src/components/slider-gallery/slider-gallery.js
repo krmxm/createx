@@ -10,6 +10,15 @@ import 'swiper/css/thumbs';
 
 import './slider-gallery.scss';
 
+import Work1 from '../../assets/img/work-1/work-1.jpeg';
+import Work1Small from '../../assets/img/work-1/work-1-small.jpeg';
+import Work2 from '../../assets/img/portfolio/portfolio-1.jpeg';
+import Work3 from '../../assets/img/portfolio/portfolio-2.jpeg';
+import Work4 from '../../assets/img/portfolio/portfolio-3.jpeg';
+
+
+
+
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
@@ -24,8 +33,8 @@ export default class App extends Component {
     this.prevRef = createRef();
     this.nextRef = createRef();
     this.state = {
-        prevBtnActive: true,
-        nextBtnActive: true
+      prevBtnActive: true,
+      nextBtnActive: true
     }
   }
 
@@ -34,6 +43,8 @@ export default class App extends Component {
   }
 
   render() {
+    const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav__btn slider-nav__prev' : 'btn-reset slider-nav__btn slider-nav__prev slider-nav__btn_disabled';
+    const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav__btn slider-nav__next' : 'btn-reset slider-nav__btn slider-nav__next slider-nav__btn_disabled';
     return (
       <>
         <Swiper
@@ -51,35 +62,23 @@ export default class App extends Component {
           className="mySwiper2"
         >
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src={Work1} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img src={Work2} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img src={Work3} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            <img src={Work4} />
           </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-          </SwiperSlide>
+          <button ref={this.prevRef} className={prevBtnClass}>
+            <ArrowLeft />
+          </button>
+          <button ref={this.nextRef} className={nextBtnClass}>
+            <ArrowRight />
+          </button>
         </Swiper>
         <Swiper
           onSwiper={this.setThumbsSwiper}
@@ -91,44 +90,19 @@ export default class App extends Component {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src={Work1Small} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img src={Work2} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img src={Work3} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+            <img src={Work4} />
           </SwiperSlide>
         </Swiper>
-        <div className="slider-nav testimonials__buttons">
-              <button ref={this.prevRef}>
-                  <ArrowLeft />
-              </button>
-              <button ref={this.nextRef}>
-                  <ArrowRight />
-              </button>
-          </div>
+
       </>
     );
   }
