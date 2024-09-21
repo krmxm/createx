@@ -1,0 +1,42 @@
+.project-goal {
+    padding-top: 30px;
+    padding-bottom: 120px;
+    &__left {
+        grid-column: 6 span;
+    }
+    &__right {
+        grid-column: 6 span;
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__descr{
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__info {
+        width: 495px;
+        padding: 25px 60px;
+        padding-right: 40px;
+        min-height: 300px;
+        box-shadow: $shadow-small;
+        background-color: $color-light;
+        border-radius: 4px;
+    }
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+    }
+    &__category {
+        width: 120px;
+        text-transform: uppercase;
+        color: $color-ebony-clay-gray;
+    }
+    &__value {
+        color: $color-storm-gray;
+    }
+}

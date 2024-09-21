@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import LearnMore from '../../components/learn-more/learn-more';
 
-
-
 import './recent-news.scss';
 
 class RecentNews extends Component {

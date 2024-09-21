@@ -40,7 +40,7 @@ class HeroPage extends Component {
     }
 
     render() {
-        const { title, descr, page, titleMb } = this.props;
+        const { title, descr, page, titleMb, slider } = this.props;
         const classTitle = title.length > 8 ? 'title title_overLength hero-page__title' : 'title hero-page__title';
         const classTitleMb = titleMb ? 'hero-page__title_mb' : '';
         return (
@@ -56,7 +56,7 @@ class HeroPage extends Component {
                     </ul>
                     <h1 className={this.classTitle()}>{title}</h1>
                     {descr ? <p className="lead lead_regular hero-page__descr">{descr}</p> : null}
-                    <SliderGellary />
+                    {slider ? <SliderGellary /> : null}
 
 
                 </div>
