@@ -1,0 +1,29 @@
+.achieve {
+    padding: 120px 0;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        padding: 0 15px;
+        grid-column: 3 span;
+    }
+    &__icon {
+        max-width: 48px;
+        max-height: 48px;
+        fill: #9A9CA5;
+        margin-bottom: 20px;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+    &__value {
+        color: $color-primary;
+        margin-bottom: 6px;
+    }
+    &__text {
+        text-align: center;
+    }
+}

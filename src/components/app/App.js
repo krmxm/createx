@@ -5,6 +5,7 @@ import ServicesPage from '../../pages/ServicesPage/ServicesPage';
 import ServicesPageInner from '../../pages/ServicesPageInner/ServicesPageInner';
 import WorkPage from '../../pages/WorkPage/WorkPage';
 import SomeProject from '../../pages/SomeProject/SomeProject';
+import AboutUs from '../../pages/AboutUs/AboutUs';
 
 
 import './app.scss';
@@ -20,7 +21,8 @@ class App extends Component {
         {/* <ServicesPage /> */}
         {/* <ServicesPageInner /> */}
         {/* <WorkPage /> */}
-        <SomeProject />
+        {/* <SomeProject /> */}
+        <AboutUs />
       </>
     )
   }
