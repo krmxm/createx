@@ -30,12 +30,15 @@
     border-collapse: collapse;
     &__heading {
         margin-bottom: 2px;
+        text-align: center;
+        text-transform: uppercase;
     }
     &__th {
         padding-top: 31px;
-        padding-right: 20px;
+        // padding-right: 20px;
         padding-bottom: 24px;
         &:first-child {
+            padding-top: 64px;
             padding-left: 24px;
             text-align: left;
         }

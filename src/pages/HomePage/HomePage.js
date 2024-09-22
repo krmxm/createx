@@ -47,7 +47,7 @@ class HomePage extends Component {
                 <Mission />
                 <ServicesSection />
                 <PortfolioSection />
-                <PartnersSection />
+                <PartnersSection title='Supported by 12+ partners' />
                 <Testimonials testimonialsSlides={this.testimonialsSlides} />
                 <Facts />
                 <RecentNews recentNews={this.recentNews} />

@@ -28,7 +28,7 @@ class ServicesPageInner extends Component {
                 <Benefits />
                 <RelatedProjects />
                 <Pricing />
-                <PartnersSection />
+                <PartnersSection title='Supported by 12+ partners' />
                 <ContactsSection />
                 <Footer />
             </>

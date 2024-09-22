@@ -43,8 +43,8 @@ export default class App extends Component {
   }
 
   render() {
-    const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav__btn slider-nav__prev' : 'btn-reset slider-nav__btn slider-nav__prev slider-nav__btn_disabled';
-    const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav__btn slider-nav__next' : 'btn-reset slider-nav__btn slider-nav__next slider-nav__btn_disabled';
+    const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav__btn slider-nav-gallery__prev' : 'btn-reset slider-nav__btn slider-nav-gallery__prev slider-nav__btn_disabled';
+    const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav__btn slider-nav-gallery__next' : 'btn-reset slider-nav__btn slider-nav-gallery__next slider-nav__btn_disabled';
     return (
       <>
         <Swiper

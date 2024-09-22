@@ -2,9 +2,12 @@
     padding-top: 30px;
     padding-bottom: 120px;
     &__left {
+        padding-top: 24px;
         grid-column: 6 span;
     }
     &__right {
+        display: flex;
+        justify-content: flex-end;
         grid-column: 6 span;
     }
     &__title {
@@ -12,7 +15,7 @@
     }
     &__descr{
         &:not(:last-child) {
-            margin-bottom: 30px;
+            margin-bottom: 27px;
         }
     }
     &__info {
@@ -28,11 +31,11 @@
         display: flex;
 
         &:not(:last-child) {
-            margin-bottom: 17px;
+            margin-bottom: 16px;
         }
     }
     &__category {
-        width: 120px;
+        width: 130px;
         text-transform: uppercase;
         color: $color-ebony-clay-gray;
     }

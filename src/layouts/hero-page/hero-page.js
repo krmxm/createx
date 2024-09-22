@@ -31,8 +31,8 @@ class HeroPage extends Component {
     }
 
     classTitle = () => {
-        const { title, titleMb } = this.props;
-        let clazz = title.length > 8 ? 'title title_overLength hero-page__title' : 'title hero-page__title';
+        const { title, titleMb, slider } = this.props;
+        let clazz = slider ? 'title title_overLength hero-page__title' : 'title hero-page__title';
         if (titleMb) {
             clazz += ' hero-page__title_mb';
         }

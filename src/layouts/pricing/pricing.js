@@ -5,7 +5,7 @@ import './pricing.scss';
 import decorate from '../../assets/img/image.png';
 
 class Pricing extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
@@ -21,17 +21,17 @@ class Pricing extends Component {
                             <caption className="visually-hidden">Tariffs table</caption>
                             <thead className="table__header">
                                 <tr className="table__row">
-                                    <th className="table__th">Items</th>
+                                    <th className="table__th large large_bold">Items</th>
                                     <th className="table__th">
-                                        <div className="table__heading">Basic</div>
+                                        <div className="table__heading title title_h5 center">Basic</div>
                                         <div className="table__per">$20 per m2</div>
                                     </th>
                                     <th className="table__th">
-                                        <div className="table__heading">STANDARD</div>
+                                        <div className="table__heading title title_h5 center">STANDARD</div>
                                         <div className="table__per">$30 per m2</div>
                                     </th>
                                     <th className="table__th">
-                                        <div className="table__heading">BUSINESS</div>
+                                        <div className="table__heading title title_h5 center">BUSINESS</div>
                                         <div className="table__per">$40 per m2</div>
                                     </th>
                                 </tr>
@@ -154,7 +154,7 @@ class Pricing extends Component {
                                     <td className="table__col">
                                         <button className="btn-reset btn btn_size-small btn_theme-outline table__btn">send request</button>
                                     </td>
-                                </tr>  
+                                </tr>
                             </tbody>
                         </table>
                     </div>
