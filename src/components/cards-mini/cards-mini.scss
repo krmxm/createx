@@ -28,10 +28,10 @@
                         display: block;
                     }
             }
-        }
-    
-        &__icon {
-            margin-bottom: 22px;
+            svg {
+                margin-bottom: 22px;
+                fill: $color-primary;
+            }
         }
         
 

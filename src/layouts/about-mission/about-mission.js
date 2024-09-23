@@ -7,9 +7,10 @@ import { ReactComponent as Quality } from '../../assets/img/icons/quality.svg';
 import { ReactComponent as Safety } from '../../assets/img/icons/safety.svg';
 import { ReactComponent as Comfort } from '../../assets/img/icons/comfort.svg';
 
-import './mission.scss';
 
-class Mission extends Component {
+import './about-mission.scss';
+
+class AboutMission extends Component {
     constructor(props) {
         super(props);
     }
@@ -18,9 +19,9 @@ class Mission extends Component {
 
     render() {
         return (
-            <section className="mission section-offset">
+            <section className="section-offset about-mission">
                 <div className="container">
-                    <h2 className="title title_h2 title_h2-center mission__title">Our core values</h2>
+                    <h2 className="title title_h2 title_h2-center about-mission__title">Our core values</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.</p>
                     <CardsMini cards={[
                         {
@@ -39,16 +40,6 @@ class Mission extends Component {
                             iconSrc: <Comfort />
                         }
                     ]} />
-                    <form className='form mission__form' action="#">
-                        <h3 className="title title_h4 title_h4-center">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h3>
-                        <Forms
-                            isHorizontal={true}
-                            isPhone={true}
-                            isMessage={true}
-                            buttonClass={'btn-reset btn btn_size-regular btn_theme-primary'}
-                            buttonText={'Send'}
-                        />
-                    </form>
                 </div>
 
             </section>
@@ -56,4 +47,4 @@ class Mission extends Component {
     }
 }
 
-export default Mission;
+export default AboutMission;

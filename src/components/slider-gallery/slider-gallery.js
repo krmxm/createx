@@ -62,16 +62,16 @@ export default class App extends Component {
           className="mySwiper2"
         >
           <SwiperSlide>
-            <img src={Work1} />
+            <img src={Work1} className='swiper-slide__img-gallery' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Work2} />
+            <img src={Work2} className='swiper-slide__img-gallery' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Work3} />
+            <img src={Work3} className='swiper-slide__img-gallery' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Work4} />
+            <img src={Work4} className='swiper-slide__img-gallery' />
           </SwiperSlide>
           <button ref={this.prevRef} className={prevBtnClass}>
             <ArrowLeft />
@@ -90,16 +90,16 @@ export default class App extends Component {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src={Work1Small} />
+            <img src={Work1Small} className='swiper-slide__img-gallery-mini' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Work2} />
+            <img src={Work2} className='swiper-slide__img-gallery-mini' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Work3} />
+            <img src={Work3} className='swiper-slide__img-gallery-mini' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Work4} />
+            <img src={Work4} className='swiper-slide__img-gallery-mini' />
           </SwiperSlide>
         </Swiper>
 

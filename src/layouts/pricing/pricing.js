@@ -23,15 +23,15 @@ class Pricing extends Component {
                                 <tr className="table__row">
                                     <th className="table__th large large_bold">Items</th>
                                     <th className="table__th">
-                                        <div className="table__heading title title_h5 center">Basic</div>
+                                        <div className="table__heading title title_h5">Basic</div>
                                         <div className="table__per">$20 per m2</div>
                                     </th>
                                     <th className="table__th">
-                                        <div className="table__heading title title_h5 center">STANDARD</div>
+                                        <div className="table__heading title title_h5">STANDARD</div>
                                         <div className="table__per">$30 per m2</div>
                                     </th>
                                     <th className="table__th">
-                                        <div className="table__heading title title_h5 center">BUSINESS</div>
+                                        <div className="table__heading title title_h5">BUSINESS</div>
                                         <div className="table__per">$40 per m2</div>
                                     </th>
                                 </tr>
