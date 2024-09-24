@@ -20,11 +20,56 @@ class History extends Component {
         // this.setThumbsSwiper = this.setThumbsSwiper.bind(this);
         this.prevRef = createRef();
         this.nextRef = createRef();
+        this.swiperRef = createRef();
         this.state = {
             prevBtnActive: true,
-            nextBtnActive: true
+            nextBtnActive: true,
+            activeTabIndex: 0
         }
+
     }
+
+    prevSlide = () => {
+        this.swiperRef.current.swiper.slidePrev();
+    };
+
+    nextSlide = () => {
+        this.swiperRef.current.swiper.slideNext();
+    };
+
+    handleReachEnd = () => {
+        this.setState({
+            nextBtnActive: false,
+        });
+    };
+
+    handleReachBeginning = () => {
+        this.setState({
+            prevBtnActive: false,
+        });
+    };
+
+    handleSlideChange = () => {
+        const swiper = this.swiperRef.current.swiper;
+        const isBeginning = swiper.isBeginning;
+        const isEnd = swiper.isEnd;
+
+        this.setState({
+            prevBtnActive: !isBeginning,
+            nextBtnActive: !isEnd,
+            activeTabIndex: swiper.activeIndex // Обновляем активный таб
+        });
+    };
+
+    navigateToSlide = (index) => {
+        this.swiperRef.current.swiper.slideTo(index);
+    };
+
+    handleTabClick = (index) => {
+        if (this.swiperRef.current && this.swiperRef.current.swiper) {
+            this.swiperRef.current.swiper.slideTo(index);
+        }
+    };
 
     render() {
         const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav-history__btn slider-nav-history__prev' : 'btn-reset slider-nav-history__btn slider-nav-history__prev slider-nav-history__btn_disabled';
@@ -46,35 +91,29 @@ class History extends Component {
                     </div>
                     <div className="history__content grid">
                         <ul class="list-reset history-nav">
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn history-nav__btn--active">Present</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">March 2019</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">November 2018</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">July 2015</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">August 2010</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">February 2007</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">May 2004</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">October 2001</button>
-                            </li>
-                            <li class="history-nav__item">
-                                <button class="btn-reset history-nav__btn">June 2000</button>
-                            </li>
+                            {['Present', 'March 2019', 'November 2018', 'July 2015', 'August 2010', 'February 2007', 'May 2004', 'October 2001', 'June 2000'].map((label, index) => (
+                                <li className="history-nav__item" key={index}>
+                                    <button
+                                        className={`btn-reset history-nav__btn ${this.state.activeTabIndex === index ? 'history-nav__btn--active' : ''}`}
+                                        onClick={() => this.handleTabClick(index)}
+                                    >
+                                        {label}
+                                    </button>
+                                </li>
+                            ))}
                         </ul>
-                        <Swiper className="history__item history-slider">
+                        <Swiper className="history__item history-slider"
+                            className="history__item history-slider"
+                            ref={this.swiperRef}
+                            modules={[Navigation, FreeMode, Thumbs]}
+                            navigation={{
+                                prevEl: this.prevRef.current,
+                                nextEl: this.nextRef.current,
+                            }}
+                            onReachEnd={this.handleReachEnd}
+                            onReachBeginning={this.handleReachBeginning}
+                            onSlideChange={this.handleSlideChange}
+                        >
                             <SwiperSlide>
                                 <img src={History1} alt="History image" class="history__image" />
                                 <p class="history__descr">
