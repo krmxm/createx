@@ -5,6 +5,7 @@ import HeroPage from '../../layouts/hero-page/hero-page';
 import Achieve from '../../layouts/achieve/achieve';
 import AboutMission from '../../layouts/about-mission/about-mission';
 import History from '../../layouts/history/history';
+import OurPartners from '../../layouts/our-partners/our-partners';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
@@ -22,6 +23,7 @@ class AboutUs extends Component {
                 <Achieve />
                 <AboutMission />
                 <History />
+                <OurPartners title='Our partners'/>
                 <ContactsSection />
                 <Footer />
             </>
