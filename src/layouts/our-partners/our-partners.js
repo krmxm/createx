@@ -17,7 +17,7 @@ class OurPartners extends Component {
         const title = this.props.title;
         return (
             <div className="our-partners">
-                <Partners title={title} logos={slideData} />
+                <Partners title={title} subtitle='We are supported by 12+ industry bodies and media partners' logos={slideData} />
             </div>
         )
     }

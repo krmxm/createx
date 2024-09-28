@@ -27,7 +27,7 @@ class Partners extends Component {
         return (
             <div className='container partner'>
                 <h2 className='title title_h2 title_h2-center partners__title'>{title}</h2>
-                {subtitle ? { subtitle } : ''}
+                {subtitle ? <p className="large large_regular large_center large_section-descr-mb">{subtitle}</p> : ''}
                 <ul className="partners__list">
                     {this.renderLogo(logos)}
                 </ul>
