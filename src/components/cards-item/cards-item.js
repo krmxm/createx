@@ -1,4 +1,4 @@
-import './cardsItem.scss';
+import './cards-item.scss';
 
 const CardsItem = ({ title, descr, picture }, index) => {
 

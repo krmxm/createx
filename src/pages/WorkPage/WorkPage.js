@@ -20,7 +20,7 @@ class WorkPage extends Component {
     }
 
     render() {
-        const headerClassMod = 'header_secondary'
+        const headerClassMod = 'header_secondary';
         return (
             <>
                 <Header headerClassMod={headerClassMod} />

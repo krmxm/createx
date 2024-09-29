@@ -1,6 +1,6 @@
-import CardsItem from '../cardsItem/cardsItem';
+import CardsItem from '../cards-item/cards-item';
 
-import './cardsList.scss';
+import './cards-list.scss';
 
 const CardsList = ({ cardsData }) => {
     const elements = cardsData.map(item => {

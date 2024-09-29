@@ -26,6 +26,9 @@ class HeroPage extends Component {
             case 'some-project':
                 return 'hero-page hero-page_some-project';
                 break;
+            case 'positions':
+                return 'hero-page hero-page_positions';
+                break;
             default: return 'hero-page'
         }
     }

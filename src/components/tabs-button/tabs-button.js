@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import './tabsButton.scss'
+import './tabs-button.scss'
 
 
 class TabsButton extends Component {

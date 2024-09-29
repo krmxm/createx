@@ -1,0 +1,42 @@
+.positions-content {
+    padding-top: 120px;
+    padding-bottom: 56px;
+    &__left {
+        grid-column: 7 span;
+    }
+    &__right {
+        display: flex;
+        justify-content: flex-end;
+        grid-column: 5 span;
+    }
+}
+
+.positions-looking {
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    &__title {
+        margin-bottom: 24px;
+    }
+    &__descr{
+        margin-bottom: 48px;
+    }
+    &__btns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn {
+        &_sub {
+            // margin-right: 22px;
+            padding-right: 44px;
+            padding-left: 44px;
+        }
+        &_send {
+            padding-right: 54px;
+            padding-left: 54px;
+        }
+    }
+}

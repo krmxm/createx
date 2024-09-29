@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import TabsButton from '../../components/tabsButton/tabsButton';
-import CardsList from '../../components/cardsList/cardsList';
+import TabsButton from '../../components/tabs-button/tabs-button';
+import CardsList from '../../components/cards-list/cards-list';
 
 import { ReactComponent as TabIcon1 } from '../../assets/img/sprite/house.svg';
 import { ReactComponent as TabIcon2 } from '../../assets/img/sprite/construction.svg';
