@@ -7,6 +7,7 @@ import WorkPage from '../../pages/WorkPage/WorkPage';
 import SomeProject from '../../pages/SomeProject/SomeProject';
 import AboutUs from '../../pages/AboutUs/AboutUs';
 import Positions from '../../pages/Positions/Positions';
+import News from '../../pages/News/News';
 
 
 import './app.scss';
@@ -24,7 +25,8 @@ class App extends Component {
         {/* <WorkPage /> */}
         {/* <SomeProject /> */}
         {/* <AboutUs /> */}
-        <Positions />
+        {/* <Positions /> */}
+        <News />
       </>
     )
   }

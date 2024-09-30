@@ -1,41 +1,41 @@
 .tabs-nav {
-    $gap: 20px;
+    // $gap: 20px;
 
     @include flex-v-center;
 
-    margin-bottom: 61px;
-    transform: translateY(-60px);
+    // margin-bottom: 61px;
+    // transform: translateY(-60px);
     &__item {
-        width: 230px;
+        // width: 230px;
 
         transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
         
-        &:not(:last-child) {
-            margin-right: $gap;
-        }
+        // &:not(:last-child) {
+        //     margin-right: $gap;
+        // }
     }
-    &__btn {
-        @include flex-column-center;
+    // &__btn {
+    //     @include flex-column-center;
 
-        justify-content: center;
-        border-radius: 4px;
-        padding: 15px;
-        width: 100%;
-        min-height: 154px;
-        box-shadow: $shadow-large;
-        color: $color-primary;
-        background-color: $color-light;
-        transition: color 0.5s ease-in-out, background-color 0.4s ease-in-out;
-        &_active {
-            color: $color-light;
-            background-color: $color-primary;
-            pointer-events: none;
+    //     justify-content: center;
+    //     border-radius: 4px;
+    //     padding: 15px;
+    //     width: 100%;
+    //     min-height: 154px;
+    //     box-shadow: $shadow-large;
+    //     color: $color-primary;
+    //     background-color: $color-light;
+    //     transition: color 0.5s ease-in-out, background-color 0.4s ease-in-out;
+    //     &_active {
+    //         color: $color-light;
+    //         background-color: $color-primary;
+    //         pointer-events: none;
 
-            .tabs-nav__text {
-            color: $color-light;
-      }
-        }
-    }
+    //         .tabs-nav__text {
+    //         color: $color-light;
+    //   }
+    //     }
+    // }
 
     &__icon {
         display: block;
@@ -49,6 +49,6 @@
     }
 
     &__text {
-        transition: color 0.4s ease-in-out;
+        // transition: color 0.4s ease-in-out;
     }
 }

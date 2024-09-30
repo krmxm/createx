@@ -8,7 +8,7 @@ class TabsButton extends Component {
         super(props);
     }
 
-    buttons = () => {
+    buttons = (classForTabsItem, classForTabsBtn) => {
         const checkActive = (e, name) => {
             const targetClassList = e.target.classList;
             if (targetClassList && targetClassList.contains('props-class_active')) {
@@ -20,15 +20,15 @@ class TabsButton extends Component {
         return (
             this.props.tabsData.map(({ id, name, icon }) => {
                 const active = this.props.filter === name;
-                const clazz = active ? 'tabs-nav__btn tabs-nav__btn_active' : 'tabs-nav__btn';
+                const clazz = active ? `${classForTabsBtn} ${classForTabsBtn}_active` : `${classForTabsBtn}`;
                 return (
-                    <li className='tabs-nav__item'>
+                    <li className={`tabs-nav__item ${classForTabsItem}`}>
                         <button
                             className={`btn-reset ${clazz}`}
                             type="button"
                             key={id}
                             onClick={(e) => checkActive(e, name)}>
-                            <span className="tabs-nav__icon">{icon}</span>
+                            {icon ? <span className="tabs-nav__icon">{icon}</span> : ''}
                             <span className='base base_bold tabs-nav__text'>{name}</span>
                         </button>
 
@@ -39,10 +39,10 @@ class TabsButton extends Component {
     }
 
     render() {
-        const { classForTabsList, classForTabsItem } = this.props;
+        const { classForTabsList, classForTabsItem, classForTabsBtn } = this.props;
         return (
             <ul className={`tabs-nav ${classForTabsList}`}>
-                {this.buttons()}
+                {this.buttons(classForTabsItem, classForTabsBtn)}
             </ul>
         )
     }

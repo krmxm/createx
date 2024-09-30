@@ -25,7 +25,7 @@ class Positions extends Component {
     render() {
         return (
             <div className="site-container">
-                <Header headerClassMod='' />
+                <Header headerClassMod='header_secondary' />
                 <HeroPage title='AVAILABLE POSITIONS' descr={`Build your career with Createx Construction Bureau.`} page='positions' />
                 <PositionsContent positionsData={this.positionsData} />
                 <EmployeeBenefits />
