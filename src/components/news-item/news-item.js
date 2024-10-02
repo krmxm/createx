@@ -29,13 +29,12 @@ const NewsItem = ({ newsArticleImg, newsArticleLinkText, newsArticleMetaLinkText
                     </h3>
                     <div className="news-article__meta article-meta small small_regular">
                         <a className='article-meta__item' href="#">{newsArticleMetaLinkText}</a>
-                        <time className='article-meta__item' >{formatData(newsArticleMetaTime)}</time>
+                        <time className='article-meta__item' datetime={newsArticleMetaTime}>{formatData(newsArticleMetaTime)}</time>
                         <span className='article-meta__item article-meta__item_comments'>{newsArticleMetaComments} comments</span>
                     </div>
                     <p className="news-article__descr base base_regular">{compressLongString(recentArticleDescr)}</p>
                 </div>
             </article>
-
         </li>
     )
 }

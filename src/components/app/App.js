@@ -8,6 +8,7 @@ import SomeProject from '../../pages/SomeProject/SomeProject';
 import AboutUs from '../../pages/AboutUs/AboutUs';
 import Positions from '../../pages/Positions/Positions';
 import News from '../../pages/News/News';
+import PostPage from '../../pages/PostPage/PostPage';
 
 
 import './app.scss';
@@ -26,7 +27,8 @@ class App extends Component {
         {/* <SomeProject /> */}
         {/* <AboutUs /> */}
         {/* <Positions /> */}
-        <News />
+        {/* <News /> */}
+        <PostPage />
       </>
     )
   }

@@ -20,12 +20,12 @@ class RelatedProjects extends Component {
             { id: 5, picture: require('../../assets/img/related-2.jpeg'), title: 'Modern Double Bedroom', descr: 'Apartments & flats' }
         ];
         return (
-            <div className="section-offset related-projects">
+            <section className="section-offset related-projects">
                 <div className="container">
                     <SliderMini title='Related projects' slides={slideData} />
                     <LearnMore title='Explore all our works' textBtn='View portfolio' classLearnMore='related-projects__learn' />
                 </div>
-            </div>
+            </section>
         )
     }
 }

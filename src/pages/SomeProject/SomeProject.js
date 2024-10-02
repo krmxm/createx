@@ -20,7 +20,7 @@ class SomeProject extends Component {
         return (
             <>
                 <Header headerClassMod={headerClassMod} />
-                <HeroPage title='Modern Cottage' page='some-project' titleMb slider />
+                <HeroPage title='Modern Cottage' page='some-project' titleMb='mbProject' slider />
                 <ProjectGoal />
                 <Decisions />
                 <SimilarProjects />

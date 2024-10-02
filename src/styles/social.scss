@@ -5,6 +5,12 @@
         &:not(:last-child) {
             margin-right: 16px;
         }
+        
+        &:hover {
+            svg {
+                fill: $color-primary;
+            }
+        }
     }
     &__link {
         width: 24px;
