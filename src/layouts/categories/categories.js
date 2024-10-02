@@ -1,9 +1,7 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import TabsButton from '../../components/tabs-button/tabs-button';
 import NewsList from '../../components/news-list/news-list';
-
-
-import { ReactComponent as LoadIcon } from '../../assets/img/icons/load.svg';
+import Paginations from '../../components/paginations/paginations';
 
 import './categories.scss';
 
@@ -14,8 +12,8 @@ class Categories extends Component {
         this.state = {
             tabsData: [
                 { id: 0, name: 'All News' },
-                { id: 1, name: 'Company News'},
-                { id: 2, name: 'Innovation'},
+                { id: 1, name: 'Company News' },
+                { id: 2, name: 'Innovation' },
                 { id: 3, name: 'Industry News' },
                 { id: 4, name: 'Expert Tips' },
                 { id: 5, name: 'Marketing' }
@@ -37,54 +35,55 @@ class Categories extends Component {
                 { id: 13, newsArticleImg: require('../../assets/img/news/news-1.png'), newsArticleLinkText: 'How to Build Climate Change-Resilient Infrastructure', newsArticleMetaLinkText: 'Industry News', newsArticleMetaTime: 'June 24, 2020', newsArticleMetaComments: '4', recentArticleDescr: 'Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...' },
                 { id: 14, newsArticleImg: require('../../assets/img/news/news-1.png'), newsArticleLinkText: 'How to Build Climate Change-Resilient Infrastructure', newsArticleMetaLinkText: 'Industry News', newsArticleMetaTime: 'June 24, 2020', newsArticleMetaComments: '4', recentArticleDescr: 'Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...' }
             ],
-            filter: 'All Projects',
-            displayedCardsCount: 9
+            filter: 'All News',
+            currentPage: 0,
+            cardsPerPage: 6
+        }
+        this.blockRef = React.createRef();
+    }
+
+    handlePageClick = (pageNumber) => {
+        this.setState({ currentPage: pageNumber })
+
+        if (this.blockRef.current) {
+            this.blockRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     }
 
     onFilterSelect = (filter) => {
-        this.setState({ filter, displayedCardsCount: 9 });
+        this.setState({ filter, currentPage: 0 });
     };
 
-    filterCard = (items, filter) => {
+    filterNews = (items, filter) => {
         switch (filter) {
-            case 'Construction':
-                return items.filter(item => item.project === 'Construction');
-            case 'Project Development':
-                return items.filter(item => item.project === 'Project Development');
-            case 'Interior Design':
-                return items.filter(item => item.project === 'Interior Design');
-            case 'Repairs':
-                return items.filter(item => item.project === 'Repairs');
+            case 'Company News':
+                return items.filter(item => item.newsArticleMetaLinkText === 'Company News');
+            case 'Innovation':
+                return items.filter(item => item.newsArticleMetaLinkText === 'Innovation');
+            case 'Industry News':
+                return items.filter(item => item.newsArticleMetaLinkText === 'Industry News');
+            case 'Expert Tips':
+                return items.filter(item => item.newsArticleMetaLinkText === 'Expert Tips');
+            case 'Marketing':
+                return items.filter(item => item.newsArticleMetaLinkText === 'Marketing');
             default:
                 return items;
         }
     }
 
-    loadMoreCards = () => {
-        this.setState((prevState) => ({
-            displayedCardsCount: prevState.displayedCardsCount + 3 // Подгружаем еще 3 карточки
-        }));
-    };
-
     render() {
-        const { tabsData, newsData, filter, displayedCardsCount } = this.state;
-        // const filteredCards = this.filterCard(cardsData, filter);
-        // const visibleCards = filteredCards.slice(0, displayedCardsCount);
+        const { tabsData, newsData, filter, currentPage, cardsPerPage } = this.state;
+        const offset = currentPage * cardsPerPage;
+        const filteredNews = this.filterNews(newsData, filter);
+        const visibleCards = filteredNews.slice(offset, offset + cardsPerPage);
+        const totalPages = Math.ceil(filteredNews.length / cardsPerPage);
         return (
-            <section className="categories">
+            <section ref={this.blockRef} className="categories">
                 <div className="container">
                     <h2 className='title title_h2 title_h2-center categories__title'>Categories</h2 >
-                    <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='news-nav' classForTabsItem='news-nav__item' classForTabsBtn='news-nav__btn'/>
-                    <NewsList newsData={newsData} classForList='categories__list' classForItem='categories__item' />
-                    {/* {displayedCardsCount < filteredCards.length && (
-                        <div className="centered">
-                            <button onClick={this.loadMoreCards} className="btn-reset portfolio-more">
-                                <LoadIcon />
-                                <p className="base vase_bold">Load more</p>
-                            </button>
-                        </div>
-                    )} */}
+                    <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='news-nav' classForTabsItem='news-nav__item' classForTabsBtn='news-nav__btn' />
+                    <NewsList newsData={visibleCards} classForList='categories__list' classForItem='categories__item' />
+                    {totalPages > 1 ? <Paginations totalPages={totalPages} currentPage={currentPage} handlePageClick={this.handlePageClick} classForPaginationsList='news-paginations-list' classForPaginationsItem='news-paginations-item' /> : ''}
                 </div>
             </section>
         )

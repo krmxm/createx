@@ -1,0 +1,38 @@
+.paginations-list {
+    display: flex;
+    justify-content: center;
+}
+
+.paginations-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        svg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    cursor: pointer;
+    &_disabled {
+        pointer-events: none;
+        cursor: none;
+        svg {
+            fill: $color-storm-gray;
+        }
+    }
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.paginations-arrow {
+    fill: $color-gray;
+    &:hover {
+        fill: $color-primary;
+    }
+}

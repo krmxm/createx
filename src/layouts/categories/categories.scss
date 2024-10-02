@@ -1,4 +1,5 @@
 .categories {
+    position: relative;
     padding-top: 120px;
     padding-bottom: 180px;
     &__title {
@@ -35,5 +36,22 @@
             color: $color-primary;
             border-color: currentColor;
           }
+    }
+}
+
+.news-paginations-list {
+    position: absolute;
+    bottom: 118px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.news-paginations-item {
+    color: $color-gray;
+    &_active {
+        color: $color-primary;
+        a {
+            color: $color-primary;
+        }
     }
 }
