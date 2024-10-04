@@ -10,7 +10,7 @@ class PostForm extends Component {
     render() {
         return (
             <form className="post-form">
-                <h2 className="title title--center post-form__title">Leave your comment</h2>
+                <h2 className="title title_h2 title_h2-center post-form__title">Leave your comment</h2>
                 <div className="post-form__content">
                     <label className="form-field form-field--gray post-form__field">
                         <span className="form-field__caption">Name*</span>
