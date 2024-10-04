@@ -13,7 +13,7 @@ class Comments extends Component {
     render() {
         return (
             <div class="comments">
-                <h2 class="title title--center comments__title">4 comments</h2>
+                <h2 class="title title_h2 title_h2-center comments__title">4 comments</h2>
                 <ul class="list-reset comments__list">
                     <li class="comments__item">
                         <article class="comment">

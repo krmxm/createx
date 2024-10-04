@@ -42,9 +42,10 @@ class Mission extends Component {
                     <form className='form mission__form' action="#">
                         <h3 className="title title_h4 title_h4-center">Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:</h3>
                         <Forms
-                            isHorizontal={true}
+                            isOrientation='horizontal'
                             isPhone={true}
                             isMessage={true}
+                            classForSection='know-more'
                             buttonClass={'btn-reset btn btn_size-regular btn_theme-primary'}
                             buttonText={'Send'}
                         />

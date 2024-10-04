@@ -2,9 +2,6 @@
     &__content {
         &_horizontal {
             @include flex-v-end;
-            .form__field {
-                margin-right: 24px;
-                }
         }
         &_vertical {
             @include flex-column-center;
@@ -14,6 +11,11 @@
             .form__checkbox {
                 margin-bottom: 24px;
             }
+        }
+        &_grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
     }
     &__field {
@@ -28,15 +30,34 @@
             resize: none;
             padding-top: 10px;
         }
-        &_horizontal-message {
+        &_know-more {
             flex-grow: 1;
+            margin-right: 24px;
             input, textarea {
                 width: 100%;
             }
         }
-        &_vertical {
+        &_contacts {
             width: 100%;
+            margin-bottom: 20px;
             input, textarea {
+                width: 100%;
+            }
+        }
+        &_post {
+            width: 48%;
+            input {
+                width: 100%;
+                height: 52px;
+              }
+            textarea {
+                width: 100%;
+                height: 100px;
+                
+            }
+            &-comment {
+                margin-top: 22px;
+                margin-bottom: 46px;
                 width: 100%;
             }
         }
@@ -53,8 +74,11 @@
         border-radius: 4px;
         border-color: $iron;
         background-color: #F4F5F7;
-        &_vertical {
+        &_contacts {
             height: 66px;
+        }
+        &_post {
+            height: 52px;
         }
         &::placeholder {
             font-size: 14px;

@@ -18,11 +18,12 @@ class ContactsSection extends Component {
                     <form className='contacts-section__form' action="#">
                         <h3 className="title title_h4 title_h4-center title_h4-form">A&nbsp;quick way to&nbsp;discuss details</h3>
                         <Forms
-                            isVertical={true}
+                            isOrientation='vertical'
                             isPhone={true}
                             isEmail={true}
                             isMessage={true}
                             isCheckBox={true}
+                            classForSection='contacts'
                             buttonClass={'btn-reset btn btn_size-regular btn_theme-primary'}
                             buttonText={'send request'}
                         />

@@ -90,9 +90,9 @@ class PostArticle extends Component {
                                 </li>
                             </ul>
                         </div>
+                        <Comments />
+                        <PostForm />
                     </div>
-                    <Comments />
-                    <PostForm />
                 </div>
             </article>
         )
