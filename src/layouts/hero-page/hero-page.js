@@ -41,6 +41,9 @@ class HeroPage extends Component {
             case 'post':
                 return 'hero-page hero-page_post';
                 break;
+            case 'contacts-us':
+                return 'hero-page hero-page_contacts-us';
+                break;
             default: return 'hero-page'
         }
     }

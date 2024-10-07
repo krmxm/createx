@@ -9,6 +9,7 @@ import AboutUs from '../../pages/AboutUs/AboutUs';
 import Positions from '../../pages/Positions/Positions';
 import News from '../../pages/News/News';
 import PostPage from '../../pages/PostPage/PostPage';
+import ContactsUs from '../../pages/ContactsUs/ContactsUs';
 
 
 import './app.scss';
@@ -28,7 +29,8 @@ class App extends Component {
         {/* <AboutUs /> */}
         {/* <Positions /> */}
         {/* <News /> */}
-        <PostPage />
+        {/* <PostPage /> */}
+        <ContactsUs />
       </>
     )
   }
