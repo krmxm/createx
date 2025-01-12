@@ -91,7 +91,7 @@ class SliderMini extends Component {
                         <img className='slider__img' src={picture} alt="Portfolio cover" />
                         <div className="slider__content">
                             <h3 className='lead lead_bold'>{title}</h3>
-                            <span className='small regular'>{descr}</span>
+                            <span className='small small_regular'>{descr}</span>
                             <button className='btn-reset btn btn_size-regular btn_theme-outline slider__btn-slide'>View Project</button>
 
                         </div>
