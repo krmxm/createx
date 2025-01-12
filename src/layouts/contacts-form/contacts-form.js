@@ -22,7 +22,7 @@ class ContactsForm extends Component {
                     <div class="form-contacts__line">
                         <label class="form-field form-field--gray form-contacts__field">
                         <span class="form-field__caption">Name*</span>
-                        <input type="text" name="name" required placeholder="Your name" class="form-field__input" />
+                        <input type="text" name="name" required placeholder="Your name" class="form-field__input base base_regular" />
                         </label>
 
                         <label class="form-field form-field--gray form-contacts__field">
@@ -38,7 +38,7 @@ class ContactsForm extends Component {
                     <div class="form-contacts__line">
                         <label class="form-field form-field--gray form-contacts__field">
                         <span class="form-field__caption">Phone*</span>
-                        <input type="tel" name="phone" required placeholder="Your phone number" class="form-field__input" />
+                        <input type="tel" name="phone" required placeholder="Your phone number" class="form-field__input base base_regular" />
                         </label>
 
                         <label class="form-field form-field--gray form-contacts__field">
@@ -52,7 +52,7 @@ class ContactsForm extends Component {
                     <div class="form-contacts__line">
                         <label class="form-field form-field--gray form-contacts__field">
                         <span class="form-field__caption">Email</span>
-                        <input type="email" name="email" placeholder="Your working email" class="form-field__input" />
+                        <input type="email" name="email" placeholder="Your working email" class="form-field__input base base_regular" />
                         </label>
 
                         <fieldset class="form-field form-contacts__fields">
@@ -78,7 +78,7 @@ class ContactsForm extends Component {
                     <label class="form-field form-field--gray form-contacts__field form-contacts__field--big">
                         <span class="form-field__caption">Message*</span>
                         <textarea name="message" placeholder="Your message"
-                        class="form-field__input form-field__input--big"></textarea>
+                        class="form-field__input form-field__input_big base base_regular"></textarea>
                     </label>
                     
                     <div class="form-contacts__bottom">
@@ -87,7 +87,7 @@ class ContactsForm extends Component {
                         <span class="custom-checkbox__text">I agree to receive communications from Createx Construction
                             Bureau.</span>
                         </label>
-                        <button class="form-contacts__btn btn btn--fill" type="submit">Send Request</button>
+                        <button class="form-contacts__btn btn btn_size-large btn_theme-primary" type="submit">Send Request</button>
                     </div>
                     </form>
                 </div>
