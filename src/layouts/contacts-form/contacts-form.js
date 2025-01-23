@@ -2,12 +2,40 @@ import { Component } from 'react';
 
 import Woman from '../../assets/img/contacts-page/woman.jpeg'
 
+import MySelect from '../../components/select/select';
+
 import './contacts-form.scss';
 
 class ContactsForm extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            interestedOptions: [
+              { value: 'Interior_Design', label: 'Interior Design' },
+              { value: 'Construction', label: 'Construction' },
+              { value: 'Project Development', label: 'Project Development' },
+              { value: 'Repairs', label: 'Repairs' },
+
+              // Другие опции можно добавить сюда
+            ],
+            locationOptions: [
+              { value: 'New_York', label: 'New York' },
+              { value: 'Taganrog', label: 'Taganrog' },
+              { value: 'Rostov-on-Don', label: 'Rostov-on-Don' },
+              { value: 'Moscow', label: 'Moscow' },
+
+              // Другие опции можно добавить сюда
+            ]
+          };
     }
+
+    handleInterestChange = (selectedValue) => {
+        console.log('Selected interest:', selectedValue);
+      };
+    
+      handleLocationChange = (selectedValue) => {
+        console.log('Selected location:', selectedValue);
+      };
 
     render() {
         return (
@@ -27,11 +55,12 @@ class ContactsForm extends Component {
 
                         <label class="form-field form-field--gray form-contacts__field">
                         <span class="form-field__caption">I am interested in</span>
-                        <select name="insterested" class="form-field__select">
-                            <option value="">Choose interested</option>
-                            <option value="Interior_Design">Interior Design</option>
-                            {/* Почему в value нужно ставить пробел? */}
-                        </select>
+                        <MySelect 
+                            options={this.state.interestedOptions} 
+                            onChange={this.handleInterestChange} 
+                            name="interested" 
+                            placeholder="Choose interested"
+                        />
                         </label>
 
                     </div>
@@ -43,10 +72,12 @@ class ContactsForm extends Component {
 
                         <label class="form-field form-field--gray form-contacts__field">
                         <span class="form-field__caption">Location</span>
-                        <select name="location" class="form-field__select" required>
-                            <option value="">Choose location</option>
-                            <option value="New_York">New York</option>
-                        </select>
+                        <MySelect 
+                            options={this.state.locationOptions} 
+                            onChange={this.handleLocationChange} 
+                            name="location" 
+                            placeholder="Choose location"
+                        />
                         </label>
                     </div>
                     <div class="form-contacts__line">
