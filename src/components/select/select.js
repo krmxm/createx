@@ -18,7 +18,7 @@ class MySelect extends Component {
       position: 'bottom',
       // choices: this.props.options,
       // placeholder: true,
-      // placeholderValue: 'Select an item',
+      placeholderValue: 'Choise',
       searchEnabled: false,
     });
     

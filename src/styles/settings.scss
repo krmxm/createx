@@ -103,6 +103,60 @@ body {
     }
 }
 
+.custom-radio {
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__text {
+        position: relative;
+        display: inline-block;
+        padding-left: 27px;
+    }
+
+    &__text::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 1px;
+        display: inline-block;
+        border: 1px solid #b3b7bc;
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &__text::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        background-image: url('data:image/svg+xml,%3Csvg%20width%3D%228.000000%22%20height%3D%228.000000%22%20viewBox%3D%220%200%208%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdesc%3ECreated%20with%20Pixso.%3C%2Fdesc%3E%3Cdefs%2F%3E%3Ccircle%20cx%3D%224.000000%22%20cy%3D%224.000000%22%20r%3D%224.000000%22%20fill%3D%22%23FF5A30%22%20fill-opacity%3D%221.000000%22%2F%3E%3C%2Fsvg%3E');
+        background-position: center;
+        background-size: 8px 8px;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__input:checked + &__text::before {
+        border-color: $color-primary;
+    }
+
+    &__input:checked + &__text::after {
+        opacity: 1;
+    }
+
+    &__input:focus+&__text {
+        outline: 1px solid $color-primary;
+        border-radius: 4px;
+    }
+}
+
 .article-meta {
 
     // color: $color-storm-gray;
