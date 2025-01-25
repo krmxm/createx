@@ -1,0 +1,110 @@
+.contacts-info {
+    padding: 80px 0;
+    background-color: $bg-color;
+    &__list {
+        --contacts-gap: 120px;
+
+        // margin-bottom: 27px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 118px;
+        gap: calc(var(--contacts-gap) * 2);
+    }
+    &__item {
+        position: relative;
+    
+        &:not(:last-child) {
+          &::after {
+            content: "";
+            position: absolute;
+            right: calc(-1 * var(--contacts-gap));
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-image: url('../../assets/img/icons/divider.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      &__subtitle {
+        margin: 0;
+        margin-bottom: 24px;
+        color: $color-ebony-clay-gray;
+      }
+      &__address {
+        display: inline-block;
+        margin-bottom: 9px;
+        color: $color-ebony-clay-gray;
+      }
+      &__link {
+        display: inline-block;
+        margin-bottom: 24px;
+        border-bottom: 1px solid currentColor;
+        color: $color-primary;
+        transition: color 0.3s ease-in-out;
+
+        &:focus {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+        }
+
+        &:hover {
+        color: $color-active;
+        }
+
+        &:active {
+        color: $color-active;
+        }
+      }
+      &__element {
+        color: $color-storm-gray;
+
+        &:not(:last-child) {
+        margin-bottom: 5px;
+        }
+      }
+      &__value {
+        color: $color-ebony-clay-gray;
+      }
+      &__soc {
+        margin-bottom: 41px;
+      }
+      &__social {
+        justify-content: center;
+        .social__item {
+            &:hover{
+                svg {
+                    fill: $color-primary;
+                }
+            }
+        }
+        .social__item:not(:last-child) {
+          margin-right: 24px;
+        }
+        .social__link {
+          width: 32px;
+          height: 32px;
+          svg {
+            fill: $color-storm-gray;
+            opacity: 1;
+          }
+        }
+      }
+}
+
+.contacts-info__value {
+    transition: color 0.3s ease-in-out;
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+    &:hover {
+      color: $color-active;
+    }
+    &:active {
+      color: $color-active;
+    }
+  }
