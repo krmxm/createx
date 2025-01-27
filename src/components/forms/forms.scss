@@ -86,5 +86,10 @@
             font-weight: 400;
             color: $color-gray;
         }
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
     }
 }

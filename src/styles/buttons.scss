@@ -5,6 +5,7 @@
     text-transform: uppercase;
     color: $color-light;
     border-radius: 4px;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
     &_size {
             &-small {
                 padding: 7px 12px;
@@ -31,21 +32,64 @@
     &_theme {
         &-light {
             border-color: $color-light;
+            &:focus {
+                outline: 2px solid $color-primary;
+                outline-offset: 2px;
+            }
+
+            &:hover {
+                border-color: $color-primary;
+                background-color: $color-primary;
+            }
+
+            &:active {
+                border-color: $color-primary;
+                background-color: $color-primary;
+            }
             }
         &-primary {
             background-color: $color-primary;
+            &:focus {
+                outline: 2px solid $color-primary;
+                outline-offset: 2px;
+            }
+
+            &:hover {
+                background-color: $color-active;
+            }
+
+            &:active {
+                background-color: $color-active;
+            }
         }
         &-outline {
             color: $color-primary;
             border-color: $color-primary;
             background-color: transparent;
             transition: all 0.3s ease-in-out;
+
+            &:focus {
+                outline: 2px solid $color-primary;
+                outline-offset: 2px;
+            }
+
             &:hover {
                 color: $color-light;
-                background-color: $color-primary;
-                border-color: transparent;
+                border-color: $color-primary;
+                background-color: $color-active;
             }
+
+            &:active {
+                border-color: $color-primary;
+                background-color: $color-primary;
+            }
+
+            // &:hover {
+            //     color: $color-light;
+            //     background-color: $color-primary;
+            //     border-color: transparent;
+            // }
         }
     }
-    
+
 }

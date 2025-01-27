@@ -10,4 +10,24 @@
             margin-right: 40px;
         }
     }
+    &__link {
+        transition: color 0.3s ease-in-out;
+        
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:active {
+            color: $color-active;
+        }
+
+        &_current {
+            color: $color-primary;
+        }
+    }
 }

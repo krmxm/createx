@@ -34,6 +34,16 @@
         border-radius: 4px;
         box-shadow: $shadow-small;
         background: var(--color-light);
+        transition: transform .3s ease-in-out;
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
     }
     &__img {
         width: 100%;
@@ -92,10 +102,21 @@
             pointer-events: none;
         }
 
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
         &:hover {
             color: $color-light;
-            background-color: $color-primary;
+            background-color: $color-active;
         }
+
+        &:active {
+            color: $color-light;
+            background-color: $color-active;
+        }
+
     }
     &__prev {
         position: absolute;

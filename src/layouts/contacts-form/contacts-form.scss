@@ -47,6 +47,10 @@
       height: 66px;
       resize: none;
     }
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+      }
   }
 
   &_big {

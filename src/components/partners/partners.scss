@@ -8,4 +8,11 @@
         column-gap: 102px;
         row-gap: 40px;
     }
+
+    &__link {
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+    }
 }
