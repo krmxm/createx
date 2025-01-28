@@ -9,6 +9,12 @@ import { ReactComponent as ArrowRight } from '../../assets/img/sprite/arrow-righ
 import './history.scss';
 
 import History1 from '../../assets/img/history/history-1.jpeg';
+import History2 from '../../assets/img/history/history-2.jpg';
+import History3 from '../../assets/img/history/history-3.jpg';
+import History4 from '../../assets/img/history/history-4.jpg';
+import History5 from '../../assets/img/history/history-5.jpg';
+import History6 from '../../assets/img/history/history-6.jpg';
+
 
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
@@ -110,6 +116,7 @@ class History extends Component {
                                 prevEl: this.prevRef.current,
                                 nextEl: this.nextRef.current,
                             }}
+                            speed={500}
                             onReachEnd={this.handleReachEnd}
                             onReachBeginning={this.handleReachBeginning}
                             onSlideChange={this.handleSlideChange}
@@ -124,7 +131,7 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
+                                <img src={History2} alt="History image" class="history__image" />
                                 <p class="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
@@ -133,7 +140,7 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
+                                <img src={History3} alt="History image" class="history__image" />
                                 <p class="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
@@ -142,7 +149,7 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
+                                <img src={History4} alt="History image" class="history__image" />
                                 <p class="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
@@ -151,7 +158,7 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
+                                <img src={History5} alt="History image" class="history__image" />
                                 <p class="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
@@ -160,7 +167,7 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
+                                <img src={History6} alt="History image" class="history__image" />
                                 <p class="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada

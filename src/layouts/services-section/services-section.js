@@ -29,7 +29,7 @@ class ServicesSection extends Component {
                             </a>
                         </li>
                         <li className="services-list__item">
-                            <a href="#" className="services-item services-item">
+                            <a href="#" className="services-item services-item services-item_pd">
                                 <div className="services-item__content">
                                     <Services2 className="services-item__icon" />
                                     <h3 className="services-item__title lead lead_bold">Project Development</h3>
@@ -37,7 +37,7 @@ class ServicesSection extends Component {
                             </a>
                         </li>
                         <li className="services-list__item">
-                            <a href="#" className="services-item services-item">
+                            <a href="#" className="services-item services-item services-item_id">
                                 <div className="services-item__content">
                                     <Services3 className="services-item__icon" />
                                     <h3 className="services-item__title lead lead_bold">Interior Design</h3>
@@ -45,7 +45,7 @@ class ServicesSection extends Component {
                             </a>
                         </li>
                         <li className="services-list__item">
-                            <a href="#" className="services-item services-item">
+                            <a href="#" className="services-item services-item services-item_repairs">
                                 <div className="services-item__content">
                                     <Services4 className="services-item__icon" />
                                     <h3 className="services-item__title lead lead_bold">Repairs</h3>

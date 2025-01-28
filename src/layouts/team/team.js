@@ -78,6 +78,7 @@ class TeamCards extends Component {
                     <h2 className="title title_h2 title_h2-center">Our team</h2>
                     <p className="large large_regular large_center large_section-descr-mb">People are at the heart of Createx Construction Bureau  </p>
                     {this.onRenderCardsOfTeam(teamData)}
+                    <div class="large large_regular team__text">Become a part of the best team in the construction market of the USA. <a href="#">Available Positions</a></div>
                 </div>
             </section>
         )

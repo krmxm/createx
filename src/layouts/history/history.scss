@@ -20,7 +20,11 @@
     }
 
     &__image {
+        width: 100%;
         margin-bottom: 34px;
+        height: 450px;
+        background-size: cover;
+        object-fit: cover;
     }
 
     &__descr {
@@ -79,6 +83,33 @@
             width: 8px;
             height: 8px;
             background-color: currentColor;
+        }
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:active {
+            color: $color-active;
+        }
+        
+        &:focus {
+            outline: none;
+            color: $color-primary;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:active {
+            color: $color-primary;
+
         }
 
         &--active {

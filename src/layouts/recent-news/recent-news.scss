@@ -47,9 +47,25 @@
     }
     &__link {
         color: $color-ebony-clay-gray;
+        transition: color .3s ease-in-out;
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:active {
+            color: $color-active;
+        }
     }
     &__meta {
         margin-bottom: 16px;
+
+        
     }
 
     &_small {

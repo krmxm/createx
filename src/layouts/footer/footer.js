@@ -73,10 +73,11 @@ class Footer extends Component {
                         <h4 className="footer-address__title footer-title">HEAD OFFICE</h4>
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
-                                Address:
-                            </span>
-                            8502 Preston Rd. Inglewood, New York
-                        </span>
+                                Address:&nbsp;
+                                </span>
+                                    8502 Preston Rd. Inglewood, New York
+                                </span>
+                            
                         <span className="base base_regular footer-address__item">
                             <span className="base base_regular footer-address__name">
                                 Call:

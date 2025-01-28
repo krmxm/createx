@@ -1,4 +1,35 @@
+.our-team {
+    padding-bottom: 135px;
+}
+
+.team {
+    &__text {
+        text-align: center;
+        color: $color-ebony-clay-gray;
+    
+        a {
+          border-bottom: 1px solid currentColor;
+          color: $color-primary;
+          transition: color 0.3s ease-in-out;
+    
+          &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+          }
+    
+          &:hover {
+            color: $color-active;
+          }
+    
+          &:active {
+            color: $color-active;
+          }
+        }
+    }
+}
+
 .team-cards {
+    margin-bottom: 80px;
     &__item{
         grid-column: 3 span;
         &:hover {

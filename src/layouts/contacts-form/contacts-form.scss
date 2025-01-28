@@ -47,10 +47,7 @@
       height: 66px;
       resize: none;
     }
-    &:focus {
-      outline: 2px solid $color-primary;
-      outline-offset: 2px;
-      }
+
   }
 
   &_big {
@@ -148,7 +145,7 @@
   }
 
   .is-focused {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid $color-primary;
     outline-offset: 2px;
   }
 

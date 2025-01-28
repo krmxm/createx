@@ -121,9 +121,23 @@
 
     &__link {
         color: $color-gray;
+        transition: color .3s ease-in-out;
 
         &:not([href]) {
             color: #9A9CA5;
+        }
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:active {
+            color: $color-active;
         }
     }
 }

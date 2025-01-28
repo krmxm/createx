@@ -88,6 +88,24 @@
             background-image: url(../../assets/img/services-1.jpeg);
         }
     }
+    
+    &_pd {
+        &::before {
+            background-image: url(../../assets/img/services-2.jpg);
+        }
+    }
+
+    &_id {
+        &::before {
+            background-image: url(../../assets/img/services-3.jpg);
+        }
+    }
+
+    &_repairs {
+        &::before {
+            background-image: url(../../assets/img/services-4.jpg);
+        }
+    }
 
     &:hover {
         &::before {

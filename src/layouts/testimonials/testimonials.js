@@ -58,6 +58,7 @@ class Testimonials extends Component {
                             spaceBetween={50}
                             slidesPerView={1}
                             loop={true}
+                            speed={500}
                             navigation={{
                                 prevEl: this.prevRef.current,
                                 nextEl: this.nextRef.current,
