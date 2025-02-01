@@ -27,6 +27,11 @@
             padding-left: 44px;
             margin-bottom: 12px;
             text-align: left;
+
+            &:focus {
+                outline: 2px solid $color-primary;
+                outline-offset: 2px;
+            }
         }
 
         .accordion__icon {

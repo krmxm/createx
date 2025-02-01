@@ -21,14 +21,14 @@ class App extends Component {
   render() {
     return (
       <>
-        <HomePage />
+        {/* <HomePage /> */}
         {/* <ServicesPage /> */}
         {/* <ServicesPageInner /> */}
-        {/* <WorkPage /> */}
+        <WorkPage />
         {/* <SomeProject /> */}
         {/* <AboutUs /> */}
         {/* <Positions /> */}
-        <News />
+        {/* <News /> */}
         {/* <PostPage /> */}
         {/* <ContactsUs /> */}
       </>

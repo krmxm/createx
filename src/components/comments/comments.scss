@@ -66,6 +66,7 @@
         font-size: 14px;
         line-height: 150%;
         color: $color-storm-gray;
+        transition: color .3s ease-in-out;
 
         svg {
             position: relative;
@@ -76,6 +77,29 @@
             height: 16px;
             fill: currentColor;
             object-fit: cover;
+            transition: fill .3s ease-in-out;
+        }
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+            svg {
+                fill: $color-primary;
+            }
+        }
+
+        &:hover {
+            color: $color-primary;
+            svg {
+                fill: $color-primary;
+            }
+        }
+
+        &:active {
+            color: $color-active;
+            svg {
+                fill: $color-active;
+            }
         }
     }
 }

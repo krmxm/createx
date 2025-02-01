@@ -24,7 +24,7 @@ class TabsButton extends Component {
                 return (
                     <li className={`tabs-nav__item ${classForTabsItem}`}>
                         <button
-                            className={`btn-reset ${clazz}`}
+                            className={`btn-reset tabs-nav__btn ${clazz}`}
                             type="button"
                             key={id}
                             onClick={(e) => checkActive(e, name)}>
