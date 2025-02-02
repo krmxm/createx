@@ -22,15 +22,15 @@ class App extends Component {
     return (
       <>
         <HomePage />
-        {/* <ServicesPage /> */}
-        {/* <ServicesPageInner /> */}
-        {/* <WorkPage /> */}
-        {/* <SomeProject /> */}
-        {/* <AboutUs /> */}
-        {/* <Positions /> */}
+        <ServicesPage />
+        <ServicesPageInner />
+        <WorkPage />
+        <SomeProject />
+        <AboutUs />
+        <Positions />
         <News />
-        {/* <PostPage /> */}
-        {/* <ContactsUs /> */}
+        <PostPage />
+        <ContactsUs />
       </>
     )
   }
