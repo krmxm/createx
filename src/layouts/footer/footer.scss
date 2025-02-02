@@ -101,6 +101,10 @@
         a  {
             transition: color .3s ease-in-out;
             &:focus {
+                outline: none;
+            }
+    
+            &:focus-visible {
                 outline: 2px solid $color-primary;
                 outline-offset: 2px;
             }
@@ -136,6 +140,10 @@
     &__link {
         transition: color .3s ease-in-out;
         &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
             outline: 2px solid $color-primary;
             outline-offset: 2px;
         }

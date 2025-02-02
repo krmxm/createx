@@ -13,9 +13,13 @@
           transition: color 0.3s ease-in-out;
     
           &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
             outline: 2px solid $color-primary;
             outline-offset: 2px;
-          }
+        }
     
           &:hover {
             color: $color-active;

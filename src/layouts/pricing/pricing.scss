@@ -80,5 +80,10 @@
     }
     &__btn {
         padding: 0 20px;
+
+        &:focus {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
     }
 }

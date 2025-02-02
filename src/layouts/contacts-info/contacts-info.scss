@@ -47,8 +47,12 @@
         transition: color 0.3s ease-in-out;
 
         &:focus {
-        outline: 2px solid $color-primary;
-        outline-offset: 2px;
+          outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
         }
 
         &:hover {
@@ -75,6 +79,9 @@
       &__social {
         justify-content: center;
         .social__item {
+            svg {
+              transition: fill .3s ease-in-out;
+            }
             &:hover{
                 svg {
                     fill: $color-primary;
@@ -98,8 +105,12 @@
 .contacts-info__value {
     transition: color 0.3s ease-in-out;
     &:focus {
-      outline: 2px solid $color-primary;
-      outline-offset: 2px;
+      outline: none;
+  }
+
+    &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
     }
     &:hover {
       color: $color-active;

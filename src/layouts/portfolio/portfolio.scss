@@ -3,11 +3,63 @@
     padding-bottom: 82px;
 }
 
+.portfolio-tabs-nav {
+    &__btn {
+        @include flex-column-center;
+
+        margin-bottom: 61px;
+        transform: translateY(-60px);
+
+        justify-content: center;
+        border-radius: 4px;
+        padding: 15px;
+        width: 100%;
+        min-height: 154px;
+        box-shadow: $shadow-large;
+        color: $color-primary;
+        background-color: $color-light;
+        transition: color 0.5s ease-in-out, background-color 0.4s ease-in-out;
+        &_active {
+            color: $color-light;
+            background-color: $color-primary;
+            pointer-events: none;
+            .portfolio-tabs-nav__text {
+                color: $color-light;
+              }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            color: $color-primary;
+            .portfolio-tabs-nav__text {
+                color: $color-ebony-clay-gray;
+            }
+        }
+
+        &:active {
+            color: $color-active;
+        }
+    }
+    &__text {
+        color: #9A9CA5;
+    }
+}
+
 .portfolio-more {
     display: inline-flex;
     align-items: center;
     margin-top: 60px;
     color: $color-gray;
+    transition: color 0.3s ease-in-out;
+
 
     svg {
         margin-right: 16px;
@@ -16,5 +68,22 @@
         color: inherit;
         fill: currentColor;
         object-fit: cover;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+    }
+
+    &:hover {
+        color: $color-primary;
+    }
+
+    &:active {
+        color: $color-active;
     }
 }

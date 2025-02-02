@@ -78,7 +78,8 @@ class Portfolio extends Component {
         return (
             <section className="portfolio">
                 <div className="container">
-                    <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='portfolio-tabs-nav' classForTabsItem='portfolio-tabs-nav__item' />
+                    <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='portfolio-tabs-nav' classForTabsItem='portfolio-tabs-nav__item'
+                    classForTabsBtn='portfolio-tabs-nav__btn' classForTabsText='portfolio-tabs-nav__text'/>
                     <CardsList cardsData={visibleCards} classForCards='portfolio-tabs' />
                     {displayedCardsCount < filteredCards.length && (
                         <div className="centered">

@@ -81,7 +81,7 @@ class Categories extends Component {
             <section ref={this.blockRef} className="categories">
                 <div className="container">
                     <h2 className='title title_h2 title_h2-center categories__title'>Categories</h2 >
-                    <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='news-nav' classForTabsItem='news-nav__item' classForTabsBtn='news-nav__btn' />
+                    <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='news-nav' classForTabsItem='news-nav__item' classForTabsBtn='news-nav__btn' classForTabsText='news-nav__text'/>
                     <NewsList newsData={visibleCards} classForList='categories__list' classForItem='categories__item' />
                     {totalPages > 1 ? <Paginations totalPages={totalPages} currentPage={currentPage} handlePageClick={this.handlePageClick} classForPaginationsList='news-paginations-list' classForPaginationsItem='news-paginations-item' /> : ''}
                 </div>
