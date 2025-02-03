@@ -69,6 +69,7 @@ class Testimonials extends Component {
                                 swiper.params.navigation.nextEl = this.nextRef.current;
                                 swiper.navigation.init();
                                 swiper.navigation.update();
+                                
                             }}
                             onInit={(swiper) => {
                                 // Добавляем класс ко всему контейнеру слайдов
