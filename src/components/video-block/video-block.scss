@@ -3,6 +3,12 @@
     overflow: hidden;
     border-radius: 4px;
     height: 500px;
+    &_played {
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }      
+    }
     &__content {
             display: block;
             width: 100%;
