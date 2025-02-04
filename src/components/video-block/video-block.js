@@ -19,38 +19,44 @@ class VideoBlock extends Component {
         const video = this.videoRef.current;
         if (video.paused) {
             video.play();
-            this.setState({ isPlaying: true });
         } else {
             video.pause();
-            this.setState({ isPlaying: false });
         }
     };
 
-    // Toggle mute/unmute
-    handleMuteClick = () => {
-        const video = this.videoRef.current;
-        video.muted = !video.muted;
-        this.setState({ isMuted: video.muted });
+    // Update state when video plays
+    handleVideoPlay = () => {
+        this.setState({ isPlaying: true });
     };
+
+    // Update state when video pauses
+    handleVideoPause = () => {
+        this.setState({ isPlaying: false });
+    };
+
+    // Toggle mute/unmute
+    // handleMuteClick = () => {
+    //     const video = this.videoRef.current;
+    //     video.muted = !video.muted;
+    //     this.setState({ isMuted: video.muted });
+    // };
 
     render() {
         const { isPlaying, isMuted } = this.state;
 
         return (
-            <div className={`video-block ${isPlaying ? 'video-block_played' : ''}`}>
+            <div 
+                className={`video-block ${isPlaying ? 'video-block_played' : ''}`}
+                onClick={this.handleVideoClick} // Обработка клика на всю область video-block
+                role="button" 
+                aria-label={isPlaying ? 'Пауза видео' : 'Воспроизведение видео'}>
+                    
                 <button
                     className={`btn-reset video-block__play ${isPlaying ? 'video-block__play_played' : ''}`}
                     onClick={this.handlePlayClick}
                     aria-label={isPlaying ? 'Pause video' : 'Play video'}
                 >
                     <Play />
-                </button>
-                <button
-                    className='btn-reset video-block__muted'
-                    onClick={this.handleMuteClick}
-                    aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-                >
-                    <Mute />
                 </button>
                 <video
                     className='video-block__content'
@@ -59,7 +65,9 @@ class VideoBlock extends Component {
                     muted={isMuted}
                     loop
                     preload="metadata"
-                    controls={isPlaying} // Show controls only when playing
+                    controls={isPlaying}
+                    onPlay={this.handleVideoPlay}
+                    onPause={this.handleVideoPause} // Show controls only when playing
                 ></video>
             </div>
         );

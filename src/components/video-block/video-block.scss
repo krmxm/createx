@@ -3,12 +3,8 @@
     overflow: hidden;
     border-radius: 4px;
     height: 500px;
-    &_played {
-        &::before {
-            opacity: 0;
-            visibility: hidden;
-        }      
-    }
+    cursor: pointer;
+
     &__content {
             display: block;
             width: 100%;
@@ -24,7 +20,14 @@
         bottom: 0;
         z-index: 3;
         background-color: rgb(30, 33, 44, 0.6);
-        ;
+        transition: opacity .3s ease-in-out, visibility .3s ease-in-out; 
+    }
+
+    &_played {
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }      
     }
     &__play {
         @include flex-all-center;
