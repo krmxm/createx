@@ -19,6 +19,7 @@ class Footer extends Component {
     render() {
         return (
             <footer className='footer'>
+                <a href="#" className="to-top"></a>
                 <div className="container footer__container grid">
                     <div className="footer__left">
                         <div className="footer__top">

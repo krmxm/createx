@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { ReactComponent as ArrowLeft } from '../../assets/img/sprite/arrow-left.svg';
@@ -58,12 +58,16 @@ class Testimonials extends Component {
                             spaceBetween={50}
                             slidesPerView={1}
                             loop={true}
-                            speed={500}
+                            speed={1000}
                             navigation={{
                                 prevEl: this.prevRef.current,
                                 nextEl: this.nextRef.current,
                             }}
-                            modules={[Navigation]}
+                            autoplay={{
+                                delay: 3000, // Устанавливаем задержку в 3 секунды
+                                disableOnInteraction: false // Не останавливать автопроигрывание при взаимодействии
+                            }}
+                            modules={[Navigation, Autoplay]}
                             onBeforeInit={(swiper) => {
                                 swiper.params.navigation.prevEl = this.prevRef.current;
                                 swiper.params.navigation.nextEl = this.nextRef.current;

@@ -7,6 +7,7 @@ import AboutMission from '../../layouts/about-mission/about-mission';
 import History from '../../layouts/history/history';
 import OurPartners from '../../layouts/our-partners/our-partners';
 import TeamCards from '../../layouts/team/team';
+import WorldMap from '../../layouts/world-map/world-map';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
@@ -39,6 +40,7 @@ class AboutUs extends Component {
                 <History />
                 <OurPartners title='Our partners' />
                 <TeamCards teamData={teamData} />
+                <WorldMap />
                 <ContactsSection />
                 <Footer />
             </>

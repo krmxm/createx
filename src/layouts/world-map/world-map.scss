@@ -1,0 +1,37 @@
+.world-map {
+	padding: 65px 0 150px;
+    background-color: $bg-color;
+	&__title {
+		margin-bottom: 54px;
+	}
+}
+
+.highlighted {
+    // width: 200%;
+    animation: highlight 2s infinite; /* Цвет подсветки */
+    // stroke: $color-light; /* Обводка */
+    // stroke-width: 2;
+    // transform: translateY(-7px);
+    // transition: fill 0.3s ease; /* Плавное изменение цвета */
+  }
+
+  @keyframes highlight {
+    0% {
+      fill: #B3B7BC; /* Начальный цвет */
+    }
+    // 25% {
+    //   fill: $color-primary;
+    //   opacity: 0.5; /* Промежуточный цвет */
+    // }
+    50% {
+        fill: $color-primary;
+        opacity: 0.5; /* Промежуточный цвет */
+    }
+    // 75% {
+    //     fill: $color-primary;
+    //     opacity: 0.5;
+    // }
+    100% {
+      fill: #B3B7BC; /* Конечный цвет */
+    }
+  }

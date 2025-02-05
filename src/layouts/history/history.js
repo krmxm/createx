@@ -1,6 +1,8 @@
 import React, { Component, createRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
 
 
 import { ReactComponent as ArrowLeft } from '../../assets/img/sprite/arrow-left.svg';
@@ -77,6 +79,19 @@ class History extends Component {
         }
     };
 
+    handleMouseEnter = () => {
+        if (this.swiperRef.current && this.swiperRef.current.swiper) {
+            this.swiperRef.current.swiper.autoplay.stop();
+        }
+    };
+
+    // Возобновление автопрокрутки при уходе курсора
+    handleMouseLeave = () => {
+        if (this.swiperRef.current && this.swiperRef.current.swiper) {
+            this.swiperRef.current.swiper.autoplay.start();
+        }
+    };
+
     render() {
         const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav-history__btn slider-nav-history__prev' : 'btn-reset slider-nav-history__btn slider-nav-history__prev slider-nav-history__btn_disabled';
         const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav-history__btn slider-nav-history__next' : 'btn-reset slider-nav-history__btn slider-nav-history__next slider-nav-history__btn_disabled';
@@ -95,7 +110,7 @@ class History extends Component {
                             </button>
                         </div>
                     </div>
-                    <div className="history__content grid">
+                    <div className="history__content grid" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                         <ul class="list-reset history-nav">
                             {['Present', 'March 2019', 'November 2018', 'July 2015', 'August 2010', 'February 2007', 'May 2004', 'October 2001', 'June 2000'].map((label, index) => (
                                 <li className="history-nav__item" key={index}>
@@ -111,7 +126,11 @@ class History extends Component {
                         <Swiper className="history__item history-slider"
                             className="history__item history-slider"
                             ref={this.swiperRef}
-                            modules={[Navigation, FreeMode, Thumbs]}
+                            autoplay={{
+                                delay: 3000, // Устанавливаем задержку в 3 секунды
+                                disableOnInteraction: false // Не останавливать автопроигрывание при взаимодействии
+                            }}
+                            modules={[Navigation, FreeMode, Thumbs, Autoplay]}
                             navigation={{
                                 prevEl: this.prevRef.current,
                                 nextEl: this.nextRef.current,
