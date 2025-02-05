@@ -19,6 +19,29 @@ class SliderMini extends Component {
         };
     }
 
+    componentDidMount() {
+        this.startAutoplay();
+    }
+
+    componentWillUnmount() {
+        this.stopAutoplay();
+    }
+
+    startAutoplay() {
+        this.autoplayInterval = setInterval(this.nextSlide, 2500);
+    }
+    stopAutoplay() {
+        clearInterval(this.autoplayInterval);
+    }
+
+    handleMouseEnter = () => {
+        this.stopAutoplay(); // Останавливаем автопрокрутку при наведении
+    }
+
+    handleMouseLeave = () => {
+        this.startAutoplay(); // Возобновляем автопрокрутку при удалении курсора
+    }
+
     calcWidthInner() {
         return (this.state.slideWidth + this.state.slideMarginRight) * this.state.totalSlides;
     }
@@ -88,12 +111,13 @@ class SliderMini extends Component {
                     }}
                 >
                     <a href="#" className="slider__item">
-                        <img className='slider__img' src={picture} alt="Portfolio cover" />
+                        <div className="slider__img">
+                            <img className='slider__img' src={picture} alt="Portfolio cover" />
+                        </div>
                         <div className="slider__content">
                             <h3 className='lead lead_bold'>{title}</h3>
                             <span className='small small_regular'>{descr}</span>
                             <button className='btn-reset btn btn_size-regular btn_theme-outline slider__btn-slide'>View Project</button>
-
                         </div>
 
                     </a>
@@ -112,7 +136,7 @@ class SliderMini extends Component {
         const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav__btn slider-nav__next' : 'btn-reset slider-nav__btn slider-nav__next slider-nav__btn_disabled';
 
         return (
-            <div className="slider">
+            <div className="slider" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                 <div className="slider__top">
                     <h2 className="title title_h2 slider__title">{title}</h2>
 

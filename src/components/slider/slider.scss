@@ -29,8 +29,9 @@
     &__item {
         @include flex-column-center;
         
-
+        position: relative;
         overflow: hidden;
+        height: 439px;
         border-radius: 4px;
         box-shadow: $shadow-small;
         background: var(--color-light);
@@ -47,19 +48,33 @@
 
         &:hover {
             transform: translateY(-3px);
+            .slider__content {
+                bottom: 15%;
+            }
         }
     }
     &__img {
         width: 100%;
         height: 345px;
         border-radius: 4px;
+        img {
+            width: 100%;
+            // height: 100%;
+            // object-fit: cover
+        }
     }
     &__content {
         @include flex-column-center;
+
+        width: 100%;
+        position: relative;
+        bottom: -1%;
         padding: 17px 10px 26px;
+        transition: bottom 0.5s;
+        background-color: $color-light;
     }
     &__btn-slide {
-        display: none;
+        // display: none;
         // margin-bottom: -69px;
         margin-top: 24px;
     }
@@ -144,3 +159,12 @@
         transform: translateY(-50%);
     }
 }
+
+// @keyframes slideInUp {
+//     0% {
+//         transform: translateY(100%);
+//     }
+//     100% {
+//         transform: translateY(0);
+//     }
+// }
