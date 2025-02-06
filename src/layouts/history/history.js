@@ -1,15 +1,9 @@
 import React, { Component, createRef } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-
-
-
+import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 import { ReactComponent as ArrowLeft } from '../../assets/img/sprite/arrow-left.svg';
 import { ReactComponent as ArrowRight } from '../../assets/img/sprite/arrow-right.svg';
-
 import './history.scss';
-
 import History1 from '../../assets/img/history/history-1.jpeg';
 import History2 from '../../assets/img/history/history-2.jpg';
 import History3 from '../../assets/img/history/history-3.jpg';
@@ -17,25 +11,80 @@ import History4 from '../../assets/img/history/history-4.jpg';
 import History5 from '../../assets/img/history/history-5.jpg';
 import History6 from '../../assets/img/history/history-6.jpg';
 
-
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-
-
 class History extends Component {
     constructor(props) {
         super(props);
-        this.state = { thumbsSwiper: null };
-        // this.setThumbsSwiper = this.setThumbsSwiper.bind(this);
+        this.state = {
+            thumbsSwiper: null,
+            prevBtnActive: true,
+            nextBtnActive: true,
+            activeTabIndex: 0,
+            autoplay: false,
+        };
+        this.startAutoplay = this.startAutoplay.bind(this);
+        this.stopAutoplay = this.stopAutoplay.bind(this);
         this.prevRef = createRef();
         this.nextRef = createRef();
         this.swiperRef = createRef();
-        this.state = {
-            prevBtnActive: true,
-            nextBtnActive: true,
-            activeTabIndex: 0
-        }
-
+        this.historyRef = createRef();
+        this.observer = null;
     }
+
+    componentDidMount() {
+        this.observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    console.log('Intersection entry:', entry.isIntersecting, entry); // Логируем видимость и весь entry
+                    if (entry.isIntersecting) {
+                        console.log('Element is visible, starting autoplay');
+                        this.startAutoplay();
+                    } else {
+                        console.log('Element is not visible, stopping autoplay');
+                        this.stopAutoplay();
+                    }
+                });
+            },
+            {
+                threshold: 0.5, // Настройте порог, если нужно
+            }
+        );
+    
+        if (this.historyRef.current) {
+            console.log('Observing element:', this.historyRef.current);
+            this.observer.observe(this.historyRef.current);
+        } else {
+            console.error('historyRef is not attached to any element');
+        }
+    }
+
+    componentWillUnmount() {
+        if (this.observer) {
+            this.observer.disconnect();
+        }
+        this.stopAutoplay();
+    }
+
+    startAutoplay = () => {
+        if (!this.state.autoplay) { // Проверяем, нужно ли обновлять состояние
+            this.setState({ autoplay: true }, () => {
+                console.log('Autoplay state:', this.state.autoplay); // Логируем состояние
+                if (this.swiperRef.current && this.swiperRef.current.swiper) {
+                    this.swiperRef.current.swiper.autoplay.start();
+                }
+            });
+        }
+    };
+
+    stopAutoplay = () => {
+        if (this.state.autoplay) { // Проверяем, нужно ли обновлять состояние
+            this.setState({ autoplay: false }, () => {
+                console.log('Autoplay state:', this.state.autoplay); // Логируем состояние
+                if (this.swiperRef.current && this.swiperRef.current.swiper) {
+                    this.swiperRef.current.swiper.autoplay.stop();
+                }
+            });
+        }
+    };
 
     prevSlide = () => {
         this.swiperRef.current.swiper.slidePrev();
@@ -96,9 +145,9 @@ class History extends Component {
         const prevBtnClass = this.state.prevBtnActive ? 'btn-reset slider-nav-history__btn slider-nav-history__prev' : 'btn-reset slider-nav-history__btn slider-nav-history__prev slider-nav-history__btn_disabled';
         const nextBtnClass = this.state.nextBtnActive ? 'btn-reset slider-nav-history__btn slider-nav-history__next' : 'btn-reset slider-nav-history__btn slider-nav-history__next slider-nav-history__btn_disabled';
         return (
-            <section className="history">
+            <section className="history" ref={this.historyRef}>
                 <div className="container">
-                    <div class="history__top">
+                    <div className="history__top">
                         <h2 className="title title_h2 slider__title">Our history</h2>
 
                         <div className="slider__nav slider-nav-history">
@@ -123,13 +172,9 @@ class History extends Component {
                                 </li>
                             ))}
                         </ul>
-                        <Swiper className="history__item history-slider"
+                        <Swiper 
                             className="history__item history-slider"
-                            ref={this.swiperRef}
-                            autoplay={{
-                                delay: 3000, // Устанавливаем задержку в 3 секунды
-                                disableOnInteraction: false // Не останавливать автопроигрывание при взаимодействии
-                            }}
+                            autoplay={this.state.autoplay ? { delay: 3500 } : false}
                             modules={[Navigation, FreeMode, Thumbs, Autoplay]}
                             navigation={{
                                 prevEl: this.prevRef.current,
@@ -139,6 +184,7 @@ class History extends Component {
                             onReachEnd={this.handleReachEnd}
                             onReachBeginning={this.handleReachBeginning}
                             onSlideChange={this.handleSlideChange}
+                            ref={this.swiperRef}
                         >
                             <SwiperSlide>
                                 <img src={History1} alt="History image" class="history__image" />

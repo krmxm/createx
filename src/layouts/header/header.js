@@ -15,7 +15,7 @@ class Header extends Component {
     render() {
         const headerClassMod = this.props.headerClassMod;
         return (
-            <div className={`header ${headerClassMod}`}>
+            <div id='top' className={`header ${headerClassMod}`}>
                 <div className="container header__container">
                     <a href="#" className='logo'>
                         <img src={logo} alt="logo" />

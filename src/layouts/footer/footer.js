@@ -1,11 +1,14 @@
 import { Component } from 'react';
 
+import GoTop from '../../components/to-top/to-top';
+
 import logo from '../../assets/img/logo/logo-footer.svg';
 import { ReactComponent as Whathapp } from '../../assets/img/sprite/whatsapp.svg';
 import { ReactComponent as Messanger } from '../../assets/img/sprite/messanger.svg';
 import { ReactComponent as Facebook } from '../../assets/img/sprite/facebook.svg';
 import { ReactComponent as Twitter } from '../../assets/img/sprite/twitter.svg'
 import { ReactComponent as YouTube } from '../../assets/img/sprite/YouTube.svg';
+
 
 
 
@@ -19,8 +22,9 @@ class Footer extends Component {
     render() {
         return (
             <footer className='footer'>
-                <a href="#" className="to-top"></a>
+                
                 <div className="container footer__container grid">
+
                     <div className="footer__left">
                         <div className="footer__top">
                             <a href="#" className='logo footer__logo'>
@@ -127,6 +131,7 @@ class Footer extends Component {
                     <small className="extrasmall extrasmall_regular footer__copyright">
                         &#169;&nbsp;All rights reserved. Made with <span>by Createx Studio</span>
                     </small>
+                    <GoTop />
                 </div>
             </footer>
         )

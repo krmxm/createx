@@ -213,3 +213,36 @@ a.article-meta__item {
         color: $color-active;
     }
 }
+
+.to-top {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    right: 10px;
+    bottom: 0;
+    &__text {
+        margin-right: 16px;
+        color: $color-light;
+        text-transform: uppercase;
+    }
+    &__icon {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background-color: $color-primary;
+        transition: background-color .3s ease-in-out;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+
+        &:hover {
+            background-color: $color-active; 
+        }
+    }
+}
