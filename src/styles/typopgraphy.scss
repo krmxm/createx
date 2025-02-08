@@ -127,6 +127,10 @@ h6 {
         margin-bottom: 58px;
         color: $color-storm-gray;
     }
+
+    @include minidesk {
+        font-size: 16px;
+    }
 }
 .small {
     font-size: 14px;

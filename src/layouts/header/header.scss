@@ -15,10 +15,45 @@
 
     &__nav {
         margin-left: -114px;
+
+        @include minidesk {
+            margin-left: 0;
+        }
+
+        @include tablet {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+            display: block;
+            overflow-y: auto;
+            padding: 50px;
+            width: 80%;
+            height: 100vh;
+            background-color: $color-light;
+            transform: translateX(-150%);
+            transition: transform 0.3s ease-in-out;
+      
+            &_active {
+              transform: none;
+            }
+          }
+      
+          @include mobile {
+            padding: 20px;
+          }
     }
 }
 
 .logo {
+    @include minidesk {
+        max-width: 100px;
+    }
+
+    @include tablet {
+        max-width: none;
+      }
+
     &:focus {
         outline: none;
     }
