@@ -21,18 +21,19 @@
         }
 
         @include tablet {
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 1000;
-            display: block;
-            overflow-y: auto;
-            padding: 50px;
-            width: 80%;
-            height: 100vh;
-            background-color: $color-light;
-            transform: translateX(-150%);
-            transition: transform 0.3s ease-in-out;
+            display: none;
+            // position: fixed;
+            // left: 0;
+            // top: 0;
+            // z-index: 1000;
+            // display: block;
+            // overflow-y: auto;
+            // padding: 50px;
+            // width: 80%;
+            // height: 100vh;
+            // background-color: $color-light;
+            // transform: translateX(-150%);
+            // transition: transform 0.3s ease-in-out;
       
             &_active {
               transform: none;
@@ -73,6 +74,26 @@
             margin-right: 36px;
         }
     }
+
+    @include tablet {
+        display: none;
+        // position: fixed;
+        // left: 0;
+        // top: 0;
+        // z-index: 1000;
+        // display: block;
+        // overflow-y: auto;
+        // padding: 50px;
+        // width: 80%;
+        // height: 100vh;
+        // background-color: $color-light;
+        // transform: translateX(-150%);
+        // transition: transform 0.3s ease-in-out;
+  
+        &_active {
+          transform: none;
+        }
+      }
 }
 .contacts-link {
     padding-left: 52px;
@@ -111,3 +132,4 @@
         color: $color-primary;
     }
 }
+
