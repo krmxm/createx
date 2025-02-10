@@ -31,6 +31,9 @@ class Header extends Component {
                             <span className="large large_regular contacts-link__value">hello@createx.com</span>
                         </a>
                     </div>
+                    <button class="btn-reset burger" aria-label="Открыть меню">
+                            <span class="burger__line"></span>
+                    </button>
                 </div>
             </div>
         )

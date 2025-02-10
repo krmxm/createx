@@ -23,8 +23,26 @@
     &__image {
         position: relative;
         z-index: 5;
-        margin-bottom: -60px;
+        margin-bottom: -160px;
+
+        @include middledesk {
+            width: 380px;
+            object-fit: cover;
+        }
+
+        @include tablet {
+            width: 300px;
+          }
+      
+        @include minitablet {
+            display: none;
+        }
     }
+
+    @include minitablet {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
 }
 .testimonials-item {
     // margin-right: 30px;
@@ -39,6 +57,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+
         }
     }
     &__descr {

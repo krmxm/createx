@@ -20,6 +20,7 @@
                 margin-right: 24px;
             }
         }
+
     }
     &__next {
         position: absolute;
@@ -41,7 +42,8 @@
 
     &__pag {
         counter-reset: pag;
-        left: calc((100% - 1260px) / 2) !important;
+        padding: 0 15px;
+        left: calc((100% - 1230px) / 2) !important;
         bottom: 120px !important;
         display: flex;
     
@@ -69,6 +71,26 @@
             display: none;
           }
 
+          @include minitablet {
+            width: 25%;
+          }
+        }
+
+        @include middledesk {
+          left: 3% !important;
+        }
+    
+        @include minidesk {
+          left: 15px !important;
+        }
+    
+        @include minitablet {
+          bottom: 50px !important;
+          width: calc(100% - 30px) !important;
+        }
+    
+        @include mobile {
+          display: none;
         }
     }
 
@@ -111,6 +133,12 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+
+    .hero__next, .hero__prev {
+      @include middledesk {
+        display: none;
+      }
+    }
 }
 
 .hero-slide {

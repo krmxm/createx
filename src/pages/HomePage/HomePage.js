@@ -46,13 +46,13 @@ class HomePage extends Component {
                 <AboutSection />
                 <Mission />
                 <ServicesSection />
-                <PortfolioSection />
-                <PartnersSection title='Supported by 12+ partners' />
-                <Testimonials testimonialsSlides={this.testimonialsSlides} />
-                <Facts />
-                <RecentNews recentNews={this.recentNews} />
-                <ContactsSection />
-                <Footer />
+                {/* <PortfolioSection />  */}
+                {/* <PartnersSection title='Supported by 12+ partners' /> 
+                <Testimonials testimonialsSlides={this.testimonialsSlides} /> 
+                <Facts /> 
+                <RecentNews recentNews={this.recentNews} /> 
+                <ContactsSection /> 
+                <Footer />  */}
             </>
         )
     }
