@@ -2,6 +2,31 @@
     &__content {
         &_horizontal {
             @include flex-v-end;
+
+            @include tablet {
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                & > * {
+                    margin-right: 0 !important;
+                    margin-bottom: 20px;
+                    width: 49% !important;
+                    flex-grow: 0 !important;
+            
+                    .form__input {
+                      width: 100%;
+                    }
+
+                    .btn {
+                        width: 100%;
+                      }
+            
+                    @include mobile {
+                      width: 100%;
+                    }
+                  }
+            
+            }
         }
         &_vertical {
             @include flex-column-center;
@@ -22,9 +47,9 @@
         @include flex-column-start;
         // width: 100%;
         
-        // input, textarea {
-        //     width: 100%;
-        // }
+        input, textarea {
+            width: 100%;
+        }
         textarea {
             // width: 100%;
             resize: none;
@@ -34,8 +59,16 @@
             flex-grow: 1;
             margin-right: 24px;
             input, textarea {
-                width: 100%;
+                // width: 100%;
             }
+
+            // @include tablet{
+            //     margin-right: 0;
+            //     // padding-right: 24px;
+            //     width: 49%;
+            //     // flex-grow: 0;
+            //     // width: 49%;
+            // }
         }
         &_contacts {
             width: 100%;

@@ -46,7 +46,7 @@ class HomePage extends Component {
                 <AboutSection />
                 <Mission />
                 <ServicesSection />
-                {/* <PortfolioSection />  */}
+                <PortfolioSection /> 
                 {/* <PartnersSection title='Supported by 12+ partners' /> 
                 <Testimonials testimonialsSlides={this.testimonialsSlides} /> 
                 <Facts /> 

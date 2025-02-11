@@ -1,12 +1,16 @@
 .card {
     &__list {
-            --mision-gap: 94px;
+            --mission-gap: 94px;
 
             // margin-bottom: 27px;
             position: relative;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: calc(var(--mision-gap) * 2);
+            gap: calc(var(--mission-gap) * 2);
+
+            @include tablet {
+                 --mission-gap: 30px;
+            }
         }
         &__item {
             position: relative;
@@ -17,7 +21,7 @@
                         
                         position: absolute;
                         top: 0;
-                        right: calc(-1 * var(--mision-gap));
+                        right: calc(-1 * var(--mission-gap));
                         width: 1px;
                         height: 100%;
                         content: "";

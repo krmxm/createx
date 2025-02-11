@@ -43,7 +43,7 @@
     &__pag {
         counter-reset: pag;
         padding: 0 15px;
-        left: calc((100% - 1230px) / 2) !important;
+        left: calc((100% - 1260px) / 2) !important;
         bottom: 120px !important;
         display: flex;
     
@@ -81,7 +81,7 @@
         }
     
         @include minidesk {
-          left: 15px !important;
+          left: 0px !important;
         }
     
         @include minitablet {

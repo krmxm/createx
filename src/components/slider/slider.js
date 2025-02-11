@@ -17,59 +17,89 @@ class SliderMini extends Component {
             visibleSlides: 3, // Количество видимых слайдов по умолчанию
             prevBtnActive: false,
             nextBtnActive: true,
+            // В конструкторе:
             breakpoints: {
-                1440: { slideWidth: 350, slideMarginRight: 20, visibleSlides: 3 },  // Для экранов <= 1440px
+                0: { slideWidth: 200, slideMarginRight: 10, visibleSlides: 1 }, // Fallback
+                480: { slideWidth: 200, slideMarginRight: 10, visibleSlides: 2 },
+                748: { slideWidth: 250, slideMarginRight: 15, visibleSlides: 2 },
+                1024: { slideWidth: 300, slideMarginRight: 20, visibleSlides: 2 },
                 1280: { slideWidth: 300, slideMarginRight: 20, visibleSlides: 3 },
-                1024: { slideWidth: 200, slideMarginRight: 20, visibleSlides: 3 }, // Для экранов <= 1280px // Для экранов <= 1280px
-                768: { slideWidth: 200, slideMarginRight: 15, visibleSlides: 2 },  // Для экранов <= 768px
-                480: { slideWidth: 200, slideMarginRight: 10, visibleSlides: 1 }   // Для экранов <= 480px
-            }
+                1440: { slideWidth: 350, slideMarginRight: 20, visibleSlides: 3 }
+              }
         };
     }
 
     componentDidMount() {
+        this.handleResize(); // Первоначальный вызов
+        window.addEventListener('resize', this.handleResize);
+        console.log("Initial window width:", window.innerWidth); // Проверка ширины при загрузке
         this.startAutoplay();
-        this.updateBreakpoints(); // Обновляем параметры при монтировании
-        window.addEventListener('resize', this.updateBreakpoints); // Следим за изменением размера окна
+        console.log("Первоначальная ширина окна:", window.innerWidth);
+         this.updateBreakpoints();
+        window.addEventListener('resize', this.updateBreakpoints);
     }
 
     componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
         this.stopAutoplay();
         window.removeEventListener('resize', this.updateBreakpoints); // Убираем слушатель при размонтировании
     }
 
-    updateBreakpoints = () => {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.visibleSlides !== this.state.visibleSlides) {
+          this.setState({
+            offset: 0,
+            currentSlide: 0
+          });
+        }
+      }
+
+      handleResize = () => {
+        clearTimeout(this.resizeTimer);
+        this.resizeTimer = setTimeout(() => {
+          this.updateBreakpoints();
+        }, 100);
+      }
+
+      updateBreakpoints = () => {
         const { breakpoints } = this.state;
         const windowWidth = window.innerWidth;
-    
-        // Находим подходящий breakpoint
-        let newSlideWidth = 390;
-        let newSlideMarginRight = 30;
-        let newVisibleSlides = 3;
-    
-        // Сортируем breakpoints по убыванию (от большего к меньшему)
+      
+        // Сортируем брейкпоинты по УБЫВАНИЮ (от большего к меньшему)
         const sortedBreakpoints = Object.keys(breakpoints)
-            .map(Number) // Преобразуем ключи в числа
-            .sort((a, b) => b - a); // Сортируем по убыванию
-    
-        // Перебираем breakpoints в порядке убывания
+          .map(Number)
+          .sort((a, b) => b - a);
+      
+        console.log("sortedBreakpoints:", sortedBreakpoints); // Для отладки
+      
+        let activeBreakpoint = 0;
         for (const breakpoint of sortedBreakpoints) {
-            if (windowWidth <= breakpoint) {
-                newSlideWidth = breakpoints[breakpoint].slideWidth;
-                newSlideMarginRight = breakpoints[breakpoint].slideMarginRight;
-                newVisibleSlides = breakpoints[breakpoint].visibleSlides;
-            } else {
-                // Если ширина экрана больше текущего breakpoint, останавливаем цикл
-                break;
-            }
+          console.log(`Checking ${breakpoint}px vs ${windowWidth}px`); // Отладка
+          if (windowWidth >= breakpoint) {
+            activeBreakpoint = breakpoint;
+            break; // Прерываем цикл после нахождения первого подходящего
+          }
         }
-    
+      
+        console.log("Active breakpoint:", activeBreakpoint); // Отладка
+      
+        const { 
+          slideWidth: newSlideWidth,
+          slideMarginRight: newSlideMarginRight,
+          visibleSlides: newVisibleSlides 
+        } = breakpoints[activeBreakpoint];
+      
+        // Обновляем состояние
         this.setState({
-            slideWidth: newSlideWidth,
-            slideMarginRight: newSlideMarginRight,
-            visibleSlides: newVisibleSlides
+          slideWidth: newSlideWidth,
+          slideMarginRight: newSlideMarginRight,
+          visibleSlides: newVisibleSlides,
+          currentSlide: 0,
+          offset: 0
+        }, () => {
+          console.log("Updated visibleSlides:", this.state.visibleSlides);
         });
-    };
+      };
 
     startAutoplay() {
         this.autoplayInterval = setInterval(this.nextSlide, 2500);
@@ -96,14 +126,15 @@ class SliderMini extends Component {
         return (slideWidth + slideMarginRight) * visibleSlides - slideMarginRight; // Убираем отступ у последнего видимого слайда
     }
 
-    updateButtonStates(newOffset) {
-        const maxOffset = (this.state.slideWidth + this.state.slideMarginRight) * (this.state.totalSlides - 3);
-
+    updateButtonStates = (newOffset) => {
+        const { slideWidth, slideMarginRight, totalSlides, visibleSlides } = this.state;
+        const maxOffset = (slideWidth + slideMarginRight) * (totalSlides - visibleSlides);
+      
         this.setState({
-            prevBtnActive: newOffset > 0,
-            nextBtnActive: newOffset < maxOffset
+          prevBtnActive: newOffset > 0,
+          nextBtnActive: newOffset < maxOffset
         });
-    }
+      };
 
     isSlideVisible(index) {
         const { currentSlide, visibleSlides } = this.state;
@@ -112,22 +143,20 @@ class SliderMini extends Component {
     
     nextSlide = () => {
         this.setState(state => {
-            const maxOffset = (state.slideWidth + state.slideMarginRight) * (state.totalSlides - state.visibleSlides);
-            const newOffset = state.offset >= maxOffset
-                ? 0
-                : state.offset + (state.slideWidth + state.slideMarginRight);
-            const newCurrentSlide = state.currentSlide >= state.totalSlides - state.visibleSlides
-                ? 0
-                : state.currentSlide + 1;
-    
-            this.updateButtonStates(newOffset);
-    
-            return {
-                offset: newOffset,
-                currentSlide: newCurrentSlide,
-            };
+          const maxOffset = (state.slideWidth + state.slideMarginRight) * 
+            (state.totalSlides - state.visibleSlides);
+          const newOffset = state.offset >= maxOffset
+            ? 0
+            : state.offset + (state.slideWidth + state.slideMarginRight);
+          const newCurrentSlide = state.currentSlide >= state.totalSlides - state.visibleSlides
+            ? 0
+            : state.currentSlide + 1;
+      
+          return { offset: newOffset, currentSlide: newCurrentSlide };
+        }, () => {
+          this.updateButtonStates(this.state.offset);
         });
-    };
+      };
     
     prevSlide = () => {
         this.setState(state => {
