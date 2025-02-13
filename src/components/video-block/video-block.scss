@@ -4,6 +4,10 @@
     border-radius: 4px;
     height: 500px;
 
+    @include mobile {
+        height: 300px;   
+    }
+
     &__content {
             display: block;
             width: 100%;

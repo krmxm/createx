@@ -3,6 +3,11 @@
     &__subtitle {
         margin: 0;
         margin-right: 48px;
+
+        @include minitablet {
+            margin-right: 10px;
+            max-width: 50%;
+        }
     }
     &__btn {
         display: block;

@@ -21,6 +21,16 @@
             }
         }
 
+        @include mobile {
+          .btn {
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+  
+            margin-bottom: 20px;
+          }
+        }
+
     }
     &__next {
         position: absolute;
@@ -174,6 +184,15 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    @include minitablet {
+        padding-top: 150px;
+        padding-bottom: 200px;
+    }
+
+    @include mobile {
+      padding: 100px 0;
     }
     
 }

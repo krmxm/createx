@@ -7,10 +7,23 @@
     &__container {
         display: flex;
         justify-content: space-between;
+
+        @include minitablet {
+            display: block;
+        }
     }
     &__content {
         position: relative;
         max-width: 612px;
+
+        @include tablet {
+            max-width: 450px;;
+        }
+
+        @include minitablet {
+            max-width: 100%;
+            margin: 0 auto;
+        }
     }
     &__title {
         margin-bottom: 60px;
@@ -42,7 +55,7 @@
     @include minitablet {
         padding-top: 40px;
         padding-bottom: 40px;
-      }
+    }
 }
 .testimonials-item {
     // margin-right: 30px;

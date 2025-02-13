@@ -11,6 +11,10 @@
         max-width: 736px;
         margin: 0 auto;
         gap: 48px;
+
+        @include minitablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &::before {
@@ -28,7 +32,7 @@
     }
 }
 
-.facts-element {
+.progress-element {
     &__circly {
         position: relative;
 
@@ -39,5 +43,11 @@
             top: 0;
             bottom: 0;
         }
+    }
+
+    @include minitablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

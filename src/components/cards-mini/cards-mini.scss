@@ -11,6 +11,14 @@
             @include tablet {
                  --mission-gap: 30px;
             }
+
+            @include minitablet {
+                --mission-gap: 10px;
+            }
+
+            @include mobile {
+                display: block;
+            }
         }
         &__item {
             position: relative;
@@ -35,6 +43,12 @@
             svg {
                 margin-bottom: 22px;
                 fill: $color-primary;
+            }
+
+            @include mobile {
+                &:not(last-child) {
+                    margin-bottom: 30px;
+                }
             }
         }
         

@@ -10,7 +10,7 @@
                 & > * {
                     margin-right: 0 !important;
                     margin-bottom: 20px;
-                    width: 49% !important;
+                    width: 49%;
                     flex-grow: 0 !important;
             
                     .form__input {
@@ -26,6 +26,10 @@
                     }
                   }
             
+            }
+
+            @include mobile {
+                display: block;  
             }
         }
         &_vertical {

@@ -1,12 +1,21 @@
 .recent-news {
     padding-top: 180px;
     padding-bottom: 120px;
+
+    @include minitablet {
+        padding-bottom: 60px;
+    }
+
     &__title {
         margin-bottom: 60px;
     }
     &__list {
         grid-template-rows: repeat(2, 255px);
         margin-bottom: 80px;
+
+        @include tablet {
+            grid-template-rows: initial;       
+        }
     }
     &__item {
         grid-column: 5 span;
@@ -24,6 +33,20 @@
             img {
                 height: auto;
             }
+
+            @include tablet {
+                grid-column: 12 span;
+                grid-row: 2 span;
+            }
+        }
+
+        @include tablet {
+            grid-column: 6 span;
+            // grid-row: 2 span;
+        }
+        
+        @include minitablet {
+            grid-column: 12 span;
         }
     }
 }

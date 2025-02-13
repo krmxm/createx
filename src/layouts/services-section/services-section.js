@@ -15,7 +15,7 @@ class ServicesSection extends Component {
 
     render() {
         return (
-            <section className="services-section section-offset">
+            <section className="services-section">
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center">Our services</h2>
                     <p className="large large_regular large_center large_section-descr-mb">Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.</p>

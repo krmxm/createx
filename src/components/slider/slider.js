@@ -20,9 +20,9 @@ class SliderMini extends Component {
             // В конструкторе:
             breakpoints: {
                 0: { slideWidth: 200, slideMarginRight: 10, visibleSlides: 1 }, // Fallback
-                480: { slideWidth: 200, slideMarginRight: 10, visibleSlides: 2 },
-                748: { slideWidth: 250, slideMarginRight: 15, visibleSlides: 2 },
-                1024: { slideWidth: 300, slideMarginRight: 20, visibleSlides: 2 },
+                480: { slideWidth: 250, slideMarginRight: 10, visibleSlides: 2 },
+                768: { slideWidth: 350, slideMarginRight: 15, visibleSlides: 2 },
+                1024: { slideWidth: 350, slideMarginRight: 20, visibleSlides: 2 },
                 1280: { slideWidth: 300, slideMarginRight: 20, visibleSlides: 3 },
                 1440: { slideWidth: 350, slideMarginRight: 20, visibleSlides: 3 }
               }

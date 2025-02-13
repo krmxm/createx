@@ -10,7 +10,7 @@ class Facts extends Component {
 
     render() {
         return (
-            <div className="facts">
+            <div className="facts section-offset">
                 <div className="container">
                     <h2 className='title title_h2 title_h2-center facts__title'>Some facts and figures</h2>
                     <ul className="facts__list">

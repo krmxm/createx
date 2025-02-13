@@ -31,6 +31,14 @@ body {
 
 .section-offset {
     padding-top: 120px;
+
+    @include minitablet {
+        padding-top: 60px !important;   
+    }
+
+    @include mobile {
+        padding-top: 40px;
+    }
 }
 
 .visually-hidden {

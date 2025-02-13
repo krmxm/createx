@@ -1,5 +1,9 @@
 .portfolio-section {
     padding-bottom: 120px;
+
+    @include minitablet {
+        padding-bottom: 40px;
+    }
     &__top {
         @include flex-all-sb;
 
