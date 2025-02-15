@@ -1,7 +1,7 @@
 .facts {
     position: relative;
-    padding-top: 180px;
-    // overflow: hidden;
+    padding: 180px 0;
+    overflow: hidden;
     &__title {
         margin-bottom: 61px;
     }
@@ -14,6 +14,10 @@
 
         @include minitablet {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
         }
     }
 

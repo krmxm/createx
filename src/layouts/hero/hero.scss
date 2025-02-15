@@ -22,6 +22,8 @@
         }
 
         @include mobile {
+          // display: flex;
+          // flex-direction: column;
           .btn {
             &:not(:last-child) {
               margin-right: 0;

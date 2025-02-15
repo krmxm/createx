@@ -19,8 +19,8 @@ class SliderMini extends Component {
             nextBtnActive: true,
             // В конструкторе:
             breakpoints: {
-                0: { slideWidth: 200, slideMarginRight: 10, visibleSlides: 1 }, // Fallback
-                480: { slideWidth: 250, slideMarginRight: 10, visibleSlides: 2 },
+                0: { slideWidth: 290, slideMarginRight: 10, visibleSlides: 1 }, // Fallback
+                576: { slideWidth: 290, slideMarginRight: 10, visibleSlides: 1 },
                 768: { slideWidth: 350, slideMarginRight: 15, visibleSlides: 2 },
                 1024: { slideWidth: 350, slideMarginRight: 20, visibleSlides: 2 },
                 1280: { slideWidth: 300, slideMarginRight: 20, visibleSlides: 3 },
@@ -30,13 +30,13 @@ class SliderMini extends Component {
     }
 
     componentDidMount() {
+        this.updateBreakpoints();
+        window.addEventListener('resize', this.updateBreakpoints);
         this.handleResize(); // Первоначальный вызов
         window.addEventListener('resize', this.handleResize);
         console.log("Initial window width:", window.innerWidth); // Проверка ширины при загрузке
         this.startAutoplay();
         console.log("Первоначальная ширина окна:", window.innerWidth);
-         this.updateBreakpoints();
-        window.addEventListener('resize', this.updateBreakpoints);
     }
 
     componentWillUnmount() {
@@ -64,42 +64,36 @@ class SliderMini extends Component {
       updateBreakpoints = () => {
         const { breakpoints } = this.state;
         const windowWidth = window.innerWidth;
-      
-        // Сортируем брейкпоинты по УБЫВАНИЮ (от большего к меньшему)
+    
+        // Сортируем брейкпоинты по возрастанию
         const sortedBreakpoints = Object.keys(breakpoints)
-          .map(Number)
-          .sort((a, b) => b - a);
-      
-        console.log("sortedBreakpoints:", sortedBreakpoints); // Для отладки
-      
+            .map(Number)
+            .sort((a, b) => a - b); // Сортировка по возрастанию
+    
         let activeBreakpoint = 0;
+        // Ищем максимальный брейкпоинт, который <= текущей ширине
         for (const breakpoint of sortedBreakpoints) {
-          console.log(`Checking ${breakpoint}px vs ${windowWidth}px`); // Отладка
-          if (windowWidth >= breakpoint) {
-            activeBreakpoint = breakpoint;
-            break; // Прерываем цикл после нахождения первого подходящего
-          }
+            if (windowWidth >= breakpoint) {
+                activeBreakpoint = breakpoint;
+            } else {
+                break; // Прерываем, так как отсортировано по возрастанию
+            }
         }
-      
-        console.log("Active breakpoint:", activeBreakpoint); // Отладка
-      
+    
         const { 
-          slideWidth: newSlideWidth,
-          slideMarginRight: newSlideMarginRight,
-          visibleSlides: newVisibleSlides 
+            slideWidth: newSlideWidth,
+            slideMarginRight: newSlideMarginRight,
+            visibleSlides: newVisibleSlides 
         } = breakpoints[activeBreakpoint];
-      
-        // Обновляем состояние
+    
         this.setState({
-          slideWidth: newSlideWidth,
-          slideMarginRight: newSlideMarginRight,
-          visibleSlides: newVisibleSlides,
-          currentSlide: 0,
-          offset: 0
-        }, () => {
-          console.log("Updated visibleSlides:", this.state.visibleSlides);
+            slideWidth: newSlideWidth,
+            slideMarginRight: newSlideMarginRight,
+            visibleSlides: newVisibleSlides,
+            currentSlide: 0,
+            offset: 0
         });
-      };
+    };
 
     startAutoplay() {
         this.autoplayInterval = setInterval(this.nextSlide, 2500);
