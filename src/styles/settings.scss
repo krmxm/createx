@@ -23,6 +23,9 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: $grid-gap;
+    @include mobile {
+        grid-template-columns: repeat(4, 1fr);
+    }
     &_cards {
         grid-template-rows: 440px;
         grid-auto-rows: 440px;

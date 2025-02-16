@@ -38,6 +38,10 @@
                 grid-column: 12 span;
                 grid-row: 2 span;
             }
+
+            @include mobile {
+                grid-column: 4 span;
+            }
         }
 
         @include tablet {
@@ -47,6 +51,10 @@
         
         @include minitablet {
             grid-column: 12 span;
+        }
+
+        @include mobile {
+            grid-column: 4 span;
         }
     }
 }

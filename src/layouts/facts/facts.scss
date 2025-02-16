@@ -2,6 +2,10 @@
     position: relative;
     padding: 180px 0;
     overflow: hidden;
+
+    @include mobile {
+        padding-bottom: 40px;
+    }
     &__title {
         margin-bottom: 61px;
     }
