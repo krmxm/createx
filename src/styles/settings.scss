@@ -169,9 +169,14 @@ body {
 }
 
 .article-meta {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     // color: $color-storm-gray;
     &__item {
+        // display: block;
         position: relative;
         color: $color-storm-gray;
 
@@ -201,6 +206,24 @@ body {
             color: $color-primary;
             font-weight: 700;
         }
+
+        @include tablet {
+            margin-top: 5px;
+
+            &:not(:last-child) {
+                margin-right: 18px;    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: -10px;
+                    top: 1px;
+                    width: 1px;
+                    height: 11px;
+                    color: $color-storm-gray;
+                    background-color: currentColor;
+                }
+            }
+        }
     }
 }
 
@@ -226,11 +249,15 @@ a.article-meta__item {
 }
 
 .to-top {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: flex-end;
-    right: 10px;
-    bottom: 0;
+    right: 5%;
+    bottom: 5%;
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
     &__text {
         margin-right: 16px;
         color: $color-light;
@@ -256,6 +283,11 @@ a.article-meta__item {
             background-color: $color-active; 
         }
     }
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .burger {

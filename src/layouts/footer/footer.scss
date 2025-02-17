@@ -3,13 +3,27 @@
     background-color: $color-ebony-clay-gray;
     &__left{
         grid-column: 7 span;
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__top {
         @include flex-v-center;
         margin-bottom: 20px;
+
+        @include mobile {
+            display: block;
+        }
     }
     &__logo {
         margin-right: 61px;
+
+        @include mobile {
+            display: inline-block;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
     }
     &__descr {
         width: 100%;
@@ -23,6 +37,10 @@
         @include minitablet {
             grid-column: 12 span;
         }
+        
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__container {
         position: relative;
@@ -32,6 +50,10 @@
     }
     &__nav {
         grid-column: 8 span;
+
+        @include mobile {
+            grid-column: 4 span;
+        }
     }
     &__copyright {
         padding-top: 28px;
@@ -44,6 +66,10 @@
             background-position: 2px center;
             background-size: 16px 16px;
             background-repeat: no-repeat;
+        }
+
+        @include mobile {
+            grid-column: 4 span;
         }
     }
 }
@@ -170,5 +196,9 @@
 
     @include minitablet {
         padding-left: 24px;
+    }
+
+    @include mobile {
+        padding-left: 0;
     }
 }

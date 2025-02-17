@@ -13,6 +13,8 @@ import RecentNews from '../../layouts/recent-news/recent-news';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
 import './HomePage.scss';
 
 
@@ -51,8 +53,9 @@ class HomePage extends Component {
                 <Testimonials testimonialsSlides={this.testimonialsSlides} /> 
                 <Facts /> 
                 <RecentNews recentNews={this.recentNews} /> 
-                {/* <ContactsSection />  */}
-                {/* <Footer />  */}
+                <ContactsSection /> 
+                <Footer /> 
+                <GoTop scrollThreshold={500} />
             </>
         )
     }

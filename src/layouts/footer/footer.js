@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-import GoTop from '../../components/to-top/to-top';
 
 import logo from '../../assets/img/logo/logo-footer.svg';
 import { ReactComponent as Whathapp } from '../../assets/img/sprite/whatsapp.svg';
@@ -131,7 +130,6 @@ class Footer extends Component {
                     <small className="extrasmall extrasmall_regular footer__copyright">
                         &#169;&nbsp;All rights reserved. Made with <span>by Createx Studio</span>
                     </small>
-                    <GoTop />
                 </div>
             </footer>
         )
