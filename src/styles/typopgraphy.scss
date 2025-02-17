@@ -133,6 +133,10 @@ h6 {
         font-weight: 700;
         color: $color-ebony-clay-gray;
     }
+
+    @include mobile {
+        font-size: 17px;
+    }
 }
 
 .base {
@@ -145,6 +149,10 @@ h6 {
     &_bold {
         font-weight: 700;
         color: $color-gray;
+    }
+
+    @include mobile {
+        font-size: 14px;
     }
 }
 
