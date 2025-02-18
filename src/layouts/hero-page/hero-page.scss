@@ -4,6 +4,7 @@
     min-height: 600px;
     background-repeat: no-repeat;
     background-color: $bg-color;
+
     &_services {
         background-image: url(../../assets/img/bg/hero-page-bg.png);
         background-position: right -8px top;
@@ -43,6 +44,43 @@
     &_contacts-us {
         background-image: url(../../assets/img/bg/contacts-us-bg.png);
         background-position: right 0px top 0;
+    }
+
+
+    @include tablet {
+        position: relative;
+        background-image: none;
+        overflow: hidden;
+        z-index: 1;
+        // background-color: #fff;
+        // background-color: #fff;
+        // animation: theme 21s linear infinite;
+    
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            width: 100vw;  // IE/Edge
+            height: 100vh; // fallback
+            width: 100vmax;
+            height: 100vmax;
+            background: rgba(0,0,0,0.05);
+            animation: background 90s linear infinite;
+            overflow: hidden;
+        }
+
+        &:after {
+            left: 15vw;
+        }
+
+        &:before {
+            right: 15vw;
+            animation-delay: -30s;
+            animation-direction: reverse;
+        }
     }
 
     &__breadcrumbs {    
@@ -143,5 +181,45 @@
         &:active {
             color: $color-active;
         }
+    }
+}
+
+@keyframes theme {
+    0% {
+        background: $color-primary;
+    }
+    
+    16% {
+        background: #5DBDB6;
+    }
+    
+    33% {
+        background: #59D4E1;
+    }
+    
+    50% {
+        background: #51BCE8;
+    }
+    
+    66% {
+        background: #FA5374;
+    }    
+    
+    83% {
+        background: #E46653;
+    }
+
+    100% {
+        background: #74C390;
+    }
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
     }
 }
