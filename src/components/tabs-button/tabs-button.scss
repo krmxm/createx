@@ -10,6 +10,10 @@
         
         &:not(:last-child) {
             margin-right: $gap;
+
+            @include tablet {
+                margin-right: auto;
+            }
         }
     }
 

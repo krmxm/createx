@@ -39,7 +39,7 @@ class ContactsForm extends Component {
 
     render() {
         return (
-            <section class="contacts">
+            <section class="contacts section-offset">
                 <div class="container">
                 <h2 class="title title_h2 title_h2-center">Contact us</h2>
                 <p class="large large_regular large_center large_section-descr-mb">Please complete the form. Detailed information will help&nbsp;us to&nbsp;make

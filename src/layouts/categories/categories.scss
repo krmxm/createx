@@ -17,6 +17,11 @@
     display: flex;
     align-items: center;
     margin-bottom: 60px;
+
+    @include tablet {
+        flex-wrap: wrap;
+    }
+
     &__item {
         display: flex;
         justify-content: center;
@@ -38,6 +43,14 @@
         &:active {
         color: $color-active;
         }
+
+        @include tablet {
+            width: calc(100% / 3);
+          }
+      
+          @include mobile {
+            width: 100%
+          }
 
         
     }
@@ -61,6 +74,9 @@
 
         &:focus {
             outline: none;
+            .news-nav__text {
+                color: $color-primary;
+            }
         }
 
         &:focus-visible {
@@ -71,6 +87,10 @@
         &:hover {
             .news-nav__text {
                 color: $color-ebony-clay-gray;
+
+                @include tablet{
+                    color: $color-active;
+                }
             }
         }
 
@@ -87,10 +107,21 @@
 }
 
 .news-paginations-list {
-    position: absolute;
-    bottom: 118px;
-    right: 50%;
-    transform: translateX(50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 118px;
+    // margin: 0 auto;
+    // position: absolute;
+    // bottom: 118px;
+    // right: 50%;
+    // transform: translateX(50%);
+
+    @include minitablet {
+        margin-top: 60px;
+    }
+    @include mobile {
+        margin-top: 40px;
+    }
 }
 
 .news-paginations-item {

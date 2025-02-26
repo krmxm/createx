@@ -5,6 +5,12 @@
     background-repeat: no-repeat;
     background-color: $bg-color;
 
+    @include mobile {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
     &_services {
         background-image: url(../../assets/img/bg/hero-page-bg.png);
         background-position: right -8px top;

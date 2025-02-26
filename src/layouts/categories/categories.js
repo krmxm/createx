@@ -78,7 +78,7 @@ class Categories extends Component {
         const visibleCards = filteredNews.slice(offset, offset + cardsPerPage);
         const totalPages = Math.ceil(filteredNews.length / cardsPerPage);
         return (
-            <section ref={this.blockRef} className="categories">
+            <section ref={this.blockRef} className="categories section-offset">
                 <div className="container">
                     <h2 className='title title_h2 title_h2-center categories__title'>Categories</h2 >
                     <TabsButton tabsData={tabsData} filter={filter} onFilterSelect={this.onFilterSelect} classForTabsList='news-nav' classForTabsItem='news-nav__item' classForTabsBtn='news-nav__btn' classForTabsText='news-nav__text'/>

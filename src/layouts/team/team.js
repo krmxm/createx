@@ -73,7 +73,7 @@ class TeamCards extends Component {
     render() {
         const { teamData } = this.props;
         return (
-            <section className="our-team">
+            <section className="our-team section-offset">
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center">Our team</h2>
                     <p className="large large_regular large_center large_section-descr-mb">People are at the heart of Createx Construction Bureau  </p>

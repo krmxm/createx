@@ -15,7 +15,7 @@ class PositionsContent extends Component {
     render() {
         const {positionsData} = this.props;
         return(
-            <section className="positions-content">
+            <section className="positions-content section-offset">
                 <h2 className="visually-hidden">Our available positions</h2>
                 <div className="container">
                     <div className="positions-content__info grid">

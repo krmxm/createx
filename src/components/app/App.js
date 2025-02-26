@@ -26,10 +26,10 @@ class App extends Component {
         {/* <ServicesPageInner /> */}
         {/* <WorkPage /> */}
         {/* <SomeProject /> */}
-        <AboutUs />
+        {/* <AboutUs /> */}
         {/* <Positions /> */}
         {/* <News /> */}
-        {/* <PostPage /> */}
+        <PostPage />
         {/* <ContactsUs /> */}
       </>
     )

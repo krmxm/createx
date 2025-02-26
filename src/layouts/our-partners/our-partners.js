@@ -16,7 +16,7 @@ class OurPartners extends Component {
     render() {
         const title = this.props.title;
         return (
-            <div className="our-partners">
+            <div className="our-partners section-offset">
                 <Partners title={title} subtitle='We are supported by 12+ industry bodies and media partners' logos={slideData} />
             </div>
         )

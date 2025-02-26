@@ -59,7 +59,7 @@ class WorldMap extends Component {
         const { currentCountry } = this.state;
 
         return(
-            <div className="world-map">
+            <div className="world-map section-offset">
                 <div className="container">
                     <h2 className="title title_h2 title_h2-center world-map__title">We work worldwibe</h2>
                     <div className="world-map__map">

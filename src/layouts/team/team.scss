@@ -1,5 +1,12 @@
 .our-team {
     padding-bottom: 135px;
+
+    @include tablet {
+        padding-bottom: 60px;
+    }
+    @include mobile {
+        padding-bottom: 40px;
+    }
 }
 
 .team {
@@ -41,6 +48,10 @@
                 top: -63px;
             }
         }
+
+        @include tablet {
+            grid-column: 6 span;
+        }
     }
     &__img {
         // @include flex-all-center;
@@ -50,11 +61,19 @@
         border-radius: 4px;
         overflow: hidden;
         transition: all 0.4s ease-in-out;
+        
 
         img {
-            // display: inline-block;
+            display: inline-block;
             height: 100%;
+            width: 100%;
+            // margin: 0 auto;
             object-fit: cover;
+        }
+
+        @include tablet {
+            // height: 100%;
+            height: auto;
         }
     }
     &__content {
@@ -88,6 +107,11 @@
         background-color: rgb(255, 90, 48, 0.7);    
         transition: top 0.4s ease-in-out;
         // z-index: 1;
+
+        @include tablet {
+            position: static;
+            // top: -60px;
+        }
     }
     &__link {
         width: 20px;

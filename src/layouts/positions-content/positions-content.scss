@@ -3,11 +3,19 @@
     padding-bottom: 56px;
     &__left {
         grid-column: 7 span;
+        @include tablet {
+            grid-column: 12 span;
+        }
     }
     &__right {
         display: flex;
         justify-content: flex-end;
         grid-column: 5 span;
+
+        @include tablet {
+            grid-column: 12 span;
+            justify-content: center;
+        }
     }
 }
 
@@ -17,6 +25,10 @@
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+
+    @include mobile {
+        width: 290px;
+    }
     &__title {
         margin-bottom: 24px;
     }
@@ -27,6 +39,16 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+      
+            .positions-looking__btn_subs {
+              margin-right: 0;
+              margin-bottom: 20px;
+            }
+          }
     }
     &__btn {
         &_sub {
@@ -38,5 +60,6 @@
             padding-right: 54px;
             padding-left: 54px;
         }
+        
     }
 }

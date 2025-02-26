@@ -1,6 +1,14 @@
 .contacts-info {
     padding: 80px 0;
     background-color: $bg-color;
+    overflow: hidden;
+
+    @include tablet {
+      padding-bottom: 60px;
+    }
+    @include mobile {
+        padding-bottom: 40px;
+    }
     &__list {
         --contacts-gap: 120px;
 
@@ -10,6 +18,15 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 118px;
         gap: calc(var(--contacts-gap) * 2);
+
+        @include minidesk {
+          --contacts-gap: 40px;
+        }
+    
+        @include minitablet {
+          display: block;
+          margin-bottom: 60px;
+        }
     }
     &__item {
         position: relative;
@@ -27,6 +44,10 @@
             background-size: cover;
             background-repeat: no-repeat;
           }
+        }
+
+        @include minitablet {
+          margin-bottom: 30px;
         }
       }
       &__subtitle {

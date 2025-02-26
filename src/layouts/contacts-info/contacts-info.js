@@ -15,7 +15,7 @@ class ContactsInfo extends Component {
 
     render() {
         return(
-            <section className="contacts-info">
+            <section className="contacts-info section-offset">
                 <div className="container">
                     <h2 class="title title_h2 title_h2-center">Our offices</h2>
                     <p class="large large_regular large_center large_section-descr-mb">Give&nbsp;us a&nbsp;call, send&nbsp;us a&nbsp;note or&nbsp;visit our office. We&nbsp;can&rsquo;t wait to&nbsp;hear from you!</p>
