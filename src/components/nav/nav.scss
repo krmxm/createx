@@ -3,11 +3,28 @@
 .nav {
     &__list {
         @include flex-all-sb;
+
+        @include tablet {
+            display: block;
+            margin-bottom: 40px;
+        }
+        
     }
 
     &__item {
         &:not(:last-child) {
             margin-right: 40px;
+        }
+
+        @include tablet {
+            display: block;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
         }
     }
     &__link {
@@ -34,4 +51,27 @@
             color: $color-primary;
         }
     }
+
+    @include tablet {
+        // display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        overflow-y: auto;
+        padding: 50px;
+        width: 80%;
+        height: 100vh;
+        background-color: $color-light;
+        transform: translateX(-150%);
+        transition: transform 0.3s ease-in-out;
+  
+        &_active {
+          transform: none;
+        }
+      }
+  
+      @include mobile {
+        padding: 20px;
+      }
 }

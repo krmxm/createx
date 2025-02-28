@@ -46,6 +46,10 @@
         margin-top: -61px;
         transform: translateY(61px);
         transition: all 0.4s ease-in-out;
+
+        @include tablet {
+            transform: translateY(-7px);
+        }
     }
     &__text {
         @include flex-column-center;
