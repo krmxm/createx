@@ -25,6 +25,7 @@ body {
     gap: $grid-gap;
     @include mobile {
         grid-template-columns: repeat(4, 1fr);
+        column-gap: 0;
     }
     &_cards {
         grid-template-rows: 440px;

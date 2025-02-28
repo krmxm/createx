@@ -52,7 +52,7 @@ export default class App extends Component {
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
           }}
-          spaceBetween={10}
+          spaceBetween={20}
           navigation={{
             prevEl: this.prevRef.current,
             nextEl: this.nextRef.current,
@@ -82,12 +82,26 @@ export default class App extends Component {
         </Swiper>
         <Swiper
           onSwiper={this.setThumbsSwiper}
-          spaceBetween={10}
-          slidesPerView={4}
+          spaceBetween={20}
+          slidesPerView={4}   
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper"
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            576: {
+              slidesPerView: 3,
+              spaceBetween: 15
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 20
+            }
+          }}
         >
           <SwiperSlide>
             <img src={Work1Small} className='swiper-slide__img-gallery-mini' />

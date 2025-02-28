@@ -13,6 +13,11 @@
     &__btn {
         width: 390px;
         transform: translateY(26px);
+
+        @include mobile {
+            width: auto;
+            transform: none;
+        }
     }
     &__centered {
         margin-top: 73px;

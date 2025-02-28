@@ -2,10 +2,23 @@
     padding: 120px 0;
     &__img {
         grid-column: 7 span;
+
+        img {
+            width: 100%;
+        }
+
+        @include tablet {
+            grid-column: 12 span;
+        }
     }
     &__content {
         grid-column: 5 span;
         padding-left: 78px;
+
+        @include tablet {
+            grid-column: 12 span;
+            padding-left: 0;
+        }
     }
     &__title {
         font-family: "Lato", sans-serif;
@@ -13,6 +26,10 @@
         line-height: 134%;
         letter-spacing: -1px;
         margin-bottom: 59px;
+
+        @include tablet {
+            text-align: center;
+        }
     }
     &__accordion {
         .accordion__item {

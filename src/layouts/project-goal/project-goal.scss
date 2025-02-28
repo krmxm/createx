@@ -1,6 +1,8 @@
 .project-goal {
     padding-top: 30px;
     padding-bottom: 120px;
+
+    
     &__left {
         padding-top: 24px;
         grid-column: 6 span;
@@ -9,6 +11,10 @@
         display: flex;
         justify-content: flex-end;
         grid-column: 6 span;
+
+        @include minitablet {
+            justify-content: flex-start;
+          }
     }
     &__title {
         margin-bottom: 40px;
@@ -26,6 +32,10 @@
         box-shadow: $shadow-small;
         background-color: $color-light;
         border-radius: 4px;
+
+        @include mobile {
+            padding: 10px 10px;
+        }
     }
     &__item {
         display: flex;
@@ -35,6 +45,7 @@
         }
     }
     &__category {
+        flex-shrink: 0;
         width: 130px;
         text-transform: uppercase;
         color: $color-ebony-clay-gray;
@@ -42,4 +53,12 @@
     &__value {
         color: $color-storm-gray;
     }
+
+    @include minitablet {
+        width: 100%;
+      }
+    
+      @include mobile {
+        padding: 10px 0;
+      }
 }

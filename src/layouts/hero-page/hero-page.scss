@@ -109,6 +109,7 @@
     &__bottom {
         display: flex;
         justify-content: space-between;
+        align-items: start;
     }
     &__meta {
         a.article-meta__item {

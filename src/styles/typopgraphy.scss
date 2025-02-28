@@ -42,7 +42,7 @@ h6 {
         letter-spacing: 1px;
 
         @include minitablet {
-            font-size: 60px;
+            font-size: 50px;
         }
     
         @include mobile {
@@ -77,6 +77,15 @@ h6 {
         font-weight: 700;
         line-height: 150%;
         letter-spacing: 0%;
+
+        @include tablet {
+            font-size: 28px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
     &_h4 {
         margin-bottom: 32px;

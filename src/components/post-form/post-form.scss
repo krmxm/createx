@@ -1,4 +1,8 @@
 .post-form {
     padding-top: 37px;
     padding-bottom: 180px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
 }

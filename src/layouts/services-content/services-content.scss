@@ -10,8 +10,22 @@
         &_revers {
             flex-direction: row-reverse;
             .services__img {
-                margin-left: margin-left80;
+                margin-left: 80px;
+
+                @include tablet {
+
+                    margin-left: 0;
+                }
             }
+        }
+
+        @include tablet {
+            display: grid;
+            margin-bottom: 60px;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // margin-left: 0;
         }
     }
     &__img {
@@ -19,6 +33,10 @@
         height: 420px;
         &_mr {
             margin-right: 50px;
+
+            @include tablet {
+                margin-right: 0;
+            }
         }
         &_ml {
             margin-left: 80px;
@@ -26,6 +44,30 @@
         img {
             width: 100%;
             height: 100%;
+        }
+
+        @include tablet {
+            min-width: auto;
+            height: auto;
+            grid-column: 12 span;
+            // width: 100%;
+            margin-bottom: 30px;
+            // overflow: hidden;
+            img {
+                object-fit: cover;
+            }
+        }
+
+        @include mobile {
+            grid-column:  4 span;
+        }
+    }
+    &__info {
+        @include tablet {
+            grid-column: 2 / span 10;
+        }
+        @include mobile {
+            grid-column:  4 span;
         }
     }
     &__title {

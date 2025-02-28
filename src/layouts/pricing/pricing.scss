@@ -17,12 +17,17 @@
 }
 
 .table-wrapper {
+    position: relative;
     width: 100%;
     z-index: 5;
     border: 1px solid rgb(229, 232, 237);
     border-radius: 4px;
     box-shadow: $shadow-small;
     background: $color-light;
+
+    @include minitablet {
+        overflow-x: auto;
+    }
 }
 
 .table {
@@ -66,6 +71,10 @@
             padding-left: 24px; 
             text-align: left;
         }
+
+        @include tablet {
+            padding: 0 10px;
+          }
     }
     &__check {
         display: inline-block;
@@ -85,5 +94,9 @@
             outline: 2px solid $color-primary;
             outline-offset: 2px;
         }
+    }
+
+    @include minitablet {
+        width: 1200px;
     }
 }

@@ -41,6 +41,46 @@
                 background-repeat: no-repeat;
             }
         }
+
+        @include tablet {
+            grid-column: 6 span;
+
+            &:not(:last-child)::after {
+                content: none; // Удаляем псевдоэлемент
+                background-image: none; // Отключаем SVG
+                width: 0; // Дополнительная очистка
+                height: 0;
+              }
+
+            &:nth-child(odd) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 30px;
+                    width: 75%;
+                    height: 1px;
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjA5LjAwMDAwMCIgaGVpZ2h0PSIxLjAwMDAwMCIgdmlld0JveD0iMCAwIDIwOSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KCTxkZXNjPgoJCQlDcmVhdGVkIHdpdGggUGl4c28uCgk8L2Rlc2M+Cgk8ZGVmcy8+Cgk8bGluZSB4MT0iMC4wMDAwMDAiIHkxPSIwLjUwMDAwMCIgeDI9IjIwOS4wMDAwMDAiIHkyPSIwLjUwMDAwMCIgc3Ryb2tlPSIjRDdEQUREIiBzdHJva2Utb3BhY2l0eT0iMS4wMDAwMDAiIHN0cm9rZS13aWR0aD0iMS4wMDAwMDAiIHN0cm9rZS1kYXNoYXJyYXk9IjQuMDAwMDAwLDQuMDAwMDAwIi8+Cjwvc3ZnPgoK");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        @include mobile {
+            grid-column: 2 span;
+
+            &:nth-child(odd) {
+                &::after {
+                    content: none; // Удаляем псевдоэлемент
+                    background-image: none; // Отключаем SVG
+                    width: 0; // Дополнительная очистка
+                    height: 0;
+                }
+            }
+
+        }
     }
     &__subtitle {
         margin-bottom: 9px;

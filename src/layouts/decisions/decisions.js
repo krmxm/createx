@@ -12,7 +12,7 @@ class Decisions extends Component {
     render() {
         return (
             <section className="decisions">
-                <div className="container grid">
+                <div className="container grid decisions__container">
                     <div className="decisions__left">
                         <img src={DecisionsImg} alt="Decisions" className="decisions__img" />
                     </div>
