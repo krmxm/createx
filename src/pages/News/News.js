@@ -6,6 +6,9 @@ import Categories from '../../layouts/categories/categories';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
+
 import './News.scss';
 
 class News extends Component {
@@ -21,6 +24,7 @@ class News extends Component {
                 <Categories />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </div>
         )
     }

@@ -11,6 +11,9 @@ import WorldMap from '../../layouts/world-map/world-map';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
+
 class AboutUs extends Component {
     constructor(props) {
         super(props);
@@ -43,6 +46,7 @@ class AboutUs extends Component {
                 <WorldMap />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </>
         )
     }

@@ -24,8 +24,8 @@ class App extends Component {
         {/* <HomePage /> */}
         {/* <ServicesPage /> */}
         {/* <ServicesPageInner /> */}
-        {/* <WorkPage /> */}
-        <SomeProject />
+        <WorkPage />
+        {/* <SomeProject /> */}
         {/* <AboutUs /> */}
         {/* <Positions /> */}
         {/* <News /> */}

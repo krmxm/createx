@@ -47,6 +47,11 @@
         &:active {
             color: $color-active;
         }
+
+        @include tablet {
+            margin-top: 30px;
+            transform: none;
+        }
     }
     &__text {
         color: #9A9CA5;

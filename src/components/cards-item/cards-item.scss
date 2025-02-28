@@ -55,4 +55,8 @@
         // display: none;
         margin-bottom: 26px;
     }
+
+    @include tablet {
+        grid-column: 6 span;
+    }
 }

@@ -6,6 +6,8 @@ import ServicesContent from '../../layouts/services-content/services-content';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
 import './ServicesPage.scss';
 
 class ServicesPage extends Component {
@@ -28,6 +30,7 @@ class ServicesPage extends Component {
                 <ServicesContent servicesContent={this.servicesContent} />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </>
         )
     }

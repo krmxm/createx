@@ -7,6 +7,8 @@ import EmployeeBenefits from '../../layouts/employee-benefits/employee-benefits'
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
 import './Positions.scss';
 
 class Positions extends Component {
@@ -31,6 +33,7 @@ class Positions extends Component {
                 <EmployeeBenefits />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </div>
         )
     }

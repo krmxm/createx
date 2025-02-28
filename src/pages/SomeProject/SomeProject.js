@@ -8,6 +8,8 @@ import SimilarProjects from '../../layouts/similar-project/similar-projects';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
 import './SomeProject.scss';
 
 class SomeProject extends Component {
@@ -26,6 +28,7 @@ class SomeProject extends Component {
                 <SimilarProjects />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </>
         )
     }

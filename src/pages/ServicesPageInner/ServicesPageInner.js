@@ -11,6 +11,8 @@ import PartnersSection from '../../layouts/partners-section/partners-section';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
 import './ServicesPageInner.scss';
 class ServicesPageInner extends Component {
     constructor(props) {
@@ -31,6 +33,7 @@ class ServicesPageInner extends Component {
                 <PartnersSection title='Supported by 12+ partners' />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </>
         )
     }

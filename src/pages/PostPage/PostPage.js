@@ -6,6 +6,8 @@ import PostArticle from '../../layouts/post/post';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
 
 class PostPage extends Component {
     constructor(props) {
@@ -21,6 +23,7 @@ class PostPage extends Component {
                 <PostArticle />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </>
         )
     }

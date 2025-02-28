@@ -8,6 +8,9 @@ import PartnersSection from '../../layouts/partners-section/partners-section';
 import ContactsSection from '../../layouts/contacts-section/contacts-section';
 import Footer from '../../layouts/footer/footer';
 
+import GoTop from '../../components/to-top/to-top';
+
+
 import './WorkPage.scss';
 
 class WorkPage extends Component {
@@ -30,6 +33,7 @@ class WorkPage extends Component {
                 <PartnersSection title='Our clients' />
                 <ContactsSection />
                 <Footer />
+                <GoTop scrollThreshold={500} />
             </>
         )
     }
