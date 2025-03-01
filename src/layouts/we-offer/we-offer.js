@@ -38,7 +38,7 @@ class WeOffer extends Component {
                 <div className="container we-offer__container grid">
                     <div className="we-offer__img">
                         <img src={WeOfferImg} alt="we-offer" />
-                    </div>F
+                    </div>
                     <div className="we-offer__content">
                         <h2 className="title title_h2 we-offer__title">We offer</h2>
                         <ul className="accordion we-offer__accordion">

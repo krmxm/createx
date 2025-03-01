@@ -160,7 +160,7 @@ class History extends Component {
                         </div>
                     </div>
                     <div className="history__content grid" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-                        <ul class="list-reset history-nav">
+                        <ul className="list-reset history-nav">
                             {['Present', 'March 2019', 'November 2018', 'July 2015', 'August 2010', 'February 2007', 'May 2004', 'October 2001', 'June 2000'].map((label, index) => (
                                 <li className="history-nav__item" key={index}>
                                     <button
@@ -187,8 +187,8 @@ class History extends Component {
                             ref={this.swiperRef}
                         >
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History1} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -196,8 +196,8 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History2} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History2} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -205,8 +205,8 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History3} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History3} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -214,8 +214,8 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History4} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History4} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -223,8 +223,17 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History5} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History5} alt="History image" className="history__image" />
+                                <p className="history__descr">
+                                    Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
+                                    malesuada
+                                    vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
+                                    Eu&nbsp;nec vitae,
+                                </p>
+                            </SwiperSlide>
+                            <SwiperSlide>className
+                                <img src={History6} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -232,8 +241,8 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History6} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History1} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -241,8 +250,8 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History1} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
@@ -250,17 +259,8 @@ class History extends Component {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
-                                <p class="history__descr">
-                                    Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
-                                    malesuada
-                                    vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.
-                                    Eu&nbsp;nec vitae,
-                                </p>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={History1} alt="History image" class="history__image" />
-                                <p class="history__descr">
+                                <img src={History1} alt="History image" className="history__image" />
+                                <p className="history__descr">
                                     Bcelerisque dapibus pharetra nibh semper iaculis duis viverra porttitor&nbsp;in. Eu&nbsp;nec vitae,
                                     malesuada
                                     vitae egestas integer et&nbsp;morbi. Maecenas sed quis diam posuere malesuada magnis. Bcelerisque dapibus.

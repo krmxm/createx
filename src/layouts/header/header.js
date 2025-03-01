@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Nav from '../../components/nav/nav';
 import Overlay from '../../components/overlay/overlay'; 
@@ -54,9 +55,13 @@ class Header extends Component {
         return (
             <div id='top' className={`header ${headerClassMod}`}>
                 <div className="container header__container">
-                    <a href="#" className='logo'>
+                    {/* <a href="#" className='logo'>
                         <img src={logo} alt="logo" />
-                    </a>
+                    </a> */}
+
+                    <NavLink to="/home" className='logo'>
+                      <img src={logo} alt="logo" />
+                    </NavLink>
                     <Nav className={`nav ${isMenuOpen ? 'nav_active' : ''}`} />
                     <div className="header-contacts">
                         <a href="tel:4055550128" className='header-contacts__link contacts-link contacts-link_call'>

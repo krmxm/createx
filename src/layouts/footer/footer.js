@@ -1,5 +1,5 @@
 import { Component } from 'react';
-
+import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/img/logo/logo-footer.svg';
 import { ReactComponent as Whathapp } from '../../assets/img/sprite/whatsapp.svg';
@@ -101,13 +101,13 @@ class Footer extends Component {
                             <h3 className="footer-nav__list footer-title">Who we are</h3>
                             <ul className="footer-nav__list">
                                 <li className="footer-nav__item">
-                                    <a href="#" className="base base_regular footer-nav__link">About Us</a>
+                                    <NavLink to="/about" className="base base_regular footer-nav__link">About Us</NavLink>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <a href="#" className="base base_regular footer-nav__link">Available Positions</a>
+                                    <NavLink to="/positions" className="base base_regular footer-nav__link">Available Positions</NavLink>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <a href="#" className="base base_regular footer-nav__link">Contacts</a>
+                                    <NavLink to="/contacts" className="base base_regular footer-nav__link">Contacts</NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -116,13 +116,13 @@ class Footer extends Component {
                             <h3 className="footer-nav__list footer-title">Our experience</h3>
                             <ul className="footer-nav__list">
                                 <li className="footer-nav__item">
-                                    <a href="#" className="base base_regular footer-nav__link">Services</a>
+                                    <NavLink to="/services" className="base base_regular footer-nav__link">Servises</NavLink>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <a href="#" className="base base_regular footer-nav__link">Work</a>
+                                    <NavLink to="/work" className="base base_regular footer-nav__link">Work</NavLink>
                                 </li>
                                 <li className="footer-nav__item">
-                                    <a href="#" className="base base_regular footer-nav__link">News</a>
+                                    <NavLink to="/news" className="base base_regular footer-nav__link">News</NavLink>
                                 </li>
                             </ul>
                         </div>

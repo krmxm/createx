@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom';
+
+
 import './cards-item.scss';
 
 const CardsItem = ({ title, descr, picture }, index) => {
@@ -16,7 +19,10 @@ const CardsItem = ({ title, descr, picture }, index) => {
                         <h3 className='lead lead_bold'>{title}</h3>
                         <span className='small regular'>{descr}</span>
                     </div>
-                    <button className='btn-reset btn btn_size-regular btn_theme-outline cards-item__btn'>View Project</button>
+                    
+                    <NavLink to="/projects/:id" >
+                        <button className='btn-reset btn btn_size-regular btn_theme-outline cards-item__btn'>View Project</button>
+                    </NavLink>
                 </div>
 
             </a>

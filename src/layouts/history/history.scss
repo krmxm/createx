@@ -1,6 +1,9 @@
 .history {
     padding: 60px 0;
     background-color: #f4f5f7;
+    &__content.grid {
+        // display: block; // Временно отключите grid
+      }
 
     &__top {
         display: flex;
@@ -15,8 +18,9 @@
     }
 
     &__item {
+        width: 100%;
         grid-column: 8 span;
-        overflow: hidden;
+        overflow: hidden !important;
     }
 
     &__image {
@@ -41,6 +45,13 @@
         line-height: 160%;
         color: $color-gray;
     }
+
+    .swiper-slide {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
 }
 
 .history-nav {
@@ -198,3 +209,4 @@
         transform: translateY(-50%);
     }
 }
+
