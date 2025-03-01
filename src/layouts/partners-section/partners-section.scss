@@ -1,6 +1,10 @@
 .partners-section {
     padding: 80px 0;
     background-color: $bg-color;
+    &_bgLight {
+        padding: 120px 0;
+        background-color: $color-light;
+    }
 
     @include minitablet {
         padding-top: 40px;

@@ -16,7 +16,7 @@ class PartnersSection extends Component {
     render() {
         const title = this.props.title;
         return (
-            <div className="partners-section">
+            <div className={`partners-section ${this.props.bgLight ? 'partners-section_bgLight' : ''}`}>
                 <Partners title={title} logos={slideData} />
             </div>
         )

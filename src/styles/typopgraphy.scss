@@ -150,10 +150,10 @@ h6 {
     &_bold {
         font-weight: 700;
         color: $color-ebony-clay-gray;
-    }
 
-    @include mobile {
-        font-size: 17px;
+        @include tablet {
+            font-size: 17px;
+        }
     }
 }
 

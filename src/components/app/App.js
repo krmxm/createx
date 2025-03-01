@@ -21,16 +21,16 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <HomePage /> */}
-        {/* <ServicesPage /> */}
-        {/* <ServicesPageInner /> */}
+        <HomePage />
+        <ServicesPage />
+        <ServicesPageInner />
         <WorkPage />
-        {/* <SomeProject /> */}
-        {/* <AboutUs /> */}
-        {/* <Positions /> */}
-        {/* <News /> */}
-        {/* <PostPage /> */}
-        {/* <ContactsUs /> */}
+        <SomeProject />
+        <AboutUs />
+        <Positions />
+        <News />
+        <PostPage />
+        <ContactsUs />
       </>
     )
   }

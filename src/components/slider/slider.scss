@@ -58,7 +58,7 @@
             }
         }
 
-        @include minitablet {
+        @include tablet {
             transform: translateY(-3px);
         }
     }
@@ -128,7 +128,13 @@
         }
     }
 
-    @media (max-width: 768px) {
+    // @media (max-width: 1024px) {
+    //     &__content {
+    //         bottom: 0px;
+    //     }
+    // }
+
+    @media (max-width: 1024px) {
         &__wrapper{
             width: 500px;
         }
